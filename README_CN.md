@@ -37,26 +37,14 @@
   </tr>
 </table>
 
-## 💵 总成本 💵
-
-> [!NOTE] 
-> 成本不包括3D打印、工具、运费和税费。
-
-| 价格（自己购买所有零件） | 美国 | 欧盟 | 中国 |
-| --- | --- | --- | --- |
-| **基础版** (使用您的笔记本电脑，单目RGB头摄像头) | **~$660** | **~€680** | **~¥3999** |
-| ↑ 双目双眼RGB头摄像头 | +$30 | +€30 | +¥199 |
-| + 树莓派 | +$79 | +€79 | +¥399 |
-| ↑ RealSense RGBD头摄像头 | +$220 | +€230 | +¥1499 |
-
-> [!NOTE] 
-> 预计下周正式在淘宝京东售卖官方面向开发者的组装套件，大家敬请期待支持正版！
-
 ---
 
 # 📰 新闻 
+- 2025-09-09: [中国区淘宝开发者组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)已开售（仅为方便开发者搭建，我个人不在售卖过程中获利）。
+- 2025-09-09: 作为导师团队之一参与由英伟达，Huggingface，SEEED联合举办的[具身智能家庭机器人黑客松](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (10.18-19深圳，10.25–26, 湾区)!.
+- <img width="1650" height="1101" alt="image" src="https://github.com/user-attachments/assets/89039122-e758-406b-b64b-72016e00285b" />
 
-- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。组装套件即将开售，敬请期待！
+- 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。
 
 - 2025-07-30: [在现实生活中控制XLeRobot](https://xlerobot.readthedocs.io/zh-cn/latest/software/index.html) 使用**键盘/Xbox控制器/Switch joycon**在任何地方。全蓝牙连接，无需WiFi，零延迟。
 - ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
@@ -70,6 +58,22 @@
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io)硬件设置，第一个完全能够处理自主家庭任务的版本，从660美元开始。
 
 ---
+
+## 💵 总成本 💵
+
+> [!NOTE] 
+> 成本不包括3D打印、工具、运费和税费。
+
+| 价格（自己购买所有零件） | 美国 | 欧盟 | 中国 |
+| --- | --- | --- | --- |
+| **基础版** (使用您的笔记本电脑，单目RGB头摄像头) | **~$660** | **~€680** | **~¥3999** |
+| ↑ 双目双眼RGB头摄像头 | +$30 | +€30 | +¥199 |
+| + 树莓派 | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD头摄像头 | +$220 | +€230 | +¥1499 |
+
+> [!NOTE] 
+> 已正式在[淘宝wowrobo售卖官方面向开发者的组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)（仅为方便开发者，我个人不在售卖过程中获利）
+
 ## 🚀 开始使用 🚀
 
 > [!NOTE] 

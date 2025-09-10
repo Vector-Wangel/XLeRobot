@@ -1,5 +1,12 @@
 # 演示
 
+### 总体
+
+<video width="100%" controls>
+  <source src="../_static/videos/Real_demos/xlerobot030.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 ### VR控制
 
 <video width="100%" controls>
@@ -45,4 +52,13 @@
 
 由Mitchell Chen制作的演示
 
-### 社区
+### 第一个演示0.1.0 (XLeRobot的起点)
+
+<video width="100%" style="max-width: 100%;" controls>
+  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+### 社区演示
+
+欢迎每个人在这里贡献！您可以通过修改[此文件](https://github.com/Vector-Wangel/XLeRobot/edit/main/docs/en/source/demos/index.md)并在github上提交pull request直接在此处添加您的演示。

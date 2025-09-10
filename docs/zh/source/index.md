@@ -32,42 +32,49 @@
 **⏰ <4小时总组装时间**
 
 
-| 价格 | 美国 | 欧盟 | 中国 |
-| --- | --- | --- | --- |
-| **基础版** (无树莓派，使用自己的笔记本电脑) | **~$660** | **~€680** | **~¥4000** |
-| **标准版** (网络摄像头RGB头部相机) | **~$750** | **~€770** | **~¥4500** |
-| **专业版** (RealSense RGB-D头部相机) | **~$960** | **~€980** | **~¥6000** |
 
 *站在巨人的肩膀上: [LeRobot](https://github.com/huggingface/lerobot), [SO-100/SO-101](https://github.com/TheRobotStudio/SO-ARM100), [Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi), [Bambot](https://github.com/timqian/bambot)*
 
 ---
 
 <video width="100%" controls>
-  <source src="./_static/videos/Real_demos/xlerobot_025_001.mp4" type="video/mp4">
+  <source src="./_static/videos/Real_demos/xlerobot030.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-## 更新
+## 📰 新闻 
+- 2025-09-09: [中国区淘宝开发者组装套件](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ)已开售（仅为方便开发者搭建，我个人不在售卖过程中获利）。
+- 2025-08-30: XLeRobot 0.3.0 发布，包含最终完善和家务展示。组装套件即将开售，敬请期待！
+
+- 2025-07-30: [控制XLeRobot在真实环境中](https://xlerobot.readthedocs.io/en/latest/software/index.html) 使用**键盘/Xbox/Switch joycon**（蓝牙，无需wifi，0延迟）。
+- ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
 
 
-- **2025.07.30**: XLeRobot 0.2.5 发布！[控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/software/index.html) 在野外的真实环境中使用Xbox控制器。无需wifi，零延迟。
+- 2025-07-08: [**Maniskill仿真**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) 支持URDF、控制脚本（支持Quest3 VR、键盘、Xbox、Switch Joycon）。支持多种传感器（深度、分割、触觉等），RL/IL/VLA环境。15分钟快速上手。
+-  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
-- **2025.07.14**: XLeRobot 0.2.3 (**XLeVR**) 发布！**VR Quest 3 全身控制系统**。捕获所有输入：姿态、摇杆、按钮。基于网页，最少依赖。模块化设计适配不同机器人。开源，20分钟快速设置。
+- 2025-07-01: [**文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html) 上线，提供更有序的教程、演示和资源。
 
-- **2025.07.08**: **完整仿真**，全面支持新的XLeRobot硬件和3个摄像头（2个手部RGB + 1个头部RGB-D），配有urdf文件、键盘末端控制脚本和教程，让您能在10分钟内开始使用。
-
-- **2025.06.14**: XLeRobot 0.2.0的硬件设置正式发布！这是第一个官方硬件版本，完全具备自主家务任务能力，成本为960美元。
+- 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) 硬件设置完全具备家务任务能力，成本660美元。
 
 ---
+## 成本
+
+| 价格（自己购买零件） | 美国 | 欧盟 | 中国 |
+| --- | --- | --- | --- |
+| **基础版** (使用自己的笔记本电脑，单RGB头部摄像头) | **~$660** | **~€680** | **~¥3999** |
+| ↑ 立体双RGB头部摄像头 | +$30 | +€30 | +¥199 |
+| + 树莓派 | +$79 | +€79 | +¥399 |
+| ↑ RealSense RGBD头部摄像头 | +$220 | +€230 | +¥1499 |
+
+组装套件即将开售，敬请期待！
+
 
 ## 🌟 为什么选择XLeRobot？ 🌟
 
-<video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/98312e30-9a5d-41a1-a6ce-ef163c3abfd5" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![image](https://github.com/user-attachments/assets/b48a0a41-7422-4f10-8dc6-a66a2fd746ad)
 
-让我们来分解一下，因为 **XLeRobot = XL + LeRobot**
+**XLeRobot = XL + LeRobot**
 
 ### 为什么选择"LeRobot"核心？
 
@@ -86,29 +93,20 @@
 - 🏠 该领域/市场缺乏价格合理、稳定的双臂家用机器人，能够与LeRobot的简易组装相匹配。
 - 🖨️ 传统3D打印底盘耐久性、稳定性和负载能力有限——使其不适合日常使用。
 - ⚡ DIY移动机器人面临电源供应挑战，导致复杂的接线设置。
-- 🤖 **XLeRobot**保持与LeRobot社区的桌面双臂SO-100/SO-101配置的兼容性，实现代码和策略的无缝转移。
 
-### XLeRobot的整体优势/目标
+### 整体优势
 
-![image](https://github.com/user-attachments/assets/3feb1bc5-8f2b-489e-9dbf-841153ff222e)
-
-
-- **经济实惠** 💴: 完整构建成本$660，或者从现有SO100Arm和Lekiwi升级仅需$250。
-- **轻松升级** ⏫ (物理和电气)对于**Lekiwi**和**SO-100/SO-101**
+- **经济实惠** 💴: 完整构建成本4000￥，或者从现有SO101Arm和Lekiwi升级仅需不到1500￥。
+- **轻松升级** ⏫ 从**Lekiwi**和**SO-100/SO-101**
     - 硬件：无需更改电机ID或硬件修改
     - 软件：与桌面单臂/双臂设置相同——直接从SO-100/SO-101手臂转移您训练好的策略
-- **实用可靠** 💪: 执行许多日常任务，可与市场上$20,000的替代品相媲美。
-    - 更多任务在LeRobot黑客马拉松中展示，包括[深圳](https://www.youtube.com/watch?v=_r9v04Rc3xA&ab_channel=SeeedStudio)、[上海](https://www.youtube.com/watch?v=1oXvINlYsls&ab_channel=SeeedStudio)和[圣何塞](https://www.youtube.com/watch?v=QvzhsDliGII&ab_channel=SeeedStudio)([获奖者](https://www.hackster.io/contests/embodiedAI#winners))，以及[第一个](https://www.youtube.com/watch?v=i3D94400vq0&ab_channel=HuggingFace)。
-    - **注意**：目前不适用于手内灵巧操作🤹、重物提升(每臂超过1kg)🏋️或高度动态运动🏃
+- **实用可靠** 💪: 执行许多日常任务，可与市场上$30,000的闭源机器人相媲美。
+    - 更多任务在[**Huggingface LeRobot全球黑客马拉松**](https://huggingface.co/spaces/LeRobot-worldwide-hackathon/all-winners)中展示。
+    - **注意**：目前不适用于手内灵巧操作🤹、重物提升(每臂超过1kg)🏋️或高度动态运动(接球)🏃
 - **丰富的开源资源** 📕
     - LeRobot的即插即用代码🧩和广泛的AI模型库🧠
     - 由活跃、不断增长的贡献者社区支持🧑‍🤝‍🧑
-- **⚠️安全始终重要⚠️**: XLeRobot具有固有的物理硬件限制(低扭矩电机、短臂长、轮式基础)，使其几乎不可能伤害人类，同时仍然保持执行许多家庭任务的能力。
-    - **低扭矩电机**🦾: 即使在意外接触的情况下，机器人也极不可能造成伤害。此外，其扭矩限制防止其执行高速、动态运动。
-    - **短臂长**🦵: 在不太可能的情况下，如果它持有尖锐物体，可以通过翻倒宜家推车快速禁用机器人。
-    - **轮式基础**🧑‍🦼‍➡️: 它无法爬过高于10cm的障碍物，所以在未授权访问尝试的情况下，您可以使用障碍物或楼梯轻松限制其移动。
-
-这些👆是摆拍照片，但它们展示了XLeRobot平台在其硬件限制内可以实现的功能。(场景有点凌乱，但嘿，这就是生活！)
+- **⚠️安全始终重要⚠️**: XLeRobot具有固有的物理硬件限制(低扭矩电机、短臂长、轮式基础)，使其**物理上**几乎不可能伤害人类，同时仍然保持执行许多家庭任务的能力。
 
 ---
 
@@ -129,18 +127,24 @@
 (嘿，这个价格，还要什么自行车？)
 
 - 🔒 固定高度——添加稳定的升降平台将显著增加成本和组装难度
-- 📏 与Aloha相比工作空间较小——虽然我们最大化了SO100的工作空间，但手臂有尺寸限制，不过XLeRobot仍能有效处理大多数任务
-- ⚖️ 单臂负载能力有限——这就是为什么我们使用宜家推车
-- 🛒 底座移动精度可能受到宜家推车轮子的影响——这可以通过闭环反馈控制解决
+- 📏 与Aloha相比工作空间较小——虽然我们最大化了SO101的工作空间，但手臂有尺寸限制(~40cm reach)，不过XLeRobot仍能有效处理大多数任务
+- ⚖️ 单臂负载能力有限(600~1000g)
 
 综合考虑——成本、社区支持、组装便捷性和实用性——XLeRobot脱颖而出，成为室内应用最具吸引力的低成本机器人之一！
 
 ---
 
-## 主要贡献者
+## 贡献
 
-- [我](https://vector-wangel.github.io/)。
-- 王跃嵩: Mujoco仿真
+**👋 想要贡献？**
+请参考[CONTRIBUTING.md](CONTRIBUTING.md)了解如何参与！
+
+**主要贡献者**
+
+- [Gaotian/Vector Wang](https://vector-wangel.github.io/)(我自己)
+- Zhuoyi Lu: RL sim2real部署，真实机器人遥操作(Xbox, VR, Joycon)
+- Nicole Yue: 文档网站设置
+- Yuesong Wang: Mujoco仿真资源
 
 这只是金字塔中的一小块砖，由[LeRobot](https://github.com/huggingface/lerobot)、[SO-100](https://github.com/TheRobotStudio/SO-ARM100)、[Lekiwi](https://github.com/SIGRobotics-UIUC/LeKiwi)和[Bambot](https://github.com/timqian/bambot)共同实现。感谢这些详细且专业项目背后所有才华横溢的贡献者。
 
@@ -154,7 +158,7 @@
 
 ```
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian},
+    author = {Wang, Gaotian and Lu, Zhuoyi},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
     howpublished = "\\url{<https://github.com/Vector-Wangel/XLeRobot>}",
     year = {2025}
@@ -168,6 +172,8 @@
 
 > 如果您基于此仓库构建、购买或开发XLeRobot，您将对其对您或他人造成的所有物理和精神损害负全部责任。
 >
+
+![image](https://github.com/user-attachments/assets/682ef049-bb42-4b50-bf98-74d6311e774d)
 
 ---
 

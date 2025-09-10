@@ -107,7 +107,7 @@ Put the XLeRobot files into Maniskill folders:
 #### Get Moving
 
 ```{note}
-Change shader="default" to "rt-fast" for photo-realisitic ray-tracing rendering (but slower).
+Change shader="default" to "rt-fast" for photo-realistic ray-tracing rendering (but slower).
 ```
 
 ##### Joint Control

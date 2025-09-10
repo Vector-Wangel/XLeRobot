@@ -61,4 +61,6 @@ Demo made by Mitchell Chen
   Your browser does not support the video tag.
 </video>
 
-### Community
+### Community Demo
+
+Welcome everyone to contribute here! You can directly add your demos here by modifying [this file](https://github.com/Vector-Wangel/XLeRobot/edit/main/docs/en/source/demos/index.md) and submitting the pull request in github.

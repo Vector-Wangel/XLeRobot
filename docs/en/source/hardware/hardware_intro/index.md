@@ -2,7 +2,7 @@
 
 **XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
-= 2x SO-100/SO-101 Arms + 3x omni wheels + RasberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
+= 2x SO-100/SO-101 Arms + 3x omni wheels + RaspberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 #### 📜Basic Specs
 
@@ -12,7 +12,7 @@
     - Width range: ~0.36m from the cart edge.
     - Capable of many household tasks.
 - **Battery**🔋:
-    - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RasberryPi (~180W max)
+    - 300W max out: sufficient for powering 12V version dual arm + lekiwi base + RaspberryPi (~180W max)
     - 288Wh capacity: can normally operate for 10hrs+
     - 280W max in: 1hr to get fully charged
     - Optional solar panels☀: for endless recharging

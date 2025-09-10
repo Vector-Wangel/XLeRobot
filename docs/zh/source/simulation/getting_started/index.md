@@ -1,12 +1,5 @@
 # 开始使用
 
-这是键盘末端执行器控制的完整视频
-
-<video width="100%" style="max-width: 100%;" controls>
-  <source src="https://github.com/user-attachments/assets/b8e630bd-1133-4941-acd1-d974f60098ff" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
 ### 前提条件
 
 - Ubuntu操作系统
@@ -20,7 +13,7 @@
 如果您已经有一个`lerobot` conda环境，可以使用该环境。否则，创建一个新环境：
 
 ```bash
-conda create -y -n lerobot python=3.10
+conda create -y -n lerobot python=3.11
 conda activate lerobot
 
 ```
@@ -48,12 +41,12 @@ python -m mani_skill.utils.download_asset "ReplicaCAD"
 
 ```
 
-使用[快速入门指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)和[演示脚本](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)来熟悉ManiSkill。
+使用[快速入门指南](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)和[演示脚本](https://maniskill.readthedocs.io/en/latest/user_guide/getting_started/quickstart.html)熟悉ManiSkill。
 
-尝试运行此命令来测试您是否成功安装了Maniskill：
+尝试此命令来测试您是否成功安装了ManiSkill：
 
 ```{note}
-如果您的计算机不支持光线追踪渲染，请将shader="rt-fast"改为"default"。
+将shader="rt-fast"更改为"default"以获得更快的渲染，或者如果您的计算机不支持光线追踪渲染。
 ```
 
 ```bash
@@ -75,7 +68,11 @@ pip install pygame
 pip install rerun-sdk
 ```
 
-#### 4. 替换机器人文件
+#### 4. 将XLeRobot文件放入ManiSkill
+
+```{note}
+我们期待ManiSkill很快为XLeRobot提供官方支持，之后可以跳过此步骤。
+```
 
 导航到您conda环境中的ManiSkill包文件夹：
 
@@ -83,39 +80,68 @@ pip install rerun-sdk
 cd ~/miniconda3/envs/lerobot/lib/python3.10/site-packages/mani_skill
 ```
 
-用XLeRobot文件替换fetch机器人代码和资源：
+将XLeRobot文件放入ManiSkill文件夹：
 
-1. 在[这里下载**XLeRobot的替换文件**](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill)：
-2. 替换/agents、/assets和/envs/scenes中的文件：
+1. 在[这里下载**XLeRobot机器人文件**](https://github.com/Vector-Wangel/XLeRobot/tree/main/simulation/Maniskill)：
+2. 将文件放入/agents/robots、/assets/robots和/envs/scenes：
+   ![image](https://github.com/user-attachments/assets/59ae0104-7b9b-441a-a526-e9d0e2f99278)
+   
+   ![image](https://github.com/user-attachments/assets/a9107171-193b-485c-9620-f453e03f8f56)
+
+   ![image](https://github.com/user-attachments/assets/f3d6072e-225e-4fe8-8b58-4f99e63b0e22)
+
+   将XLeRobot机器人描述文件放入/agents/robots后，在/agents/robots/init.py中添加这一行
+   ![image](https://github.com/user-attachments/assets/89c8fd71-2306-4963-8717-257795d8f8f1)
     
-    ![image](https://github.com/user-attachments/assets/2675fb26-0302-45ec-a994-d4133ce8c239)
+4. 将控制代码添加到/examples：
     
-    ![image](https://github.com/user-attachments/assets/5a85d244-b342-45f5-bfa3-72f1ce11c83a)
+    ![image](https://github.com/user-attachments/assets/7b3c955e-bfa2-403e-9eb5-a3b3f9b52117)
+
     
-3. 将控制代码添加到/examples：
-    
-    ![image](https://github.com/user-attachments/assets/654556ab-473f-44d2-8ff7-107c346882c6)
+5. 修改utils/scene_builder/replicacad/scenebulider.py：对于新的机器人id，您需要先将它们添加到ReplicaCAD场景中。
+
+   ![image](https://github.com/user-attachments/assets/2beda6c3-71aa-4574-851b-e4e989fd4b6a)
     
 
 #### 开始运行
 
 ```{note}
-如果您的计算机不支持光线追踪渲染，请将shader="rt-fast"改为"default"。
+将shader="default"更改为"rt-fast"以获得照片级真实感光线追踪渲染(但更慢)。
 ```
 
 ##### 关节控制
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+python -m mani_skill.examples.demo_ctrl_action -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
 
 ```
 ![image](https://github.com/user-attachments/assets/11f6d417-9d1b-45d7-84c7-58b9d1611922)
 
-##### 通过Rerun进行末端执行器控制和相机可视化
+
+
+##### 末端执行器控制 
+
+原始双臂版本：
 
 ```bash
-python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1"   --render-mode="human" --shader="rt-fast" -c "pd_joint_delta_pos_dual_arm"
+python -m mani_skill.examples.demo_ctrl_action_ee_keyboard -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
 
 ```
+
+单臂版本：
+
+```
+python -m mani_skill.examples.demo_ctrl_action_ee_keyboard_single -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot_single"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos"
+```
+
+通过Rerun进行相机可视化：
+
+```bash
+python -m mani_skill.examples.demo_ctrl_action_ee_cam_rerun -e "ReplicaCAD_SceneManipulation-v1" -r "xlerobot"  --render-mode="human" --shader="default" -c "pd_joint_delta_pos_dual_arm"
+
+```
+
+
+
 ![image](https://github.com/user-attachments/assets/12129988-e386-4d71-b1b2-79fe8492f419)
 

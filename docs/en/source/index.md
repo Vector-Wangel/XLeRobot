@@ -56,7 +56,7 @@ Assembly kit ready for purchase soon, stay tuned!
 Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA environments. Get started in 15 min.
 -  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
-- 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more orgainized turotials, demos and resources.
+- 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more organized tutorials, demos and resources.
 
 - 2025-06-13: [**XLeRobot 0.2.0**](https://xlerobot.readthedocs.io) hardware setup fully capable for household tasks, with 660$ cost. 
 
@@ -67,7 +67,7 @@ Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA env
 | --- | --- | --- | --- |
 | **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
 | ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RasberryPi | +$79 | +€79 | +¥399 |
+| + RaspberryPi | +$79 | +€79 | +¥399 |
 | ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 Assembly kit ready for purchase soon, stay tuned!

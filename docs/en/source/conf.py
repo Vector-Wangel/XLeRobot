@@ -12,7 +12,7 @@ import sys
 project = 'XLeRobot'
 copyright = "2025, XLeRobot Contributors"
 author = 'Vector & Nicole'
-release = '0.1'
+release = '0.3.0'
 
 import importlib.util
 import logging

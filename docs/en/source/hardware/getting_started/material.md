@@ -3,14 +3,14 @@
 ## 💵 Total Cost 
 
 ```{note}
-Doesn't include cost of 3D printing, tools, shippings and taxes.
+Doesn't include cost of 3D printing, tools, shipping and taxes.
 ```
 
 | Price | US | EU | CN |
 | --- | --- | --- | --- |
 | **Basic** (use your laptop, single RGB head cam) | **~$660** | **~€680** | **~¥3999** |
 | ↑ Stereo dual-eye RGB head cam | +$30 | +€30 | +¥199 |
-| + RasberryPi | +$79 | +€79 | +¥399 |
+| + RaspberryPi | +$79 | +€79 | +¥399 |
 | ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 |
 
 
@@ -51,7 +51,7 @@ Skip this section if you already have these tools:
 
 ![image](https://github.com/user-attachments/assets/ee012d47-f2a9-495c-a156-01bf92b2e63b)
 
-- XLeRobot is designed to be pratical, which is why it only comes in a 12V version. You can also purchase for [STS3250 servo](https://shop.wowrobo.com/products/feetech-sts3250-c002-servo-12v-50kg-1-345-servo) (1.5x torque, 3x price) for extreme performance.
+- XLeRobot is designed to be practical, which is why it only comes in a 12V version. You can also purchase for [STS3250 servo](https://shop.wowrobo.com/products/feetech-sts3250-c002-servo-12v-50kg-1-345-servo) (1.5x torque, 3x price) for extreme performance.
 - 17 motors = 12 for arms + 3 for base + 2 for head.
 - Any battery/power bank/power station that supports two 60W+ USB-C fast charging should work. Here are some other potential options (not tested), these brands should be available both in US and China.
   - [UGREEN 300W 48000mAh Power Bank](https://www.ugreen.com/products/ugreen-300w-48000mah-portable-charger-power-bank?gad_source=1&gad_campaignid=22334559506&gbraid=0AAAAAokPG3uYEJ4xHLZ1A5FoS_1cCYYRO&gclid=CjwKCAjwq9rFBhAIEiwAGVAZP_WRyKyLoZsEkLylqFw3KlfsLzoJ5NMiHtnRrRCAHs69uGl3R8McnBoCL-gQAvD_BwE)
@@ -89,7 +89,7 @@ Skip this section if you already have these tools:
 
 ![image](https://github.com/user-attachments/assets/0f5a10ce-d0e9-4e53-b457-27a9ba057cbf)
 
-## 🧑‍🤝‍🧑 Alternative chioces 
+## 🧑‍🤝‍🧑 Alternative choices 
 
 - **IKEA Cart**: You can use a similar cart not from IKEA; however, this may require minor adjustments to the base connector in [3D printed parts](https://github.com/Vector-Wangel/XLeRobot/tree/main/hardware).
 - **Batteries**: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms and 3 wheels(~120W=60W*2 ports) (and a RaspberryPi (40W) if you have one).

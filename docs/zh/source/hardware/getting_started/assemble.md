@@ -24,7 +24,7 @@
 
 ![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
-> 由于官方lerobot代码库目前不支持除手臂外的电机配置，我们使用[Bambot](https://bambot.org/)代替。
+> 由于官方lerobot代码库目前不支持除手臂外的电机配置，我们使用[Bambot](https://bambot.org/)代替(在Windows和Mac上工作，Linux需要先运行'sudo chmod 666 /dev/ttyACM0')。
 >
 
 - 将你想要配置的电机(逐个)连接到控制板，并直接将板子连接到你的计算机。
@@ -148,11 +148,29 @@
 
 ![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
 
+完成这些步骤后，XLeRobot应该在物理上组装良好，准备做一些家务。
+
+![image](https://github.com/user-attachments/assets/4efa2b31-627c-4f62-9977-d6a50d8dce0e)
+
 ![image](https://github.com/user-attachments/assets/1d553e6a-dad6-4b17-bc82-e4d6d3e2ecc8)
 
 ```{important}
 XLeRobot完全组装后，不要像宜家推车那样推着它到处走，因为这可能损坏电机齿轮。相反，当你需要手动移动时，请抬起机器人(~12kg)。
 ```
+```{note}
+当前形式的轮连接器不够坚固，偶尔可能需要重新拧紧中心螺丝。
+```
+### 可选视觉升级
+
+为了更好的视觉效果，如果您喜欢，可以为XLeRobot穿戴这些零件。
+
+![image](https://github.com/user-attachments/assets/91491f62-a466-4421-ac9b-db3492849a89)
+
+- **外壳**用于控制板和第一个关节，提供更好的保护和视觉效果。
+  - 在将第二个外壳穿到手臂上之前，您可能需要先取下手部相机。
+- 运动袖套用于隐藏线缆，使XLeRobot更加时尚。
+  
+![image](https://github.com/user-attachments/assets/9847f2a6-f79a-4899-bd20-64a25c709660)
 
 
 
