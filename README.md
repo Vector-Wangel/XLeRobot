@@ -1,3 +1,35 @@
+
+<div align="right">
+  <details>
+    <summary >🌐 Language</summary>
+    <div>
+      <div align="center">
+        <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=en">English</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=zh-CN">简体中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=zh-TW">繁體中文</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=ja">日本語</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=ko">한국어</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=hi">हिन्दी</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=th">ไทย</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=fr">Français</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=de">Deutsch</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=es">Español</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=it">Italiano</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=ru">Русский</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=pt">Português</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=nl">Nederlands</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=pl">Polski</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=ar">العربية</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=fa">فارسی</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=tr">Türkçe</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=vi">Tiếng Việt</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=id">Bahasa Indonesia</a>
+        | <a href="https://openaitx.github.io/view.html?user=Vector-Wangel&project=XLeRobot&lang=as">অসমীয়া</
+      </div>
+    </div>
+  </details>
+</div>
+
 # [XLeRobot 🤖](https://xlerobot.readthedocs.io/en/latest/index.html)
 
 [![en](https://img.shields.io/badge/lang-en-blue.svg)](README.md)
