@@ -13,9 +13,11 @@ import time
 import logging
 import traceback
 import math
+import sys
 import cv2
 import numpy as np
 import threading
+from queue import Queue, Empty
 from ultralytics import YOLOE
 
 # Set up logging
@@ -283,8 +285,40 @@ def video_stream_loop(model, cap, target_objects=None):
     print("Video stream ended")
     cv2.destroyAllWindows()
 
-def p_control_loop(
-    robot, keyboard, target_positions, start_positions, current_x, current_y, kp=0.5, control_freq=50
+# Shared frame queue for thread-safe communication
+frame_queue = Queue(maxsize=2)  # Keep only latest 2 frames
+def yolo_inference_thread(model, cap, frame_queue):
+    """
+    Sub-thread: Read camera, run YOLO inference, put result in queue
+    """
+    while True:
+        try:
+            ret, frame = cap.read()
+            if not ret:
+                continue
+            
+            # Run YOLO inference
+            results = model(frame)
+            if results and hasattr(results[0], 'boxes') and results[0].boxes:
+                annotated_frame = results[0].plot()
+            else:
+                annotated_frame = frame
+            
+            # Put in queue (non-blocking, drop old frames)
+            if frame_queue.full():
+                try:
+                    frame_queue.get_nowait()  # Remove oldest
+                except Empty:
+                    pass
+            frame_queue.put_nowait(annotated_frame)
+            
+        except Exception as e:
+            print(f"YOLO thread error: {e}")
+            time.sleep(0.1)
+
+
+def p_control_and_display_loop(
+    robot, keyboard, target_positions, start_positions, current_x, current_y, kp=0.5, control_freq=50, is_macos_display=False
 ):
     """
     P control loop - identical to 5_so100_keyboard_ee_control.py
@@ -306,9 +340,27 @@ def p_control_loop(
     pitch_step = 1  # Pitch adjustment step size
 
     print(f"Starting P control loop, control frequency: {control_freq}Hz, proportional gain: {kp}")
-
+    
+    
     while True:
         try:
+            # Display frame in main thread (macOS requirement)
+            # Sub-thread does YOLO inference, we just show the result
+            if is_macos_display:
+                try:
+                    # Get latest annotated frame from queue (non-blocking)
+                    annotated_frame = frame_queue.get_nowait()
+                    cv2.imshow("YOLO Live Detection", annotated_frame)
+                    
+                    # Check for quit key
+                    key = cv2.waitKey(1) & 0xFF
+                    if key == ord("q") or key == 27:
+                        print("Video window closed, exiting...")
+                        return
+                except Empty:
+                    # No frame ready yet, just update window
+                    cv2.waitKey(1)
+            
             # Get keyboard input
             keyboard_action = keyboard.get_action()
 
@@ -383,12 +435,12 @@ def p_control_loop(
                     -target_positions["shoulder_lift"] - target_positions["elbow_flex"] + pitch
                 )
                 # Show current pitch value (display every 100 steps to avoid screen flooding)
-                if hasattr(p_control_loop, "step_counter"):
-                    p_control_loop.step_counter += 1
+                if hasattr(p_control_and_display_loop, "step_counter"):
+                    p_control_and_display_loop.step_counter += 1
                 else:
-                    p_control_loop.step_counter = 0
+                    p_control_and_display_loop.step_counter = 0
 
-                if p_control_loop.step_counter % 100 == 0:
+                if p_control_and_display_loop.step_counter % 100 == 0:
                     print(
                         f"Current pitch adjustment: {pitch:.3f}, wrist_flex target: {target_positions['wrist_flex']:.3f}"
                     )
@@ -519,7 +571,7 @@ def main():
         print(f"Initialize end effector position: x={current_x:.4f}, y={current_y:.4f}")
         
         # Initialize YOLO and camera
-        model = YOLOE("yoloe-11l-seg.pt")  # or select yoloe-11s/m-seg.pt for different sizes
+        model = YOLOE("yoloe-11s-seg.pt")  # or select yoloe-11s/m-seg.pt for different sizes
         
         # Get detection targets from user input
         print("\n" + "="*60)
@@ -572,16 +624,34 @@ def main():
         print("")
         print("Video stream:")
         print("- Independent YOLO detection display (no robot control)")
-        print("- Q (in YOLO window): Exit video stream")
+        print("- Q (in YOLO window): Exit video and return to start position")
         print("="*60)
-        print("Note: Video stream and keyboard control are completely independent")
+        print("Note: YOLO runs in sub-thread, main thread displays and controls robot")
         
-        # Start video stream in a separate thread
-        video_thread = threading.Thread(target=video_stream_loop, args=(model, cap, target_objects), daemon=True)
-        video_thread.start()
+        # Start keyboard control loop with vision display
+        # macOS: Main thread control and displays, sub-thread infers
+        # Linux/Windows: Sub-thread handles everything
+        use_main_thread_display = sys.platform == "darwin"
+        vision_enabled = model is not None and cap is not None
         
-        # Start keyboard control loop (main thread)
-        p_control_loop(robot, keyboard, target_positions, start_positions, current_x, current_y, kp=0.5, control_freq=50)
+        if vision_enabled:
+            if use_main_thread_display:
+                print("Starting YOLO inference in sub-thread (macOS mode)...")
+                inference_thread = threading.Thread(
+                    target=yolo_inference_thread, 
+                    args=(model, cap, frame_queue),
+                    daemon=True
+                )
+                inference_thread.start()
+                
+            else:
+                print("Starting video stream in sub-thread (Linux/Windows mode)...")
+                video_thread = threading.Thread(target=video_stream_loop, 
+                                              args=(model, cap, target_objects), daemon=True)
+                video_thread.start()
+                             
+        p_control_and_display_loop(robot, keyboard, target_positions, start_positions, 
+                        current_x, current_y, kp=0.5, control_freq=50, is_macos_display=vision_enabled and use_main_thread_display)
         
         # Disconnect
         robot.disconnect()
