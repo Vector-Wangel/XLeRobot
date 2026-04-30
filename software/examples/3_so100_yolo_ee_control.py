@@ -626,7 +626,8 @@ def main():
         print("- Independent YOLO detection display (no robot control)")
         print("- Q (in YOLO window): Exit video and return to start position")
         print("="*60)
-        print("Note: YOLO runs in sub-thread, main thread displays and controls robot")
+        print("Note: Linux/Windows: Video stream and keyboard control are completely independent")
+        print("Note: MacOS: YOLO runs in sub-thread, main thread displays and controls robot")
         
         # Start keyboard control loop with vision display
         # macOS: Main thread control and displays, sub-thread infers
