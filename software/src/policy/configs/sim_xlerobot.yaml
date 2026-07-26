@@ -1,0 +1,30 @@
+# Sim robot config: Genesis-simulated bimanual XLeRobot.
+# Swap this file for real_xlerobot.yaml to run the same policy on hardware.
+robot:
+  type: genesis_xlerobot
+  state_units: degrees
+  sim_config:
+    scene:
+      name: plane
+      dt: 0.01
+      show_viewer: false
+    robot:
+      name: xlerobot
+    cameras:
+      head:
+        type: realsense
+        mount: head
+        res: [640, 480]
+        fov: 60.0
+      right_wrist:
+        type: opencv
+        mount: right_wrist
+        res: [640, 480]
+        fov: 60.0
+      left_wrist:
+        type: opencv
+        mount: left_wrist
+        res: [640, 480]
+        fov: 60.0
+    control:
+      name: pd

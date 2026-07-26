@@ -1,0 +1,29 @@
+# Real robot config: bimanual XLeRobot on hardware.
+# Same schema/state layout as sim_xlerobot.yaml; the runner builds this via
+# lerobot's make_robot_from_config (requires the real `xlerobot` robot package to
+# be registered in the lerobot install). Swapping this file for sim_xlerobot.yaml
+# runs the identical policy in simulation. Device paths below are placeholders.
+robot:
+  type: xlerobot
+  port1: /dev/ttyACM0
+  port2: /dev/ttyACM1
+  use_degrees: true
+  cameras:
+    head:
+      type: intelrealsense
+      serial_number_or_name: "REPLACE_WITH_SERIAL"
+      width: 640
+      height: 480
+      fps: 30
+    right_wrist:
+      type: opencv
+      index_or_path: /dev/video0
+      width: 640
+      height: 480
+      fps: 30
+    left_wrist:
+      type: opencv
+      index_or_path: /dev/video2
+      width: 640
+      height: 480
+      fps: 30

@@ -1,0 +1,33 @@
+# Policy run config: the single-arm ACT pick-and-place policy on XLeRobot.
+# `robot_config` selects sim vs real (both present the 17-DOF XLeRobot interface).
+policy:
+  path: sai-chand-gubbala/act-pick-and-place-dry-run
+  device: cuda
+
+robot_config: sim_xlerobot.yaml   # swap to real_xlerobot.yaml for hardware
+
+task: "Pick and place"
+duration_steps: 400
+
+# The policy is single-arm 6-DOF; the robot is bimanual 17-DOF. This mapping bridges
+# them: which robot state keys feed the policy, which robot cameras map to the policy's
+# camera inputs, and which robot action keys the policy output drives (others are held).
+mapping:
+  image_hw: [480, 640]           # (H, W) the policy expects
+  state_keys:                    # robot obs -> policy observation.state (order matters)
+    - right_arm_shoulder_pan.pos
+    - right_arm_shoulder_lift.pos
+    - right_arm_elbow_flex.pos
+    - right_arm_wrist_flex.pos
+    - right_arm_wrist_roll.pos
+    - right_arm_gripper.pos
+  action_keys:                   # policy action -> robot action keys (same 6, right arm)
+    - right_arm_shoulder_pan.pos
+    - right_arm_shoulder_lift.pos
+    - right_arm_elbow_flex.pos
+    - right_arm_wrist_flex.pos
+    - right_arm_wrist_roll.pos
+    - right_arm_gripper.pos
+  cameras:                       # policy image key -> robot camera key
+    head: head
+    wrist: right_wrist
