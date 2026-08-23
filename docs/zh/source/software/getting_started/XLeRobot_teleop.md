@@ -37,4 +37,17 @@
 
 ### 8. VR遥操作
 
-您可以先尝试[在仿真中用VR控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html)。真实机器人的VR遥操作官方代码即将推出。
+您可以先尝试[在仿真中用VR控制XLeRobot](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html)。
+
+真实机器人请运行 [8_xlerobot_teleop_vr.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/8_xlerobot_teleop_vr.py)。双臂跟随手柄，扳机控制夹爪，右摇杆驱动底盘。[software/src/teleporators/xlerobot_vr](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src/teleporators/xlerobot_vr) 还提供了遵循 `teleop_keyboard` 格式的 `Teleoperator` 子类。
+
+该脚本会在自己的进程内启动 [XLeVR](https://github.com/Vector-Wangel/XLeRobot/tree/main/XLeVR)，因此头显连接的是运行该示例的那台机器。运行前需要准备四点：
+
+- 把 `XLeVR` 目录本身加入 `PYTHONPATH`，否则 `from vr_monitor import VRMonitor` 无法解析
+- 在与 `lerobot` 相同的环境中安装 `pygame`、`scipy` 和 `websockets`
+- 给 `XLerobotConfig()` 传入 `id` 和串口路径。不传 `id` 时标定文件会被当作 `None.json` 查找，`connect()` 会启动 17 个舵机的交互式标定，而不是恢复已保存的标定
+- 重新生成 `cert.pem` / `key.pem`。仓库自带的证书已于 2026-06-27 过期且没有 `subjectAltName`。删除它们也没用，因为 HTTPS 服务器先于 WebSocket 服务器启动，而它并不调用 `ensure_ssl_certificates`
+
+在头显浏览器中需要**分别**信任 `https://<host>:8443`（网页界面）和 `https://<host>:8442`（WebSocket）两个证书。`vr_app.js` 中写死了端口 8442，只信任 8443 会导致 WebSocket 静默连接失败。
+
+已在真实 XLeRobot（双 SO-101 机械臂、云台头部、三轮全向底盘）上验证，由 Raspberry Pi 5 驱动，头显为 Quest 3S。

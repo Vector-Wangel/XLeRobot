@@ -39,4 +39,17 @@ Intuitive gamepad control for the full XLeRobot system. Run [5_xlerobot_teleop_x
 
 ### VR Teleop
 
-You can try [controlling XLeRobot with VR in simulation](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html) first. The offical code for VR teleop the real robot is coming soon. 
+You can try [controlling XLeRobot with VR in simulation](https://xlerobot.readthedocs.io/en/latest/simulation/getting_started/vr_sim.html) first.
+
+For the real robot, run [8_xlerobot_teleop_vr.py](https://github.com/Vector-Wangel/XLeRobot/blob/main/software/examples/8_xlerobot_teleop_vr.py). Both arms follow the controllers, the trigger drives the gripper, and the right thumbstick drives the base. There is also a `Teleoperator` subclass at [software/src/teleporators/xlerobot_vr](https://github.com/Vector-Wangel/XLeRobot/tree/main/software/src/teleporators/xlerobot_vr) that follows the `teleop_keyboard` format.
+
+The script starts [XLeVR](https://github.com/Vector-Wangel/XLeRobot/tree/main/XLeVR) inside its own process, so the headset connects to whichever machine runs the example. Four things to set up first:
+
+- put the `XLeVR` directory itself on `PYTHONPATH`, so `from vr_monitor import VRMonitor` resolves
+- install `pygame`, `scipy` and `websockets` into the same environment as `lerobot`
+- pass `id` and the serial ports to `XLerobotConfig()`. Without `id` the calibration file is looked up as `None.json`, and `connect()` starts the 17-motor interactive calibration instead of restoring the saved one
+- regenerate `cert.pem` / `key.pem`. The bundled certificate expired on 2026-06-27 and carries no `subjectAltName`. Deleting them does not help, because the HTTPS server starts before the WebSocket server and is the only one that does not call `ensure_ssl_certificates`
+
+In the headset browser, accept the certificate for **both** `https://<host>:8443` (web UI) and `https://<host>:8442` (WebSocket). `vr_app.js` hardcodes port 8442, and accepting 8443 alone leaves the WebSocket silently unable to connect.
+
+Tested on a real XLeRobot (dual SO-101 arms, head pan-tilt, 3-wheel omni base) driven from a Raspberry Pi 5 with a Quest 3S.
