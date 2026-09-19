@@ -9,18 +9,27 @@
 如果您还没有配置[SO101手臂](https://huggingface.co/docs/lerobot/so101#configure-the-motors)和[其他电机](https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble.html#configure-motors)的电机，请进行配置。
 
 
-## 移动XLeRobot文件 
+## 安装XLeRobot插件
 
-打开已安装的lerobot文件夹并：
+XLeRobot以一组LeRobot插件的形式提供：一个包含SO101运动学工具的共享模块，以及每种机器人底盘和遥操作方式各自对应的插件。
 
-将我的SO101机器人解析逆运动学求解器移动到/model文件夹
-![image](https://github.com/user-attachments/assets/87248f48-b118-470d-8e57-2b7111f054ed)
+克隆本仓库，然后安装共享模块和您需要的插件：
 
-将xlerobot机器人文件夹移动到/robots文件夹。
-![image](https://github.com/user-attachments/assets/335d571a-a14d-4466-b439-8384517f607b)
+```bash
+git clone https://github.com/Vector-Wangel/XLeRobot.git
+cd XLeRobot
+
+pip install -e software/plugins/xlerobot_model
+pip install -e software/plugins/lerobot_robot_xlerobot          # 三全向轮底盘
+pip install -e software/plugins/lerobot_robot_xlerobot_2wheels  # 双轮差速驱动底盘
+pip install -e software/plugins/lerobot_robot_xlerobot_mecanum  # 麦克纳姆轮底盘
+pip install -e software/plugins/lerobot_teleoperator_xlerobot_vr  # VR遥操作
+```
 
 ```{note}
-如果您想基于树莓派构建，请在__init__.py中取消注释xlerobot_host和xlerobot_client。
+如果您想基于树莓派构建，请在`software/src/robots/`下对应插件的`__init__.py`中取消注释`xlerobot_host`和`xlerobot_client`。
 ```
-将所有示例代码移动到/example文件夹。
-![image](https://github.com/user-attachments/assets/f6e89ff4-7361-408a-83c6-d320bb23da98)
+
+`--robot.type=xlerobot` / `xlerobot_2wheels` / `xlerobot_mecanum`
+和`--teleop.type=xlerobot_vr`现在可以在任何标准的LeRobot命令行工具中使用
+（`lerobot-teleoperate`、`lerobot-record`等）。

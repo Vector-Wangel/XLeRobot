@@ -26,7 +26,7 @@ import zmq
 
 from lerobot.utils.errors import DeviceAlreadyConnectedError, DeviceNotConnectedError
 
-from ..robot import Robot
+from lerobot.robots.robot import Robot
 from .config_xlerobot import XLerobotConfig, XLerobotClientConfig
 
 

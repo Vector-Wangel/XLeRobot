@@ -20,9 +20,9 @@ import numpy as np
 
 # Local imports
 from XLeVR.vr_monitor import VRMonitor
-from lerobot.robots.xlerobot import XLerobotConfig, XLerobot
+from lerobot_robot_xlerobot import XLerobotConfig, XLerobot
 from lerobot.utils.robot_utils import precise_sleep
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 from lerobot.utils.constants import ACTION, OBS_STR
 from lerobot.datasets.utils import hw_to_dataset_features, build_dataset_frame

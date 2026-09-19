@@ -32,9 +32,9 @@ from typing import Any, Dict, Optional
 import numpy as np
 
 # from lerobot.errors import DeviceAlreadyConnectedError, DeviceNotConnectedError
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 
-from ..teleoperator import Teleoperator
+from lerobot.teleoperators.teleoperator import Teleoperator
 from .configuration_xlerobot_vr import XLerobotVRTeleopConfig
 
 # Setup logging

@@ -17,7 +17,7 @@
 from dataclasses import dataclass
 from typing import Optional
 
-from ..config import TeleoperatorConfig
+from lerobot.teleoperators.config import TeleoperatorConfig
 
 
 @TeleoperatorConfig.register_subclass("xlerobot_vr")

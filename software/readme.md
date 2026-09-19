@@ -1,6 +1,9 @@
 ## Updates
 
-This folder mimics the official lerobot folder with XLeRobot robot file, configs and demo codes.
+This folder holds XLeRobot's robot code, configs, and demo scripts. `src/robots/`
+and `src/model/` install into LeRobot as plugins - see
+[`plugins/README.md`](plugins/README.md) and
+[the install guide](https://xlerobot.readthedocs.io/en/latest/software/getting_started/install.html).
 
 - SO100/SO101 control codes: These codes should be compatible to both SO100 and SO101, even if you just keep the name in the codes as so100. 
 

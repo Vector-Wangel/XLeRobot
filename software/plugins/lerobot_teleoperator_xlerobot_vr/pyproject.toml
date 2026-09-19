@@ -1,0 +1,16 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lerobot_teleoperator_xlerobot_vr"
+version = "0.1.0"
+description = "XLeRobot VR teleoperator plugin for lerobot (TeleoperatorConfig.register_subclass 'xlerobot_vr')"
+requires-python = ">=3.10"
+dependencies = [
+    "lerobot",
+    "xlerobot_model",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["lerobot_teleoperator_xlerobot_vr"]

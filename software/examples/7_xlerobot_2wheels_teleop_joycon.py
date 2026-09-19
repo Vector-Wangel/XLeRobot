@@ -1,11 +1,11 @@
 # To Run on the host
 '''
-PYTHONPATH=src python -m lerobot.robots.xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
+python -m lerobot_robot_xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
 '''
 
 # To Run the teleop:
 '''
-PYTHONPATH=src python -m examples.xlerobot_2wheels.teleoperate_joycon
+python examples/7_xlerobot_2wheels_teleop_joycon.py
 '''
 
 # Base speed control instructions:
@@ -21,11 +21,11 @@ import time
 import numpy as np
 import math
 
-from lerobot.robots.xlerobot_2wheels import XLerobot2WheelsConfig, XLerobot2Wheels
+from lerobot_robot_xlerobot_2wheels import XLerobot2WheelsConfig, XLerobot2Wheels
 # from lerobot.utils.robot_utils import busy_wait
 from lerobot.utils.robot_utils import precise_sleep
 from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 from joyconrobotics import JoyconRobotics
 
 LEFT_JOINT_MAP = {
