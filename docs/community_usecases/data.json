@@ -39,7 +39,8 @@
           "url": "https://github.com/ranegray/pincer"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2603.09051v2"
+      "evidence_url": "https://arxiv.org/html/2603.09051v2",
+      "image_key": "paper_cuttingcord"
     },
     {
       "id": "nori-bot",
@@ -67,7 +68,8 @@
           "url": "https://arxiv.org/html/2605.16537v1"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2605.16537v1"
+      "evidence_url": "https://arxiv.org/html/2605.16537v1",
+      "image_key": "paper_nori_v1"
     },
     {
       "id": "anchorvla4d",
@@ -99,7 +101,8 @@
           "url": "https://arxiv.org/html/2603.12730v1"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2603.12730v1"
+      "evidence_url": "https://arxiv.org/html/2603.12730v1",
+      "image_key": "paper_anchorvla4d"
     },
     {
       "id": "xs-vla",
@@ -132,7 +135,8 @@
           "url": "https://arxiv.org/html/2607.04171v3"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2607.04171v3"
+      "evidence_url": "https://arxiv.org/html/2607.04171v3",
+      "image_key": "paper_xsvla"
     },
     {
       "id": "mars-ra",
@@ -165,7 +169,8 @@
           "url": "https://aclanthology.org/2026.acl-long.1349.pdf"
         }
       ],
-      "evidence_url": "https://aclanthology.org/2026.acl-long.1349.pdf"
+      "evidence_url": "https://aclanthology.org/2026.acl-long.1349.pdf",
+      "image_key": "paper_marsra"
     },
     {
       "id": "low-cost-teleop",
@@ -250,7 +255,8 @@
           "url": "https://lehome-web.github.io/"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2604.22363v1"
+      "evidence_url": "https://arxiv.org/html/2604.22363v1",
+      "image_key": "paper_lehome"
     },
     {
       "id": "piphen",
@@ -278,7 +284,8 @@
           "url": "https://arxiv.org/html/2511.16200v1"
         }
       ],
-      "evidence_url": "https://arxiv.org/html/2511.16200v1"
+      "evidence_url": "https://arxiv.org/html/2511.16200v1",
+      "image_key": "paper_piphen"
     },
     {
       "id": "elasticflow",
@@ -307,7 +314,8 @@
           "url": "https://aclanthology.org/2026.findings-acl.1186.pdf"
         }
       ],
-      "evidence_url": "https://aclanthology.org/2026.findings-acl.1186.pdf"
+      "evidence_url": "https://aclanthology.org/2026.findings-acl.1186.pdf",
+      "image_key": "paper_elasticflow"
     }
   ],
   "projects": [
@@ -512,7 +520,8 @@
           "url": "https://ambient-robots.github.io/xlerobot_pinc/"
         }
       ],
-      "evidence_url": "https://github.com/ambient-robots/xlerobot_pinc/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/ambient-robots/xlerobot_pinc/blob/HEAD/README.md",
+      "image_key": "project_xlerobot_pinc"
     },
     {
       "source_index": 14,
@@ -535,7 +544,8 @@
           "url": "https://github.com/APLUX-Official/XLerobot-X1"
         }
       ],
-      "evidence_url": "https://github.com/APLUX-Official/XLerobot-X1/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/APLUX-Official/XLerobot-X1/blob/HEAD/README.md",
+      "image_key": "project_xlerobot_x1"
     },
     {
       "source_index": 17,
@@ -609,7 +619,8 @@
           "url": "https://www.alexkoven.com/project/grievous/"
         }
       ],
-      "evidence_url": "https://www.alexkoven.com/project/grievous/"
+      "evidence_url": "https://www.alexkoven.com/project/grievous/",
+      "image_key": "project_grievous"
     },
     {
       "source_index": 21,
@@ -678,7 +689,8 @@
           "url": "https://github.com/Qifei-C/xlerobot_gazebo"
         }
       ],
-      "evidence_url": "https://github.com/Qifei-C/xlerobot_gazebo/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/Qifei-C/xlerobot_gazebo/blob/HEAD/README.md",
+      "image_key": "project_xlerobot_gazebo"
     },
     {
       "source_index": 25,
@@ -885,7 +897,8 @@
           "url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder"
         }
       ],
-      "evidence_url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder/blob/HEAD/README.md",
+      "image_key": "project_kinesthetic_recorder"
     },
     {
       "source_index": 36,
@@ -965,7 +978,7 @@
         }
       ],
       "evidence_url": "https://github.com/Astera-org/brainbot/blob/HEAD/README.md",
-      "image_key": "vbrain"
+      "image_key": "project_brainbot"
     },
     {
       "source_index": 40,
@@ -1039,7 +1052,8 @@
           "url": "https://github.com/OneRobotAI/xlerobot/blob/main/docs/en/source/fold_tower.mp4"
         }
       ],
-      "evidence_url": "https://github.com/OneRobotAI/xlerobot/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/OneRobotAI/xlerobot/blob/HEAD/README.md",
+      "image_key": "project_onerobotai_xlerobot"
     },
     {
       "source_index": 46,
@@ -1062,7 +1076,8 @@
           "url": "https://github.com/mave5/XLeRobot-Perception-Engine"
         }
       ],
-      "evidence_url": "https://github.com/mave5/XLeRobot-Perception-Engine/blob/HEAD/README.md"
+      "evidence_url": "https://github.com/mave5/XLeRobot-Perception-Engine/blob/HEAD/README.md",
+      "image_key": "project_perception_engine"
     },
     {
       "source_index": 47,
@@ -1142,7 +1157,8 @@
       "kind": "student_application_project",
       "supplemental": true,
       "source_record_id": "C10",
-      "checked_this_round": false
+      "checked_this_round": false,
+      "image_key": "project_matcha_bot"
     }
   ],
   "images": {
@@ -1193,6 +1209,427 @@
       "alt_zh": "BrainBot 数据采集四宫格",
       "credit_en": "Original project image",
       "credit_zh": "原项目图片"
+    },
+    "paper_cuttingcord": {
+      "filename": "paper_cuttingcord.jpg",
+      "width": 1200,
+      "height": 611,
+      "bytes": 110749,
+      "crop_pixels": null,
+      "source_url": "https://arxiv.org/html/2603.09051v2",
+      "asset_url": "https://arxiv.org/html/2603.09051v2/pictures/FIRST.png",
+      "source_figure": "Figure 1",
+      "alt_en": "Modified XLeRobot assisting with electric-vehicle battery screw removal.",
+      "alt_zh": "改造后的 XLeRobot 协助拆除电动车电池螺丝。",
+      "credit_en": "Shaw et al., Cutting the Cord, v2, Fig. 1.",
+      "credit_zh": "Shaw 等，Cutting the Cord，v2，图 1。",
+      "derivation": "Original paper image resized and JPEG-compressed; no content crop.",
+      "visual_checked": true
+    },
+    "paper_nori_v1": {
+      "filename": "paper_nori_v1.jpg",
+      "width": 1200,
+      "height": 675,
+      "bytes": 170640,
+      "crop_pixels": null,
+      "source_url": "https://arxiv.org/html/2605.16537v1",
+      "asset_url": "https://arxiv.org/html/2605.16537v1/task-desk.png",
+      "source_figure": "Figure 2, top-right panel",
+      "alt_en": "Historical Nori Bot v1 prototype operating beside a bookshelf.",
+      "alt_zh": "历史 Nori Bot v1 原型在书架旁操作。",
+      "credit_en": "Li, Park and Chew, Nori Bot v1, Fig. 2 (bookshelf panel).",
+      "credit_zh": "Li、Park 与 Chew，Nori Bot v1，图 2（书架任务面板）。",
+      "derivation": "Original v1 paper panel downloaded individually, resized and JPEG-compressed. This is not the Nori A3 v2 design.",
+      "visual_checked": true
+    },
+    "paper_anchorvla4d": {
+      "filename": "paper_anchorvla4d.jpg",
+      "width": 1200,
+      "height": 754,
+      "bytes": 208940,
+      "crop_pixels": null,
+      "source_url": "https://arxiv.org/html/2603.12730v1",
+      "asset_url": "https://arxiv.org/html/2603.12730v1/assets/figure_3-1.png",
+      "source_figure": "Figure 4",
+      "alt_en": "XLeRobot real-world task sequences from AnchorVLA4D: box lifting, drawer opening and pouring.",
+      "alt_zh": "AnchorVLA4D 中 XLeRobot 抬箱、开抽屉和倒水的真机任务序列。",
+      "credit_en": "Zhu et al., AnchorVLA4D, Fig. 4.",
+      "credit_zh": "Zhu 等，AnchorVLA4D，图 4。",
+      "derivation": "Complete original task montage resized and JPEG-compressed; panel order unchanged.",
+      "visual_checked": true
+    },
+    "paper_xsvla": {
+      "filename": "paper_xsvla.jpg",
+      "width": 1200,
+      "height": 675,
+      "bytes": 190045,
+      "crop_pixels": null,
+      "source_url": "https://arxiv.org/html/2607.04171v3",
+      "asset_url": "https://arxiv.org/html/2607.04171v3/xlerobot.png",
+      "source_figure": "Figure 5",
+      "alt_en": "XLeRobot transferring a carrot between its arms in XS-VLA's supplementary real-world demonstration.",
+      "alt_zh": "XS-VLA 补充真机演示中 XLeRobot 在双臂之间传递胡萝卜。",
+      "credit_en": "Lei et al., Teaching Tiny VLA Models Where to Look and How to Move, v3, Fig. 5.",
+      "credit_zh": "Lei 等，Teaching Tiny VLA Models Where to Look and How to Move，v3，图 5。",
+      "derivation": "Complete XLeRobot montage resized and JPEG-compressed; other embodiments from the paper are not included.",
+      "visual_checked": true
+    },
+    "paper_piphen": {
+      "filename": "paper_piphen.jpg",
+      "width": 1200,
+      "height": 499,
+      "bytes": 163890,
+      "crop_pixels": null,
+      "source_url": "https://arxiv.org/html/2511.16200v1",
+      "asset_url": "https://arxiv.org/html/2511.16200v1/fig4.png",
+      "source_figure": "Figure 3",
+      "alt_en": "Task sequence from PIPHEN's tableware-setting demonstration with two single-arm XLeRobot variants.",
+      "alt_zh": "PIPHEN 使用两台单臂改型 XLeRobot 协同摆放餐具的任务序列。",
+      "credit_en": "Chen, Long and Shang, PIPHEN author manuscript, Fig. 3.",
+      "credit_zh": "Chen、Long 与 Shang，PIPHEN 作者稿，图 3。",
+      "derivation": "Complete original real-world montage resized and JPEG-compressed; panel order unchanged.",
+      "visual_checked": true
+    },
+    "paper_marsra": {
+      "filename": "paper_marsra.jpg",
+      "width": 1000,
+      "height": 1015,
+      "bytes": 236562,
+      "crop_pixels": [
+        2960,
+        0,
+        5876,
+        2959
+      ],
+      "source_url": "https://arxiv.org/html/2607.27967v1",
+      "asset_url": "https://arxiv.org/html/2607.27967v1/images/figure4.jpg",
+      "source_figure": "Figure 7, right panel",
+      "alt_en": "Two XLeRobots in the real doorway-traversal setup used by MARS-RA.",
+      "alt_zh": "MARS-RA 真机穿门实验场景中的两台 XLeRobot。",
+      "credit_en": "Wang et al., MARS-RA, Fig. 7 (real-world panel).",
+      "credit_zh": "Wang 等，MARS-RA，图 7（真机场景面板）。",
+      "derivation": "Cropped to the right-hand real-world panel, removing the separate simulation reconstruction; resized and JPEG-compressed.",
+      "visual_checked": true
+    },
+    "paper_lehome": {
+      "filename": "paper_lehome.jpg",
+      "width": 800,
+      "height": 1367,
+      "bytes": 160740,
+      "crop_pixels": [
+        0,
+        0,
+        449,
+        767
+      ],
+      "source_url": "https://arxiv.org/html/2604.22363v1",
+      "asset_url": "https://arxiv.org/html/2604.22363v1/LeHome_fig6.png",
+      "source_figure": "Figure 6, left panel",
+      "alt_en": "LeHome's XLeRobot simulation teleoperation panel, showing joystick and keyboard controls.",
+      "alt_zh": "LeHome 的 XLeRobot 仿真遥操作面板，展示手柄与键盘控制。",
+      "credit_en": "Li et al., LeHome, Fig. 6 (XLeRobot simulation panel).",
+      "credit_zh": "Li 等，LeHome，图 6（XLeRobot 仿真面板）。",
+      "derivation": "Cropped to the left XLeRobot panel; the right LeRobot leader-follower panel was excluded. Original 449-pixel crop resampled to 800 pixels wide without generative enhancement.",
+      "visual_checked": true
+    },
+    "paper_elasticflow": {
+      "filename": "paper_elasticflow.jpg",
+      "width": 1201,
+      "height": 536,
+      "bytes": 212895,
+      "crop_pdf_points": [
+        69.5,
+        70,
+        525.5,
+        273.5
+      ],
+      "source_url": "https://aclanthology.org/2026.findings-acl.1186.pdf",
+      "asset_url": null,
+      "source_figure": "Figure 3",
+      "alt_en": "ElasticFlow's XLeRobot sequences for dynamic interception, straw insertion and a multistage manipulation task.",
+      "alt_zh": "ElasticFlow 中 XLeRobot 动态拦截、吸管插入和多阶段操作的实验序列。",
+      "credit_en": "Chen et al., ElasticFlow, Fig. 3, PDF page 8.",
+      "credit_zh": "Chen 等，ElasticFlow，图 3，PDF 第 8 页。",
+      "derivation": "Rendered the complete figure area from the original PDF at web resolution; surrounding caption and article text excluded. Original instructions and panel arrangement preserved.",
+      "visual_checked": true,
+      "source_page": 8,
+      "source_local_pdf": "Paper/research/papers/P04_ElasticFlow_ACL_Findings_2026.pdf"
+    },
+    "project_matcha_bot": {
+      "filename": "project_matcha_bot.jpg",
+      "source_url": "https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520",
+      "alt_en": "Matcha Bot gripper holding a whisk over a bowl of matcha.",
+      "alt_zh": "Matcha Bot 夹持茶筅搅拌碗中的抹茶。",
+      "credit_en": "SIGRobotics / Hackster project photograph",
+      "credit_zh": "SIGRobotics／Hackster 项目照片",
+      "kind": "photograph",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "83474f6f561d66dbca25a434817bfb4e8d4f0d3fe7e885b3b73b4bed23a1d104",
+      "original_dimensions": [
+        1205,
+        904
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        1200,
+        900
+      ],
+      "bytes": 134304,
+      "jpeg_quality": 87,
+      "sha256": "d68483fec0a448a67e5f81d11e98f0468fcadfaebd0f986b41aa798483f81921",
+      "asset_url": "https://hackster.imgix.net/uploads/attachments/1898237/_hvFqOrgD4B.blob?auto=compress&w=1600&h=1200&fit=min&fm=jpg"
+    },
+    "project_brainbot": {
+      "filename": "project_brainbot.jpg",
+      "source_url": "https://www.hackster.io/brainbot/brainbot-big-brain-with-xlerobot-ad1b4c",
+      "alt_en": "BrainBot project photograph showing several modified XLeRobot builds.",
+      "alt_zh": "BrainBot 项目照片，展示多台改装 XLeRobot。",
+      "credit_en": "BrainBot team / Hackster project photograph",
+      "credit_zh": "BrainBot 团队／Hackster 项目照片",
+      "kind": "photograph",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "replaces_existing_image": true,
+      "original_sha256": "ada9c82bc62ce2853459962b438d8fcaf813d15031b1ab4219bb6fdc4cc96ec4",
+      "original_dimensions": [
+        1024,
+        768
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        1024,
+        768
+      ],
+      "bytes": 122616,
+      "jpeg_quality": 87,
+      "sha256": "277387ac846adbc69650800dcea366bcc03cc190d285c75347967bdbb5667740",
+      "asset_url": "https://hackster.imgix.net/uploads/attachments/1898497/_d42UOfPZSi.blob?auto=compress&w=1600&h=1200&fit=min&fm=jpg"
+    },
+    "project_xlerobot_x1": {
+      "filename": "project_xlerobot_x1.jpg",
+      "source_url": "https://github.com/APLUX-Official/XLerobot-X1",
+      "alt_en": "Four photographs of the XLerobot-X1 build in indoor demonstration settings.",
+      "alt_zh": "四张 XLerobot-X1 在室内演示环境中的照片。",
+      "credit_en": "APLUX-Official / XLerobot-X1 README",
+      "credit_zh": "APLUX-Official／XLerobot-X1 README",
+      "kind": "photograph_collage",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "442ce7b7ce2386fcbca6d40d80d161f785369f389afaad91a95900b975724f9b",
+      "original_dimensions": [
+        1920,
+        1080
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        1200,
+        675
+      ],
+      "bytes": 180315,
+      "jpeg_quality": 87,
+      "sha256": "5259322ee2a2f65a01884d371fde44bb9d612949bb07e40b472a78f82fe0514a",
+      "asset_url": "https://raw.githubusercontent.com/APLUX-Official/XLerobot-X1/HEAD/images_intro/feng1.jpg"
+    },
+    "project_grievous": {
+      "filename": "project_grievous.jpg",
+      "source_url": "https://www.alexkoven.com/project/grievous/",
+      "alt_en": "Grievous XLeRobot build with onboard leader arms, shown against a white background.",
+      "alt_zh": "Grievous 的 XLeRobot 实机，装有随车主臂，原图使用白色背景。",
+      "credit_en": "Alex Koven / Grievous project page",
+      "credit_zh": "Alex Koven／Grievous 项目页",
+      "kind": "project_hardware_image",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "eba742654c7a6ba6661d3d32876d744803d5e41f905aa7576038723c077650b3",
+      "original_dimensions": [
+        1210,
+        1352
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        1074,
+        1200
+      ],
+      "bytes": 91590,
+      "jpeg_quality": 87,
+      "sha256": "c99fac5ad9edbd85414ee1ca5d8ad4f98ad726d4c183e63b42ea45e38cedd6cc",
+      "asset_url": "https://www.alexkoven.com/project/grievous/featured.png"
+    },
+    "project_xlerobot_gazebo": {
+      "filename": "project_xlerobot_gazebo.jpg",
+      "source_url": "https://github.com/Qifei-C/xlerobot_gazebo",
+      "alt_en": "XLeRobot model inside the Gazebo simulation interface.",
+      "alt_zh": "Gazebo 仿真界面中的 XLeRobot 模型。",
+      "credit_en": "Qifei-C / XLeRobot Gazebo README screenshot",
+      "credit_zh": "Qifei-C／XLeRobot Gazebo README 仿真截图",
+      "kind": "simulation_screenshot",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "82d652149765cdab2f059c96ee50627534d1508fbdf810650b498e2d69751b5e",
+      "original_dimensions": [
+        1002,
+        884
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        1002,
+        884
+      ],
+      "bytes": 109587,
+      "jpeg_quality": 87,
+      "sha256": "860d00797764e1096626a568b73a3a9a586dea799b112d26db9aba484204acb9",
+      "asset_url": "https://github.com/user-attachments/assets/7a75a148-d21e-43ea-9869-cfbd9b446b19"
+    },
+    "project_kinesthetic_recorder": {
+      "filename": "project_kinesthetic_recorder.jpg",
+      "source_url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder",
+      "alt_en": "A person manually guides an XLeRobot follower arm in the project's kinesthetic-recording demonstration.",
+      "alt_zh": "项目拖动示教演示中，一人手动引导 XLeRobot 从臂。",
+      "credit_en": "tianrui-li-0 / kinesthetic recorder README demonstration",
+      "credit_zh": "tianrui-li-0／拖动示教录制器 README 演示",
+      "kind": "demonstration_frame",
+      "frame_index": 38,
+      "derivation": "Selected GIF frame, preserving full frame; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "952779aa5bab90cf94fa50c9c5dd309f0658503220baab2e0196ccc5047522b3",
+      "original_dimensions": [
+        426,
+        240
+      ],
+      "frame_timestamp_ms": 2280,
+      "dimensions": [
+        426,
+        240
+      ],
+      "bytes": 30354,
+      "jpeg_quality": 87,
+      "sha256": "ff5cd860e8887943cda95867a415a304ba5b4ed04d9fbb25d4a32197e8ea18fc",
+      "asset_url": "https://github.com/user-attachments/assets/ca99de51-b0ac-48e3-91ce-d6032890a270"
+    },
+    "project_onerobotai_xlerobot": {
+      "filename": "project_onerobotai_xlerobot.jpg",
+      "source_url": "https://github.com/OneRobotAI/xlerobot",
+      "alt_en": "Published preview image for OneRobotAI's XLeRobot folding demonstration.",
+      "alt_zh": "OneRobotAI 发布的 XLeRobot 叠毛巾演示预览图。",
+      "credit_en": "OneRobotAI / folding demonstration preview",
+      "credit_zh": "OneRobotAI／叠毛巾演示预览",
+      "kind": "demonstration_preview",
+      "frame_index": 0,
+      "derivation": "Preserve complete source image; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "cef8cab56adb6029480a8bb0d73cc6715508898213811a945aef198badee38dc",
+      "original_dimensions": [
+        976,
+        720
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        976,
+        720
+      ],
+      "bytes": 64736,
+      "jpeg_quality": 87,
+      "sha256": "3db155b960a46a12b16476c2e88f1e5584d00e92e32c0d8df2c088ad97115b1d",
+      "asset_url": "https://raw.githubusercontent.com/OneRobotAI/xlerobot/HEAD/docs/en/source/fold_tower_preview.png"
+    },
+    "project_perception_engine": {
+      "filename": "project_perception_engine.jpg",
+      "source_url": "https://github.com/mave5/XLeRobot-Perception-Engine",
+      "alt_en": "Front view of the physical XLeRobot in the Perception Engine camera-head demonstration.",
+      "alt_zh": "Perception Engine 相机云台演示中的 XLeRobot 实机正面。",
+      "credit_en": "mave5 / Perception Engine demonstration GIF",
+      "credit_zh": "mave5／Perception Engine 演示 GIF",
+      "kind": "demonstration_frame",
+      "frame_index": 31,
+      "derivation": "Selected GIF frame, preserving full frame; downsample and JPEG compress.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "original_sha256": "3e946eabc7fcbed185b5574edc5efd913d6f7a85ced199c0d8ba7828ee4f0938",
+      "original_dimensions": [
+        480,
+        853
+      ],
+      "frame_timestamp_ms": 2580,
+      "dimensions": [
+        480,
+        853
+      ],
+      "bytes": 125880,
+      "jpeg_quality": 87,
+      "sha256": "df36f989eb8ceaa439be732c5636002f1b339eddf8192618d0022769c8b46550",
+      "asset_url": "https://raw.githubusercontent.com/mave5/XLeRobot-Perception-Engine/HEAD/media/xlerobot-front.gif"
+    },
+    "project_xlerobot_pinc": {
+      "filename": "project_xlerobot_pinc.jpg",
+      "source_url": "https://github.com/ambient-robots/xlerobot_pinc",
+      "alt_en": "Rendered XLeRobot Pinc arms and head in the project's interactive 3D viewer; not a physical-robot photograph.",
+      "alt_zh": "项目交互式 3D 查看器中的 XLeRobot Pinc 双臂与头部模型，并非实机照片。",
+      "credit_en": "Ambient Robots / interactive 3D viewer screenshot",
+      "credit_zh": "Ambient Robots／交互式 3D 查看器截图",
+      "kind": "model_viewer_screenshot",
+      "frame_index": 0,
+      "derivation": "Chromium screenshot of live project viewer at 1200x900; crop [300,0,1000,406] retains complete robot model and removes surrounding margins and controls; JPEG compression.",
+      "checked_on": "2026-09-24",
+      "visual_checked": true,
+      "rights_status": "Source retained; third-party publication permission unverified.",
+      "crop_box": [
+        300,
+        0,
+        1000,
+        406
+      ],
+      "original_sha256": "d5c28f52ca8de5eceee516d24710dd61a3d3942211269cb7a38e382d4a5e3811",
+      "original_dimensions": [
+        1200,
+        900
+      ],
+      "frame_timestamp_ms": 0,
+      "dimensions": [
+        700,
+        406
+      ],
+      "bytes": 31166,
+      "jpeg_quality": 87,
+      "sha256": "13486bc012eb7ac4f5a3044afd28c354276ef411456a3dd158fa5361b03f5b79",
+      "asset_url": "https://ambient-robots.github.io/xlerobot_pinc/"
     }
-  }
+  },
+  "highlights": [
+    {
+      "id": "makermods-xlerobot",
+      "label_en": "MakerMods · Hardware adaptation",
+      "label_zh": "MakerMods · 硬件改造"
+    },
+    {
+      "id": "matcha-bot",
+      "label_en": "Matcha Bot · Household application",
+      "label_zh": "Matcha Bot · 家庭应用"
+    },
+    {
+      "id": "low-cost-teleop",
+      "label_en": "Teleoperation · User study",
+      "label_zh": "遥操作 · 用户研究"
+    }
+  ]
 }

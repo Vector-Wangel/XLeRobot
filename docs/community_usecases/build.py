@@ -9,7 +9,7 @@ ROOT = Path(__file__).resolve().parent
 TEXT = {
     'en': {
         'title': 'Community Use Cases',
-        'intro': 'Research and community projects that use, adapt, or extend XLeRobot. Explore how teams work with the platform, from manipulation and teleoperation to simulation and household applications.',
+        'intro': 'See how researchers and builders use XLeRobot for manipulation, teleoperation, simulation, and household applications.',
         'scope': 'Each entry describes the specific use reported by its authors. Simulation examples and hardware derivatives are identified separately.',
         'papers': 'Research papers', 'projects': 'Community projects', 'all': 'All entries',
         'search': 'Search papers and projects', 'placeholder': 'Try teleoperation, VLA, or a project name',
@@ -18,11 +18,11 @@ TEXT = {
         'snapshot': 'Based on the September 18, 2026 collection, with selected source checks on September 24, 2026.',
         'share': 'Share your project',
         'contribute': 'Using XLeRobot in your research or project? Suggest an addition with a paper, repository, or demonstration link and a short description of how you use it.',
-        'suggest': 'Suggest a community use case', 'source': 'Source',
+        'suggest': 'Suggest a community use case', 'source': 'Source', 'highlights': 'Featured community examples',
     },
     'zh': {
         'title': '社区应用案例',
-        'intro': '这里收录使用、改造或扩展 XLeRobot 的研究论文和社区项目，涵盖机器人操作、遥操作、仿真与家庭应用。',
+        'intro': '看看研究者和开发者如何将 XLeRobot 用于机器人操作、遥操作、仿真与家庭应用。',
         'scope': '每个条目说明作者如何使用 XLeRobot；仿真案例和硬件改型会单独标明。',
         'papers': '研究论文', 'projects': '社区项目', 'all': '全部条目',
         'search': '搜索论文和项目', 'placeholder': '试试遥操作、VLA 或项目名称',
@@ -31,7 +31,7 @@ TEXT = {
         'snapshot': '基于 2026 年 9 月 18 日的资料整理，并于 2026 年 9 月 24 日定向复核部分来源。',
         'share': '分享你的项目',
         'contribute': '如果你正在用 XLeRobot 做研究或开发项目，欢迎提供论文、代码仓库或演示链接，并简要说明具体用途。',
-        'suggest': '推荐一个社区应用案例', 'source': '来源',
+        'suggest': '推荐一个社区应用案例', 'source': '来源', 'highlights': '社区案例精选',
     },
 }
 CATEGORIES = {
@@ -96,19 +96,20 @@ def card(item, entry_type, lang, images):
         raise ValueError('No source link for ' + item['id'])
     title_url = item.get('url', links[0]['url'])
     out = [f'<article class="community-card" id="case-{esc(item["id"])}" '
-           f'data-community-type="{entry_type}" data-community-search="{esc(search)}">',
-           '<div class="community-meta">' + ' · '.join(esc(m) for m in meta) + '</div>',
-           f'<h3 class="community-title"><a href="{esc(title_url)}">{esc(item["title"])}</a></h3>']
+           f'data-community-type="{entry_type}" data-community-search="{esc(search)}">']
+    image = images.get(item.get('image_key'))
+    if image:
+        alt = image.get('alt_' + lang, item['title'])
+        image_url = '../_static/community/' + esc(image['filename'])
+        out.append(f'<a class="community-media" href="{image_url}" target="_blank" rel="noopener" aria-label="{esc(alt)}">'
+                   f'<img class="community-image" src="{image_url}" alt="{esc(alt)}" loading="lazy" decoding="async"></a>')
+    out.extend(['<div class="community-meta">' + ' · '.join(esc(m) for m in meta) + '</div>',
+                f'<h3 class="community-title"><a href="{esc(title_url)}">{esc(item["title"])}</a></h3>'])
     if item.get('authors'):
         authors = item['authors']
         if isinstance(authors, list):
             authors = ', '.join(authors[:3]) + (' et al.' if lang == 'en' else ' 等') if len(authors) > 4 else ', '.join(authors)
         out.append(f'<p class="community-authors">{esc(authors)}</p>')
-    image = images.get(item.get('image_key'))
-    if image:
-        alt = image.get('alt_' + lang, item['title'])
-        out.append(f'<img class="community-image" src="../_static/community/{esc(image["filename"])}" '
-                   f'alt="{esc(alt)}" loading="lazy" decoding="async">')
     out.append(f'<p class="community-description">{esc(summary)}</p>')
     out.append('<p class="community-links">' + ' '.join(
         f'<a href="{esc(link["url"])}">{esc(link["label_" + lang])}</a>' for link in links) + '</p>')
@@ -119,33 +120,45 @@ def card(item, entry_type, lang, images):
     return '\n'.join(out)
 
 
+def highlights(data, lang):
+    items = {item['id']: item for item in data['papers'] + data['projects']}
+    result = [f'<div class="community-highlights" aria-label="{TEXT[lang]["highlights"]}">']
+    for chosen in data.get('highlights', []):
+        item = items[chosen['id']]
+        image = data['images'].get(item.get('image_key'))
+        if not image:
+            continue
+        result.append(f'<a class="community-highlight" href="#case-{esc(item["id"])}">'
+                      f'<img src="../_static/community/{esc(image["filename"])}" '
+                      f'alt="{esc(image["alt_" + lang])}" decoding="async">'
+                      f'<span>{esc(chosen["label_" + lang])}</span></a>')
+    result.append('</div>')
+    return '\n'.join(result)
+
+
 def render(data, lang):
     t = TEXT[lang]
     papers, projects = data['papers'], data['projects']
     count = len(papers) + len(projects)
-    switch = ('<span aria-current="page">English</span> · '
-              '<a href="https://xlerobot.readthedocs.io/zh-cn/latest/relatedworks/index.html" lang="zh-CN">中文</a>') if lang == 'en' else (
-              '<a href="https://xlerobot.readthedocs.io/en/latest/relatedworks/index.html" lang="en">English</a> · '
-              '<span aria-current="page">中文</span>')
-    out = ['<!-- Generated by docs/community_usecases/build.py; edit data.json instead. -->',
-           '# ' + t['title'], '', t['intro'], '', t['scope'], '',
-           '<nav class="community-language" aria-label="Language">' + switch + '</nav>', '',
-           f'<p class="community-jump"><a href="#research-papers">{t["papers"]} ({len(papers)})</a>'
-           f' <a href="#community-projects">{t["projects"]} ({len(projects)})</a></p>', '',
-           '<div class="community-controls">',
-           f'<label for="community-search">{t["search"]}</label>',
-           f'<input type="search" id="community-search" placeholder="{esc(t["placeholder"])}" autocomplete="off">',
-           f'<fieldset class="community-filters"><legend>{t["filter"]}</legend>']
+    controls = ['<div class="community-controls">',
+                f'<label class="community-sr-only" for="community-search">{t["search"]}</label>',
+                f'<input type="search" id="community-search" placeholder="{esc(t["placeholder"])}" autocomplete="off">',
+                f'<fieldset class="community-filters"><legend class="community-sr-only">{t["filter"]}</legend>']
     for kind, key in [('all', 'all'), ('paper', 'papers'), ('project', 'projects')]:
-        out.append(f'<button type="button" data-community-filter="{kind}" '
-                   f'aria-pressed="{"true" if kind == "all" else "false"}">{t[key]}</button>')
-    out.extend(['</fieldset>',
+        controls.append(f'<button type="button" data-community-filter="{kind}" '
+                        f'aria-pressed="{"true" if kind == "all" else "false"}">{t[key]}</button>')
+    controls.extend(['</fieldset>',
         f'<p id="community-results" role="status" aria-live="polite" data-count-template="{esc(t["count"])}">'
         + t['count'].format(shown=count, total=count) + '</p>',
-        f'<p id="community-empty" hidden>{t["empty"]}</p>', '</div>', '',
+        f'<p id="community-empty" hidden>{t["empty"]}</p>', '</div>'])
+    out = ['<!-- Generated by docs/community_usecases/build.py; edit data.json instead. -->',
+           '# ' + t['title'], '', t['intro'], '', highlights(data, lang), '',
+           f'<p class="community-jump"><a href="#research-papers">{t["papers"]} ({len(papers)})</a>'
+           f' <a href="#community-projects">{t["projects"]} ({len(projects)})</a></p>', '',
+           '\n'.join(controls), '',
         '<!-- Explicit labels preserve the same anchors in both languages. -->',
         '(research-papers)=', '## ' + t['papers'], '',
-        '<div class="community-group"><div class="community-grid community-papers">'])
+        '<div class="community-group"><div class="community-grid community-papers">']
     out.extend(card(p, 'paper', lang, data['images']) for p in papers)
     out.extend(['</div></div>', '', '(community-projects)=', '## ' + t['projects'], ''])
     for category, titles in CATEGORIES.items():
@@ -159,6 +172,7 @@ def render(data, lang):
         out.extend(['</div></div>', ''])
     out.extend(['## ' + t['share'], '', t['contribute'], '',
                 f'[{t["suggest"]}](https://github.com/Vector-Wangel/XLeRobot/issues/new)', '',
+                '<p class="community-credit">' + t['scope'] + '</p>', '',
                 '<p class="community-credit">' + t['snapshot'] + '</p>', ''])
     return '\n\n'.join(out)
 
@@ -168,6 +182,8 @@ def validate(data):
     if len(ids) != len(set(ids)):
         raise ValueError('Entry IDs must be unique across papers and projects')
     for item in data['papers'] + data['projects']:
+        if item.get('image_key') and item['image_key'] not in data['images']:
+            raise ValueError('Unknown image key for ' + item['id'])
         for key in ('summary_en', 'summary_zh', 'evidence_url'):
             if not item.get(key):
                 raise ValueError(f'{item["id"]}: missing {key}')
@@ -175,8 +191,17 @@ def validate(data):
             if not link['url'].startswith('https://'):
                 raise ValueError('Source links must use HTTPS: ' + link['url'])
     for image in data['images'].values():
+        for key in ('alt_en', 'alt_zh', 'credit_en', 'credit_zh', 'source_url'):
+            if not image.get(key):
+                raise ValueError(f'{image["filename"]}: missing {key}')
         if not (ROOT/'static/community'/image['filename']).is_file():
             raise ValueError('Missing image: ' + image['filename'])
+    items = {item['id']: item for item in data['papers'] + data['projects']}
+    for chosen in data.get('highlights', []):
+        if chosen['id'] not in items or not items[chosen['id']].get('image_key'):
+            raise ValueError('Highlight must reference an illustrated case: ' + chosen['id'])
+        if not chosen.get('label_en') or not chosen.get('label_zh'):
+            raise ValueError('Highlight needs both language labels: ' + chosen['id'])
 
 
 def main():

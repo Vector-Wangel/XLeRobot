@@ -1,9 +1,11 @@
 /* Embedded in the PyData Sphinx article; no page-shell or global heading rules. */
 .community-controls {
   display: grid;
-  gap: 0.65rem;
-  margin: 1.4rem 0 0.6rem;
-  padding: 1rem;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.65rem 1rem;
+  align-items: center;
+  margin: 1rem 0 0.6rem;
+  padding: 0.8rem;
   border: 1px solid var(--pst-color-border);
   border-radius: 0.65rem;
   background: var(--pst-color-surface);
@@ -39,7 +41,7 @@
   flex-wrap: wrap;
   gap: 0.45rem;
   min-width: 0;
-  margin: 0.25rem 0 0;
+  margin: 0;
   padding: 0;
   border: 0;
 }
@@ -87,12 +89,14 @@
 }
 
 #community-results {
-  margin: 0.6rem 0 1.5rem;
-  font-size: 0.9rem;
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.8rem;
   color: var(--pst-color-text-base);
 }
 
 #community-empty {
+  grid-column: 1 / -1;
   margin: 1.5rem 0;
   padding: 1rem;
   border: 1px dashed var(--pst-color-border);
@@ -116,7 +120,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.6rem;
   min-width: 0;
   margin: 0;
   padding: 1rem;
@@ -174,7 +178,7 @@
   max-width: 100%;
   height: auto;
   aspect-ratio: 16 / 10;
-  margin: 0.1rem 0 0;
+  margin: 0;
   border: 1px solid var(--pst-color-border);
   border-radius: 0.35rem;
   background: var(--pst-color-surface);
@@ -187,6 +191,95 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.community-media {
+  display: block;
+  margin: -0.2rem -0.2rem 0.35rem;
+  max-width: calc(100% + 0.4rem);
+}
+
+.community-authors {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.community-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
+  margin: 1.1rem 0 0.8rem;
+}
+
+.community-highlight {
+  display: block;
+  min-width: 0;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.55rem;
+  background: var(--pst-color-surface);
+  overflow: hidden;
+  color: var(--pst-color-text-base);
+  text-decoration: none;
+}
+
+.community-highlight img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: var(--pst-color-surface);
+}
+
+.community-highlight span {
+  display: block;
+  padding: 0.6rem 0.65rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.community-highlight:hover,
+.community-highlight:focus-visible {
+  border-color: var(--pst-color-primary);
+  color: var(--pst-color-primary);
+}
+
+.community-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.community-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (max-width: 1100px) {
+  .community-controls { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .community-highlights {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding-bottom: 0.35rem;
+  }
+  .community-highlight {
+    flex: 0 0 72%;
+    scroll-snap-align: start;
+  }
 }
 
 .community-credit {

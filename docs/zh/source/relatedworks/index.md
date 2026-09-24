@@ -4,15 +4,15 @@
 
 
 
-这里收录使用、改造或扩展 XLeRobot 的研究论文和社区项目，涵盖机器人操作、遥操作、仿真与家庭应用。
+看看研究者和开发者如何将 XLeRobot 用于机器人操作、遥操作、仿真与家庭应用。
 
 
 
-每个条目说明作者如何使用 XLeRobot；仿真案例和硬件改型会单独标明。
-
-
-
-<nav class="community-language" aria-label="Language"><a href="https://xlerobot.readthedocs.io/en/latest/relatedworks/index.html" lang="en">English</a> · <span aria-current="page">中文</span></nav>
+<div class="community-highlights" aria-label="社区案例精选">
+<a class="community-highlight" href="#case-makermods-xlerobot"><img src="../_static/community/makermods.jpg" alt="MakerMods 升级版 XLeRobot 产品照" decoding="async"><span>MakerMods · 硬件改造</span></a>
+<a class="community-highlight" href="#case-matcha-bot"><img src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot 夹持茶筅搅拌碗中的抹茶。" decoding="async"><span>Matcha Bot · 家庭应用</span></a>
+<a class="community-highlight" href="#case-low-cost-teleop"><img src="../_static/community/hri.jpg" alt="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制" decoding="async"><span>遥操作 · 用户研究</span></a>
+</div>
 
 
 
@@ -21,25 +21,15 @@
 
 
 <div class="community-controls">
-
-<label for="community-search">搜索论文和项目</label>
-
+<label class="community-sr-only" for="community-search">搜索论文和项目</label>
 <input type="search" id="community-search" placeholder="试试遥操作、VLA 或项目名称" autocomplete="off">
-
-<fieldset class="community-filters"><legend>按条目类型筛选</legend>
-
+<fieldset class="community-filters"><legend class="community-sr-only">按条目类型筛选</legend>
 <button type="button" data-community-filter="all" aria-pressed="true">全部条目</button>
-
 <button type="button" data-community-filter="paper" aria-pressed="false">研究论文</button>
-
 <button type="button" data-community-filter="project" aria-pressed="false">社区项目</button>
-
 </fieldset>
-
 <p id="community-results" role="status" aria-live="polite" data-count-template="显示 {shown} / {total} 个条目">显示 43 / 43 个条目</p>
-
 <p id="community-empty" hidden>没有匹配的条目，请尝试其他关键词或选择“全部条目”。</p>
-
 </div>
 
 
@@ -55,77 +45,93 @@
 <div class="community-group"><div class="community-grid community-papers">
 
 <article class="community-card" id="case-cutting-the-cord" data-community-type="paper" data-community-search="Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation [&#x27;Artemis Shaw&#x27;, &#x27;Chen Liu&#x27;, &#x27;Justin Costa&#x27;, &#x27;Rane Gray&#x27;, &#x27;Alina Skowronek&#x27;, &#x27;Kevin Diaz&#x27;, &#x27;Nam Bui&#x27;, &#x27;Nikolaus Correll&#x27;] Extends XLeRobot with onboard Jetson computation, revised power distribution and stiffer arm components for untethered teleoperation, navigation and vision-guided manipulation. 为 XLeRobot 加入板载 Jetson 计算、改进供电分配和刚度更高的机械臂部件，用于不拖线的遥操作、导航与视觉引导操作。  hardware_derivative">
+<a class="community-media" href="../_static/community/paper_cuttingcord.jpg" target="_blank" rel="noopener" aria-label="改造后的 XLeRobot 协助拆除电动车电池螺丝。"><img class="community-image" src="../_static/community/paper_cuttingcord.jpg" alt="改造后的 XLeRobot 协助拆除电动车电池螺丝。" loading="lazy" decoding="async"></a>
 <div class="community-meta">硬件改型 · 2026 · arXiv · 预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2603.09051v2">Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation</a></h3>
 <p class="community-authors">Artemis Shaw, Chen Liu, Justin Costa 等</p>
 <p class="community-description">为 XLeRobot 加入板载 Jetson 计算、改进供电分配和刚度更高的机械臂部件，用于不拖线的遥操作、导航与视觉引导操作。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2603.09051v2">论文（v2）</a> <a href="https://arxiv.org/html/2603.09051v2">全文</a> <a href="https://github.com/ranegray/pincer">配套抓取代码</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2603.09051v2">Shaw 等，Cutting the Cord，v2，图 1。</a></p>
 </article>
 
 <article class="community-card" id="case-nori-bot" data-community-type="paper" data-community-search="Nori Bot: A Sub-$1,000 Floor-to-Counter Mobile Manipulator [&#x27;Antonio Li&#x27;, &#x27;Sungjoon Park&#x27;, &#x27;Wen Ni Chew&#x27;] The original Nori Bot prototype adds a vertical lift to an XLeRobot-based cart to extend its manipulation workspace. This is the historical v1 design; the later Nori A3 in v2 uses a different mechanical base. 早期 Nori Bot 原型在基于 XLeRobot 的小车上加入升降轴，以扩展操作空间。此处收录历史 v1 设计；后续 v2 的 Nori A3 使用不同的机械底座。  hardware_derivative">
+<a class="community-media" href="../_static/community/paper_nori_v1.jpg" target="_blank" rel="noopener" aria-label="历史 Nori Bot v1 原型在书架旁操作。"><img class="community-image" src="../_static/community/paper_nori_v1.jpg" alt="历史 Nori Bot v1 原型在书架旁操作。" loading="lazy" decoding="async"></a>
 <div class="community-meta">硬件改型 · 2026 · arXiv · 历史预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2605.16537v1">Nori Bot: A Sub-$1,000 Floor-to-Counter Mobile Manipulator</a></h3>
 <p class="community-authors">Antonio Li, Sungjoon Park, Wen Ni Chew</p>
 <p class="community-description">早期 Nori Bot 原型在基于 XLeRobot 的小车上加入升降轴，以扩展操作空间。此处收录历史 v1 设计；后续 v2 的 Nori A3 使用不同的机械底座。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2605.16537v1">历史论文（v1）</a> <a href="https://arxiv.org/html/2605.16537v1">历史全文（v1）</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2605.16537v1">Li、Park 与 Chew，Nori Bot v1，图 2（书架任务面板）。</a></p>
 </article>
 
 <article class="community-card" id="case-anchorvla4d" data-community-type="paper" data-community-search="AnchorVLA4D: an Anchor-Based Spatial-Temporal Vision-Language-Action Model for Robotic Manipulation [&#x27;Juan Zhu&#x27;, &#x27;Zhanying Shao&#x27;, &#x27;Xiaoqi Li&#x27;, &#x27;Ethan Morgan&#x27;, &#x27;Jiadong Xu&#x27;, &#x27;Hongwei Fan&#x27;, &#x27;Hao Dong&#x27;] Uses XLeRobot to evaluate an anchor-image vision-language-action policy on box lifting, drawer opening and pouring, with task-specific demonstrations collected on the robot. 使用 XLeRobot 评估引入锚点图像的视觉语言动作策略，在机器人上采集任务演示，并开展抬箱、开抽屉和倒水实验。  real_robot_experiments">
+<a class="community-media" href="../_static/community/paper_anchorvla4d.jpg" target="_blank" rel="noopener" aria-label="AnchorVLA4D 中 XLeRobot 抬箱、开抽屉和倒水的真机任务序列。"><img class="community-image" src="../_static/community/paper_anchorvla4d.jpg" alt="AnchorVLA4D 中 XLeRobot 抬箱、开抽屉和倒水的真机任务序列。" loading="lazy" decoding="async"></a>
 <div class="community-meta">实机实验 · 2026 · arXiv · 预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2603.12730v1">AnchorVLA4D: an Anchor-Based Spatial-Temporal Vision-Language-Action Model for Robotic Manipulation</a></h3>
 <p class="community-authors">Juan Zhu, Zhanying Shao, Xiaoqi Li 等</p>
 <p class="community-description">使用 XLeRobot 评估引入锚点图像的视觉语言动作策略，在机器人上采集任务演示，并开展抬箱、开抽屉和倒水实验。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2603.12730v1">论文</a> <a href="https://arxiv.org/html/2603.12730v1">全文</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2603.12730v1">Zhu 等，AnchorVLA4D，图 4。</a></p>
 </article>
 
 <article class="community-card" id="case-xs-vla" data-community-type="paper" data-community-search="Teaching Tiny VLA Models Where to Look and How to Move [&#x27;Iok Tong Lei&#x27;, &#x27;Ying Jie Yap&#x27;, &#x27;Wei Huang&#x27;, &#x27;Qingchen Xie&#x27;, &#x27;Qianzhi Li&#x27;, &#x27;Yujie Zhang&#x27;, &#x27;Xiaolong Liu&#x27;, &#x27;Zhidong Deng&#x27;] Uses XLeRobot for a bimanual carrot-handover task with demonstrations collected from several teleoperators. Appendix D of v3 presents a qualitative comparison of XS-VLA, ACT and SmolVLA using partial-credit scores. 使用 XLeRobot 开展双臂胡萝卜传递任务，并由多位操作员采集遥操作演示。v3 附录 D 以分阶段计分方式定性比较 XS-VLA、ACT 和 SmolVLA。  real_robot_experiments">
+<a class="community-media" href="../_static/community/paper_xsvla.jpg" target="_blank" rel="noopener" aria-label="XS-VLA 补充真机演示中 XLeRobot 在双臂之间传递胡萝卜。"><img class="community-image" src="../_static/community/paper_xsvla.jpg" alt="XS-VLA 补充真机演示中 XLeRobot 在双臂之间传递胡萝卜。" loading="lazy" decoding="async"></a>
 <div class="community-meta">实机实验 · 2026 · arXiv · 预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2607.04171v3">Teaching Tiny VLA Models Where to Look and How to Move</a></h3>
 <p class="community-authors">Iok Tong Lei, Ying Jie Yap, Wei Huang 等</p>
 <p class="community-description">使用 XLeRobot 开展双臂胡萝卜传递任务，并由多位操作员采集遥操作演示。v3 附录 D 以分阶段计分方式定性比较 XS-VLA、ACT 和 SmolVLA。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2607.04171v3">论文（v3）</a> <a href="https://arxiv.org/html/2607.04171v3">全文</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2607.04171v3">Lei 等，Teaching Tiny VLA Models Where to Look and How to Move，v3，图 5。</a></p>
 </article>
 
 <article class="community-card" id="case-mars-ra" data-community-type="paper" data-community-search="MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation [&#x27;Dawei Wang&#x27;, &#x27;Di Zhao&#x27;, &#x27;Xinyuan Liu&#x27;, &#x27;Marci Chi Ma&#x27;, &#x27;Xiaoyang Liu&#x27;, &#x27;Chengming Zhou&#x27;, &#x27;Gary Ushaw&#x27;, &#x27;Richard Davison&#x27;] Tests a multi-agent coordination policy on two XLeRobots in a cooperative doorway-traversal task, after training in a reconstructed simulation of the room. 先在重建的房间仿真场景中训练多智能体协作策略，再使用两台 XLeRobot 开展协同穿门的真机实验。  real_robot_experiments">
+<a class="community-media" href="../_static/community/paper_marsra.jpg" target="_blank" rel="noopener" aria-label="MARS-RA 真机穿门实验场景中的两台 XLeRobot。"><img class="community-image" src="../_static/community/paper_marsra.jpg" alt="MARS-RA 真机穿门实验场景中的两台 XLeRobot。" loading="lazy" decoding="async"></a>
 <div class="community-meta">实机实验 · 2026 · ACL 2026 · 已发表</div>
 <h3 class="community-title"><a href="https://aclanthology.org/2026.acl-long.1349/">MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation</a></h3>
 <p class="community-authors">Dawei Wang, Di Zhao, Xinyuan Liu 等</p>
 <p class="community-description">先在重建的房间仿真场景中训练多智能体协作策略，再使用两台 XLeRobot 开展协同穿门的真机实验。</p>
 <p class="community-links"><a href="https://aclanthology.org/2026.acl-long.1349/">正式论文</a> <a href="https://aclanthology.org/2026.acl-long.1349.pdf">全文（PDF）</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2607.27967v1">Wang 等，MARS-RA，图 7（真机场景面板）。</a></p>
 </article>
 
 <article class="community-card" id="case-low-cost-teleop" data-community-type="paper" data-community-search="Low-Cost Teleoperation Extension for Mobile Manipulators [&#x27;Danil Belov&#x27;, &#x27;Artem Erkhov&#x27;, &#x27;Yaroslav Savotin&#x27;, &#x27;Tatiana Podladchikova&#x27;, &#x27;Pavel Osinenko&#x27;, &#x27;Dzmitry Tsetserukou&#x27;] Combines phone-based head tracking, foot-pedal base control and leader arms in an XLeRobot teleoperation interface. A 30-participant study compares the interface with keyboard and headset-based alternatives. 在 XLeRobot 遥操作界面中结合手机头部追踪、脚踏板底盘控制和主从机械臂。论文通过 30 人用户研究，将这一界面与键盘和头显方案进行比较。  teleoperation_user_study">
+<a class="community-media" href="../_static/community/hri.jpg" target="_blank" rel="noopener" aria-label="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制"><img class="community-image" src="../_static/community/hri.jpg" alt="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制" loading="lazy" decoding="async"></a>
 <div class="community-meta">遥操作研究 · 2026 · arXiv · 预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2603.07672v2">Low-Cost Teleoperation Extension for Mobile Manipulators</a></h3>
 <p class="community-authors">Danil Belov, Artem Erkhov, Yaroslav Savotin 等</p>
-<img class="community-image" src="../_static/community/hri.jpg" alt="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制" loading="lazy" decoding="async">
 <p class="community-description">在 XLeRobot 遥操作界面中结合手机头部追踪、脚踏板底盘控制和主从机械臂。论文通过 30 人用户研究，将这一界面与键盘和头显方案进行比较。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2603.07672v2">论文（v2）</a> <a href="https://arxiv.org/html/2603.07672v2">全文</a> <a href="https://github.com/HRI2026LBR/xlerobot-teleop">代码</a></p>
 <p class="community-credit"><a href="https://raw.githubusercontent.com/HRI2026LBR/xlerobot-teleop/HEAD/demo.gif">原项目图片</a></p>
 </article>
 
 <article class="community-card" id="case-lehome" data-community-type="paper" data-community-search="LeHome: A Simulation Environment for Deformable Object Manipulation in Household Scenarios [&#x27;Zeyi Li&#x27;, &#x27;Yushi Yang&#x27;, &#x27;Shawn Xie&#x27;, &#x27;Kyle Xu&#x27;, &#x27;Tianxing Chen&#x27;, &#x27;Yuran Wang&#x27;, &#x27;Zhenhao Shen&#x27;, &#x27;Yan Shen&#x27;, &#x27;Yue Chen&#x27;, &#x27;Wenjun Li&#x27;, &#x27;Yukun Zheng&#x27;, &#x27;Chaorui Zhang&#x27;, &#x27;Siyi Lin&#x27;, &#x27;Fei Teng&#x27;, &#x27;Hongjun Yang&#x27;, &#x27;Ming Chen&#x27;, &#x27;Steve Xie&#x27;, &#x27;Ruihai Wu&#x27;] Integrates an XLeRobot embodiment into a household simulation environment for deformable-object manipulation, with keyboard and joystick teleoperation for collecting demonstrations. 在面向家居可变形物体操作的仿真环境中接入 XLeRobot 本体，并提供键盘和手柄遥操作以采集演示。  simulation_embodiment">
+<a class="community-media" href="../_static/community/paper_lehome.jpg" target="_blank" rel="noopener" aria-label="LeHome 的 XLeRobot 仿真遥操作面板，展示手柄与键盘控制。"><img class="community-image" src="../_static/community/paper_lehome.jpg" alt="LeHome 的 XLeRobot 仿真遥操作面板，展示手柄与键盘控制。" loading="lazy" decoding="async"></a>
 <div class="community-meta">仿真 · 2026 · arXiv · 预印本</div>
 <h3 class="community-title"><a href="https://arxiv.org/abs/2604.22363v1">LeHome: A Simulation Environment for Deformable Object Manipulation in Household Scenarios</a></h3>
 <p class="community-authors">Zeyi Li, Yushi Yang, Shawn Xie 等</p>
 <p class="community-description">在面向家居可变形物体操作的仿真环境中接入 XLeRobot 本体，并提供键盘和手柄遥操作以采集演示。</p>
 <p class="community-links"><a href="https://arxiv.org/abs/2604.22363v1">论文</a> <a href="https://arxiv.org/html/2604.22363v1">全文</a> <a href="https://lehome-web.github.io/">项目主页</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2604.22363v1">Li 等，LeHome，图 6（XLeRobot 仿真面板）。</a></p>
 </article>
 
 <article class="community-card" id="case-piphen" data-community-type="paper" data-community-search="PIPHEN: Physical Interaction Prediction with Hamiltonian Energy Networks [&#x27;Kewei Chen&#x27;, &#x27;Yayu Long&#x27;, &#x27;Mingsheng Shang&#x27;] Deploys a distributed perception-and-control method on two single-arm XLeRobot mobile manipulators for a coordinated table-setting demonstration. 将分布式感知与控制方法部署到两台单臂改型 XLeRobot 移动机器人上，开展协同摆放餐具演示。  real_robot_experiments">
+<a class="community-media" href="../_static/community/paper_piphen.jpg" target="_blank" rel="noopener" aria-label="PIPHEN 使用两台单臂改型 XLeRobot 协同摆放餐具的任务序列。"><img class="community-image" src="../_static/community/paper_piphen.jpg" alt="PIPHEN 使用两台单臂改型 XLeRobot 协同摆放餐具的任务序列。" loading="lazy" decoding="async"></a>
 <div class="community-meta">实机实验 · 2026 · AAAI 2026 · 已发表</div>
 <h3 class="community-title"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/38879">PIPHEN: Physical Interaction Prediction with Hamiltonian Energy Networks</a></h3>
 <p class="community-authors">Kewei Chen, Yayu Long, Mingsheng Shang</p>
 <p class="community-description">将分布式感知与控制方法部署到两台单臂改型 XLeRobot 移动机器人上，开展协同摆放餐具演示。</p>
 <p class="community-links"><a href="https://ojs.aaai.org/index.php/AAAI/article/view/38879">正式论文</a> <a href="https://arxiv.org/html/2511.16200v1">作者稿与附录</a></p>
+<p class="community-credit"><a href="https://arxiv.org/html/2511.16200v1">Chen、Long 与 Shang，PIPHEN 作者稿，图 3。</a></p>
 </article>
 
 <article class="community-card" id="case-elasticflow" data-community-type="paper" data-community-search="ElasticFlow: One-Step Physics-Consistent Policy with Elastic Time Horizons for Language-Guided Manipulation [&#x27;Kewei Chen&#x27;, &#x27;Yayu Long&#x27;, &#x27;Shuai Li&#x27;, &#x27;Mingsheng Shang&#x27;] Presents qualitative XLeRobot demonstrations of intercepting a rolling cylinder, inserting a straw and executing a multi-stage household manipulation sequence. 使用 XLeRobot 定性展示拦截滚动圆柱、插入吸管和执行多阶段家居操作序列。  real_robot_experiments">
+<a class="community-media" href="../_static/community/paper_elasticflow.jpg" target="_blank" rel="noopener" aria-label="ElasticFlow 中 XLeRobot 动态拦截、吸管插入和多阶段操作的实验序列。"><img class="community-image" src="../_static/community/paper_elasticflow.jpg" alt="ElasticFlow 中 XLeRobot 动态拦截、吸管插入和多阶段操作的实验序列。" loading="lazy" decoding="async"></a>
 <div class="community-meta">实机实验 · 2026 · Findings of ACL 2026 · 已发表</div>
 <h3 class="community-title"><a href="https://aclanthology.org/2026.findings-acl.1186/">ElasticFlow: One-Step Physics-Consistent Policy with Elastic Time Horizons for Language-Guided Manipulation</a></h3>
 <p class="community-authors">Kewei Chen, Yayu Long, Shuai Li, Mingsheng Shang</p>
 <p class="community-description">使用 XLeRobot 定性展示拦截滚动圆柱、插入吸管和执行多阶段家居操作序列。</p>
 <p class="community-links"><a href="https://aclanthology.org/2026.findings-acl.1186/">正式论文</a> <a href="https://aclanthology.org/2026.findings-acl.1186.pdf">全文（PDF）</a></p>
+<p class="community-credit"><a href="https://aclanthology.org/2026.findings-acl.1186.pdf">Chen 等，ElasticFlow，图 3，PDF 第 8 页。</a></p>
 </article>
 
 </div></div>
@@ -145,26 +151,30 @@
 <div class="community-group"><div class="community-grid">
 
 <article class="community-card" id="case-makermods-xlerobot" data-community-type="project" data-community-search="MakerMods XLeRobot  Redesigns XLeRobot&#x27;s printed structure, wheel modules, power-bank mounts, and electronics enclosures, with shared CAD and printing files. 重新设计 XLeRobot 的打印结构、轮组、充电宝支架和电子部件外壳，并提供 CAD 与打印文件。 hardware hardware_derivative">
+<a class="community-media" href="../_static/community/makermods.jpg" target="_blank" rel="noopener" aria-label="MakerMods 升级版 XLeRobot 产品照"><img class="community-image" src="../_static/community/makermods.jpg" alt="MakerMods 升级版 XLeRobot 产品照" loading="lazy" decoding="async"></a>
 <div class="community-meta">硬件改型</div>
 <h3 class="community-title"><a href="https://github.com/makermods-robotics/MakerMods-XLeRobot">MakerMods XLeRobot</a></h3>
-<img class="community-image" src="../_static/community/makermods.jpg" alt="MakerMods 升级版 XLeRobot 产品照" loading="lazy" decoding="async">
 <p class="community-description">重新设计 XLeRobot 的打印结构、轮组、充电宝支架和电子部件外壳，并提供 CAD 与打印文件。</p>
 <p class="community-links"><a href="https://github.com/makermods-robotics/MakerMods-XLeRobot">源码</a></p>
 <p class="community-credit"><a href="https://raw.githubusercontent.com/makermods-robotics/MakerMods-XLeRobot/HEAD/assets/images/hero_shot_17_04_02_18.png">原项目图片</a></p>
 </article>
 
 <article class="community-card" id="case-xlerobot-pinc" data-community-type="project" data-community-search="XLeRobot Pinc  Extends XLeRobot with SO107-style arms and PincOpen grippers, sharing hardware designs, URDF models, and teleoperation interfaces. 为 XLeRobot 配置 SO107 风格机械臂与 PincOpen 夹爪，并开放硬件设计、URDF 模型和遥操作接口。 hardware hardware_derivative">
+<a class="community-media" href="../_static/community/project_xlerobot_pinc.jpg" target="_blank" rel="noopener" aria-label="项目交互式 3D 查看器中的 XLeRobot Pinc 双臂与头部模型，并非实机照片。"><img class="community-image" src="../_static/community/project_xlerobot_pinc.jpg" alt="项目交互式 3D 查看器中的 XLeRobot Pinc 双臂与头部模型，并非实机照片。" loading="lazy" decoding="async"></a>
 <div class="community-meta">硬件改型</div>
 <h3 class="community-title"><a href="https://github.com/ambient-robots/xlerobot_pinc">XLeRobot Pinc</a></h3>
 <p class="community-description">为 XLeRobot 配置 SO107 风格机械臂与 PincOpen 夹爪，并开放硬件设计、URDF 模型和遥操作接口。</p>
 <p class="community-links"><a href="https://github.com/ambient-robots/xlerobot_pinc">源码</a> <a href="https://ambient-robots.github.io/xlerobot_pinc/">3D 模型查看器</a></p>
+<p class="community-credit"><a href="https://github.com/ambient-robots/xlerobot_pinc">Ambient Robots／交互式 3D 查看器截图</a></p>
 </article>
 
 <article class="community-card" id="case-xlerobot-x1" data-community-type="project" data-community-search="XLerobot-X1  Adapts XLeRobot to a Qualcomm QCS8550 computing platform, with assembly, wiring, printed-part, and software resources. 将 XLeRobot 适配到高通 QCS8550 计算平台，提供装配、接线、打印零件和软件资源。 hardware hardware_derivative">
+<a class="community-media" href="../_static/community/project_xlerobot_x1.jpg" target="_blank" rel="noopener" aria-label="四张 XLerobot-X1 在室内演示环境中的照片。"><img class="community-image" src="../_static/community/project_xlerobot_x1.jpg" alt="四张 XLerobot-X1 在室内演示环境中的照片。" loading="lazy" decoding="async"></a>
 <div class="community-meta">硬件改型</div>
 <h3 class="community-title"><a href="https://github.com/APLUX-Official/XLerobot-X1">XLerobot-X1</a></h3>
 <p class="community-description">将 XLeRobot 适配到高通 QCS8550 计算平台，提供装配、接线、打印零件和软件资源。</p>
 <p class="community-links"><a href="https://github.com/APLUX-Official/XLerobot-X1">源码</a></p>
+<p class="community-credit"><a href="https://github.com/APLUX-Official/XLerobot-X1">APLUX-Official／XLerobot-X1 README</a></p>
 </article>
 
 <article class="community-card" id="case-xlerobot-pro-data" data-community-type="project" data-community-search="XLeRobot-Pro Measurement Tools  Shares measurement scripts, experiment protocols, and telemetry for an XLeRobot-Pro build, covering power, actuator temperature, payload motion, and demonstration recording. 提供 XLeRobot-Pro 的测量脚本、实验流程与遥测数据，涵盖供电、执行器温度、负载运动及示教录制。 hardware measurement_tooling">
@@ -272,10 +282,12 @@
 <div class="community-group"><div class="community-grid">
 
 <article class="community-card" id="case-kinesthetic-recorder" data-community-type="project" data-community-search="XLeRobot Kinesthetic Recorder  Records demonstrations by manually guiding XLeRobot&#x27;s follower arms, with synchronized camera recording and replay tools. 通过手动引导 XLeRobot 从臂录制示教，提供同步相机录制与回放工具。 learning data_collection_tooling">
+<a class="community-media" href="../_static/community/project_kinesthetic_recorder.jpg" target="_blank" rel="noopener" aria-label="项目拖动示教演示中，一人手动引导 XLeRobot 从臂。"><img class="community-image" src="../_static/community/project_kinesthetic_recorder.jpg" alt="项目拖动示教演示中，一人手动引导 XLeRobot 从臂。" loading="lazy" decoding="async"></a>
 <div class="community-meta">数据采集工具</div>
 <h3 class="community-title"><a href="https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder">XLeRobot Kinesthetic Recorder</a></h3>
 <p class="community-description">通过手动引导 XLeRobot 从臂录制示教，提供同步相机录制与回放工具。</p>
 <p class="community-links"><a href="https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder">源码</a></p>
+<p class="community-credit"><a href="https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder">tianrui-li-0／拖动示教录制器 README 演示</a></p>
 </article>
 
 <article class="community-card" id="case-dexbotic-xlerobot" data-community-type="project" data-community-search="Dexbotic XLeRobot Integration  Provides an XLeRobot-specific path from LeRobot data conversion to policy training and deployment, using a robot client, inference bridge, and policy server. 提供面向 XLeRobot 的 LeRobot 数据转换、策略训练和部署流程，通过机器人客户端、推理桥接与策略服务器连接各环节。 learning software_integration">
@@ -293,10 +305,12 @@
 </article>
 
 <article class="community-card" id="case-onerobotai-xlerobot" data-community-type="project" data-community-search="OneRobotAI XLeRobot  Shares an XLeRobot adaptation with a SmolVLA towel-folding demonstration. 分享 XLeRobot 的适配代码及 SmolVLA 叠毛巾演示。 learning application_project">
+<a class="community-media" href="../_static/community/project_onerobotai_xlerobot.jpg" target="_blank" rel="noopener" aria-label="OneRobotAI 发布的 XLeRobot 叠毛巾演示预览图。"><img class="community-image" src="../_static/community/project_onerobotai_xlerobot.jpg" alt="OneRobotAI 发布的 XLeRobot 叠毛巾演示预览图。" loading="lazy" decoding="async"></a>
 <div class="community-meta">应用项目</div>
 <h3 class="community-title"><a href="https://github.com/OneRobotAI/xlerobot">OneRobotAI XLeRobot</a></h3>
 <p class="community-description">分享 XLeRobot 的适配代码及 SmolVLA 叠毛巾演示。</p>
 <p class="community-links"><a href="https://github.com/OneRobotAI/xlerobot">源码</a> <a href="https://github.com/OneRobotAI/xlerobot/blob/main/docs/en/source/fold_tower.mp4">叠毛巾演示</a></p>
+<p class="community-credit"><a href="https://github.com/OneRobotAI/xlerobot">OneRobotAI／叠毛巾演示预览</a></p>
 </article>
 
 <article class="community-card" id="case-xle-hack" data-community-type="project" data-community-search="XLeRobot Hackathon Tools  Shares XLeRobot-focused policy-training and perception tools from a hackathon project, plus a companion installer that configures the LeRobot/XLeRobot integration. 分享黑客松项目中面向 XLeRobot 的策略训练与感知工具，并通过配套安装器配置 LeRobot 和 XLeRobot 的集成。 learning software_integration">
@@ -317,27 +331,27 @@
 <div class="community-group"><div class="community-grid">
 
 <article class="community-card" id="case-robocrew" data-community-type="project" data-community-search="RoboCrew  Adds LLM-driven interaction to XLeRobot through camera observations, speech, arm-control tools, and multi-agent examples. 为 XLeRobot 接入基于大语言模型的交互，提供相机观察、语音、机械臂控制工具及多智能体示例。 applications software_integration">
+<a class="community-media" href="../_static/community/robocrew.jpg" target="_blank" rel="noopener" aria-label="RoboCrew 功能示意：相机增强、语音识别、长期记忆、VLA、运动控制标注在 XLeRobot 线稿上"><img class="community-image" src="../_static/community/robocrew.jpg" alt="RoboCrew 功能示意：相机增强、语音识别、长期记忆、VLA、运动控制标注在 XLeRobot 线稿上" loading="lazy" decoding="async"></a>
 <div class="community-meta">软件集成</div>
 <h3 class="community-title"><a href="https://github.com/Grigorij-Dudnik/RoboCrew">RoboCrew</a></h3>
-<img class="community-image" src="../_static/community/robocrew.jpg" alt="RoboCrew 功能示意：相机增强、语音识别、长期记忆、VLA、运动控制标注在 XLeRobot 线稿上" loading="lazy" decoding="async">
 <p class="community-description">为 XLeRobot 接入基于大语言模型的交互，提供相机观察、语音、机械臂控制工具及多智能体示例。</p>
 <p class="community-links"><a href="https://github.com/Grigorij-Dudnik/RoboCrew">源码</a></p>
 <p class="community-credit"><a href="https://raw.githubusercontent.com/Grigorij-Dudnik/RoboCrew-assets/master/Images/main2.jpg">原项目图片</a></p>
 </article>
 
 <article class="community-card" id="case-home-service-demo" data-community-type="project" data-community-search="XLeRobot Home Service Demo  Demonstrates a modified XLeRobot responding to spoken requests and fetching objects, with calibration tools, ACT and geometric grasping backends, and voice/web interfaces. 展示改装 XLeRobot 响应语音请求并取送物品，提供标定工具、ACT 与几何抓取方案，以及语音和网页接口。 applications application_project">
+<a class="community-media" href="../_static/community/homeservice.jpg" target="_blank" rel="noopener" aria-label="XLeRobot Home Service Demo 项目的 URDF 渲染图"><img class="community-image" src="../_static/community/homeservice.jpg" alt="XLeRobot Home Service Demo 项目的 URDF 渲染图" loading="lazy" decoding="async"></a>
 <div class="community-meta">应用项目</div>
 <h3 class="community-title"><a href="https://github.com/xujiayuxian-png/xlerobot_home_service_demo">XLeRobot Home Service Demo</a></h3>
-<img class="community-image" src="../_static/community/homeservice.jpg" alt="XLeRobot Home Service Demo 项目的 URDF 渲染图" loading="lazy" decoding="async">
 <p class="community-description">展示改装 XLeRobot 响应语音请求并取送物品，提供标定工具、ACT 与几何抓取方案，以及语音和网页接口。</p>
 <p class="community-links"><a href="https://github.com/xujiayuxian-png/xlerobot_home_service_demo">源码</a> <a href="https://huggingface.co/lissajous/xlerobot-act-local-grasp-v1">ACT 模型</a> <a href="https://huggingface.co/datasets/lissajous/xlerobot-glue-stick-grasp-30">示教数据集</a></p>
 <p class="community-credit"><a href="https://raw.githubusercontent.com/xujiayuxian-png/xlerobot_home_service_demo/HEAD/docs/images/robot-hero.png">原项目 URDF 渲染图</a></p>
 </article>
 
 <article class="community-card" id="case-maque" data-community-type="project" data-community-search="Maque  Connects a local language-model agent, VLA executor, and XLeRobot controller across three computers, with an Orange Pi robot host. 将本地语言模型智能体、VLA 执行端和 XLeRobot 控制端部署在三台计算设备上，由 Orange Pi 承载机器人端。 applications software_integration">
+<a class="community-media" href="../_static/community/maque.jpg" target="_blank" rel="noopener" aria-label="Maque 三机架构图"><img class="community-image" src="../_static/community/maque.jpg" alt="Maque 三机架构图" loading="lazy" decoding="async"></a>
 <div class="community-meta">软件集成</div>
 <h3 class="community-title"><a href="https://github.com/yizhidianlu/Maque">Maque</a></h3>
-<img class="community-image" src="../_static/community/maque.jpg" alt="Maque 三机架构图" loading="lazy" decoding="async">
 <p class="community-description">将本地语言模型智能体、VLA 执行端和 XLeRobot 控制端部署在三台计算设备上，由 Orange Pi 承载机器人端。</p>
 <p class="community-links"><a href="https://github.com/yizhidianlu/Maque">源码</a></p>
 <p class="community-credit"><a href="https://raw.githubusercontent.com/yizhidianlu/Maque/HEAD/assets/maque-overview.png">原项目图片</a></p>
@@ -365,26 +379,30 @@
 </article>
 
 <article class="community-card" id="case-grievous" data-community-type="project" data-community-search="Grievous  Extends an XLeRobot build with onboard SO-101 leader arms and reports SmolVLA experiments on pick-and-place and dusting tasks. 在 XLeRobot 上增加随车 SO-101 主臂，并展示 SmolVLA 在抓放和除尘任务中的实验进展。 applications application_project">
+<a class="community-media" href="../_static/community/project_grievous.jpg" target="_blank" rel="noopener" aria-label="Grievous 的 XLeRobot 实机，装有随车主臂，原图使用白色背景。"><img class="community-image" src="../_static/community/project_grievous.jpg" alt="Grievous 的 XLeRobot 实机，装有随车主臂，原图使用白色背景。" loading="lazy" decoding="async"></a>
 <div class="community-meta">应用项目</div>
 <h3 class="community-title"><a href="https://www.alexkoven.com/project/grievous/">Grievous</a></h3>
 <p class="community-description">在 XLeRobot 上增加随车 SO-101 主臂，并展示 SmolVLA 在抓放和除尘任务中的实验进展。</p>
 <p class="community-links"><a href="https://www.alexkoven.com/project/grievous/">项目介绍</a></p>
+<p class="community-credit"><a href="https://www.alexkoven.com/project/grievous/">Alex Koven／Grievous 项目页</a></p>
 </article>
 
 <article class="community-card" id="case-brainbot" data-community-type="project" data-community-search="BrainBot  Builds an XLeRobot control stack that combines bimanual teleoperation, policy inference, multi-camera streaming, and web/AR visualization. 构建面向 XLeRobot 的控制系统，整合双臂遥操作、策略推理、多相机流及网页／AR 可视化。 applications application_project">
+<a class="community-media" href="../_static/community/project_brainbot.jpg" target="_blank" rel="noopener" aria-label="BrainBot 项目照片，展示多台改装 XLeRobot。"><img class="community-image" src="../_static/community/project_brainbot.jpg" alt="BrainBot 项目照片，展示多台改装 XLeRobot。" loading="lazy" decoding="async"></a>
 <div class="community-meta">应用项目</div>
 <h3 class="community-title"><a href="https://github.com/Astera-org/brainbot">BrainBot</a></h3>
-<img class="community-image" src="../_static/community/vbrain.jpg" alt="BrainBot 数据采集四宫格" loading="lazy" decoding="async">
 <p class="community-description">构建面向 XLeRobot 的控制系统，整合双臂遥操作、策略推理、多相机流及网页／AR 可视化。</p>
 <p class="community-links"><a href="https://github.com/Astera-org/brainbot">源码</a> <a href="https://www.hackster.io/brainbot/brainbot-big-brain-with-xlerobot-ad1b4c">项目演示</a></p>
-<p class="community-credit"><a href="https://github.com/Vector-Wangel/XLeRobot-assets/blob/main/videos/Community/Brain_bot_by_astera.mp4">原项目图片</a></p>
+<p class="community-credit"><a href="https://www.hackster.io/brainbot/brainbot-big-brain-with-xlerobot-ad1b4c">BrainBot 团队／Hackster 项目照片</a></p>
 </article>
 
 <article class="community-card" id="case-perception-engine" data-community-type="project" data-community-search="XLeRobot Perception Engine  Adds object tracking and camera-head sweeping to XLeRobot, with a pan/tilt controller, calibration utility, and browser preview. 为 XLeRobot 增加目标跟踪与相机云台扫视，提供俯仰／偏航控制器、标定工具和浏览器预览。 applications software_integration">
+<a class="community-media" href="../_static/community/project_perception_engine.jpg" target="_blank" rel="noopener" aria-label="Perception Engine 相机云台演示中的 XLeRobot 实机正面。"><img class="community-image" src="../_static/community/project_perception_engine.jpg" alt="Perception Engine 相机云台演示中的 XLeRobot 实机正面。" loading="lazy" decoding="async"></a>
 <div class="community-meta">软件集成</div>
 <h3 class="community-title"><a href="https://github.com/mave5/XLeRobot-Perception-Engine">XLeRobot Perception Engine</a></h3>
 <p class="community-description">为 XLeRobot 增加目标跟踪与相机云台扫视，提供俯仰／偏航控制器、标定工具和浏览器预览。</p>
 <p class="community-links"><a href="https://github.com/mave5/XLeRobot-Perception-Engine">源码</a></p>
+<p class="community-credit"><a href="https://github.com/mave5/XLeRobot-Perception-Engine">mave5／Perception Engine 演示 GIF</a></p>
 </article>
 
 <article class="community-card" id="case-clemson-human-interaction" data-community-type="project" data-community-search="Clemson Student Interaction Robot  A Clemson student project built an XLeRobot with Jetson AGX Orin, a microphone, and a speaker for language-based human–robot interaction. Clemson 学生项目搭建 XLeRobot，并加入 Jetson AGX Orin、麦克风和扬声器，用于语言式人机交互。 applications student_project">
@@ -395,10 +413,12 @@
 </article>
 
 <article class="community-card" id="case-matcha-bot" data-community-type="project" data-community-search="Matcha Bot  UIUC SIGRobotics adapted XLeRobot for matcha preparation, combining bimanual control with a GR00T N1.5 policy and sharing its project code. UIUC SIGRobotics 将 XLeRobot 用于抹茶制作，结合双臂控制与 GR00T N1.5 策略，并开放项目代码。 applications student_application_project">
+<a class="community-media" href="../_static/community/project_matcha_bot.jpg" target="_blank" rel="noopener" aria-label="Matcha Bot 夹持茶筅搅拌碗中的抹茶。"><img class="community-image" src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot 夹持茶筅搅拌碗中的抹茶。" loading="lazy" decoding="async"></a>
 <div class="community-meta">学生应用项目</div>
 <h3 class="community-title"><a href="https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520">Matcha Bot</a></h3>
 <p class="community-description">UIUC SIGRobotics 将 XLeRobot 用于抹茶制作，结合双臂控制与 GR00T N1.5 策略，并开放项目代码。</p>
 <p class="community-links"><a href="https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520">项目介绍</a> <a href="https://github.com/SIGRobotics-UIUC/lerobot_robot_bi_so101_follower">机器人驱动</a> <a href="https://github.com/SIGRobotics-UIUC/seeed-hack-interface">交互代码</a></p>
+<p class="community-credit"><a href="https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520">SIGRobotics／Hackster 项目照片</a></p>
 </article>
 
 </div></div>
@@ -426,10 +446,12 @@
 </article>
 
 <article class="community-card" id="case-xlerobot-gazebo" data-community-type="project" data-community-search="XLeRobot Gazebo  Integrates XLeRobot with Gazebo and ros2_control, including launch scripts for omnidirectional and planar base backends. 将 XLeRobot 接入 Gazebo 与 ros2_control，提供全向和二维平面底盘后端的启动脚本。 simulation simulation_project">
+<a class="community-media" href="../_static/community/project_xlerobot_gazebo.jpg" target="_blank" rel="noopener" aria-label="Gazebo 仿真界面中的 XLeRobot 模型。"><img class="community-image" src="../_static/community/project_xlerobot_gazebo.jpg" alt="Gazebo 仿真界面中的 XLeRobot 模型。" loading="lazy" decoding="async"></a>
 <div class="community-meta">仿真项目</div>
 <h3 class="community-title"><a href="https://github.com/Qifei-C/xlerobot_gazebo">XLeRobot Gazebo</a></h3>
 <p class="community-description">将 XLeRobot 接入 Gazebo 与 ros2_control，提供全向和二维平面底盘后端的启动脚本。</p>
 <p class="community-links"><a href="https://github.com/Qifei-C/xlerobot_gazebo">源码</a></p>
+<p class="community-credit"><a href="https://github.com/Qifei-C/xlerobot_gazebo">Qifei-C／XLeRobot Gazebo README 仿真截图</a></p>
 </article>
 
 </div></div>
@@ -445,6 +467,10 @@
 
 
 [推荐一个社区应用案例](https://github.com/Vector-Wangel/XLeRobot/issues/new)
+
+
+
+<p class="community-credit">每个条目说明作者如何使用 XLeRobot；仿真案例和硬件改型会单独标明。</p>
 
 
 
