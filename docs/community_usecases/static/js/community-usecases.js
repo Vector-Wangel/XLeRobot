@@ -82,11 +82,11 @@
         update();
       });
     });
-    document.querySelectorAll('.community-highlight').forEach((link) => {
-      link.addEventListener('click', () => {
-        // A featured case may be hidden by the current search or filter.
-        search.value = '';
-        activeFilter = 'all';
+    document.querySelectorAll(".community-highlight, .community-jump a").forEach((link) => {
+      link.addEventListener("click", () => {
+        // A linked case or section may be hidden by the current search or filter.
+        search.value = "";
+        activeFilter = "all";
         update();
       });
     });
