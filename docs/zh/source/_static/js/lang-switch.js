@@ -18,5 +18,5 @@ function switchLang(lang) {
 
 // Initialize with English
 document.addEventListener('DOMContentLoaded', () => {
-    switchLang('en');
+    if (document.querySelector('.lang-switch button')) switchLang('en');
 });

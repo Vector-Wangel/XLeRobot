@@ -192,5 +192,5 @@ hardware/index
 simulation/index
 software/index
 demos/index
-relatedworks/index
+Community Use Cases <relatedworks/index>
 ```

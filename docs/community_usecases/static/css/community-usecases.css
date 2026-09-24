@@ -1,0 +1,240 @@
+/* Embedded in the PyData Sphinx article; no page-shell or global heading rules. */
+.community-controls {
+  display: grid;
+  gap: 0.65rem;
+  margin: 1.4rem 0 0.6rem;
+  padding: 1rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.65rem;
+  background: var(--pst-color-surface);
+  color: var(--pst-color-text-base);
+}
+
+.community-controls label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.community-controls input[type="search"] {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.4rem;
+  background: var(--pst-color-surface);
+  color: var(--pst-color-text-base);
+  font: inherit;
+}
+
+.community-controls input[type="search"]::placeholder {
+  color: var(--pst-color-text-base);
+  opacity: 0.65;
+}
+
+.community-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  min-width: 0;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  border: 0;
+}
+
+.community-filters legend {
+  float: none;
+  width: 100%;
+  margin: 0 0 0.3rem;
+  padding: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.community-filters button {
+  min-height: 2.5rem;
+  max-width: 100%;
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.4rem;
+  background: var(--pst-color-surface);
+  color: var(--pst-color-text-base);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+}
+
+.community-filters button:hover,
+.community-filters button[aria-pressed="true"] {
+  border-color: var(--pst-color-primary);
+  color: var(--pst-color-primary);
+}
+
+.community-filters button[aria-pressed="true"] {
+  box-shadow: inset 0 0 0 1px var(--pst-color-primary);
+  font-weight: 600;
+}
+
+.community-controls input:focus-visible,
+.community-filters button:focus-visible,
+.community-card a:focus-visible {
+  outline: 3px solid var(--pst-color-primary);
+  outline-offset: 3px;
+}
+
+#community-results {
+  margin: 0.6rem 0 1.5rem;
+  font-size: 0.9rem;
+  color: var(--pst-color-text-base);
+}
+
+#community-empty {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border: 1px dashed var(--pst-color-border);
+  border-radius: 0.5rem;
+  color: var(--pst-color-text-base);
+}
+
+.community-group {
+  margin: 1rem 0 2rem;
+}
+
+.community-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  align-items: stretch;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.community-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  min-width: 0;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.65rem;
+  color: var(--pst-color-text-base);
+  background: var(--pst-color-surface);
+  overflow-wrap: anywhere;
+}
+
+.community-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.65rem;
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.community-kind {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.3rem;
+  color: var(--pst-color-primary);
+  font-weight: 600;
+}
+
+/* Defeat the site's global h3:nth-of-type color rules only inside these cards. */
+.community-card .community-title {
+  margin: 0;
+  color: var(--pst-color-text-base) !important;
+  font-size: 1.12rem;
+  font-weight: 650;
+  line-height: 1.4;
+}
+
+.community-title a {
+  color: inherit;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+.community-description {
+  margin: 0;
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.community-image {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  margin: 0.1rem 0 0;
+  border: 1px solid var(--pst-color-border);
+  border-radius: 0.35rem;
+  background: var(--pst-color-surface);
+  object-fit: contain;
+  overflow: hidden;
+}
+
+.community-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.community-credit {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.community-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0.9rem;
+  align-items: center;
+  margin: auto 0 0;
+  padding-top: 0.35rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.community-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  max-width: 100%;
+  color: var(--pst-color-primary);
+  text-underline-offset: 0.18em;
+}
+
+.community-card[hidden],
+.community-group[hidden],
+#community-empty[hidden] {
+  display: none !important;
+}
+
+@media (max-width: 480px) {
+  .community-controls,
+  .community-card {
+    padding: 0.85rem;
+  }
+
+  .community-grid {
+    gap: 0.85rem;
+  }
+}
+
+@media (forced-colors: active) {
+  .community-filters button[aria-pressed="true"] {
+    outline: 2px solid Highlight;
+    outline-offset: -3px;
+  }
+}

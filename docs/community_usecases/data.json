@@ -1,0 +1,1198 @@
+{
+  "schema_version": 1,
+  "collection_date": "2026-09-18",
+  "targeted_source_checks": "2026-09-24",
+  "papers": [
+    {
+      "id": "cutting-the-cord",
+      "title": "Cutting the Cord: System Architecture for Low-Cost, GPU-Accelerated Bimanual Mobile Manipulation",
+      "authors": [
+        "Artemis Shaw",
+        "Chen Liu",
+        "Justin Costa",
+        "Rane Gray",
+        "Alina Skowronek",
+        "Kevin Diaz",
+        "Nam Bui",
+        "Nikolaus Correll"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "preprint",
+      "kind": "hardware_derivative",
+      "summary_en": "Extends XLeRobot with onboard Jetson computation, revised power distribution and stiffer arm components for untethered teleoperation, navigation and vision-guided manipulation.",
+      "summary_zh": "为 XLeRobot 加入板载 Jetson 计算、改进供电分配和刚度更高的机械臂部件，用于不拖线的遥操作、导航与视觉引导操作。",
+      "links": [
+        {
+          "label_en": "Paper (v2)",
+          "label_zh": "论文（v2）",
+          "url": "https://arxiv.org/abs/2603.09051v2"
+        },
+        {
+          "label_en": "Full text",
+          "label_zh": "全文",
+          "url": "https://arxiv.org/html/2603.09051v2"
+        },
+        {
+          "label_en": "Companion grasping code",
+          "label_zh": "配套抓取代码",
+          "url": "https://github.com/ranegray/pincer"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2603.09051v2"
+    },
+    {
+      "id": "nori-bot",
+      "title": "Nori Bot: A Sub-$1,000 Floor-to-Counter Mobile Manipulator",
+      "authors": [
+        "Antonio Li",
+        "Sungjoon Park",
+        "Wen Ni Chew"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "historical_preprint",
+      "kind": "hardware_derivative",
+      "summary_en": "The original Nori Bot prototype adds a vertical lift to an XLeRobot-based cart to extend its manipulation workspace. This is the historical v1 design; the later Nori A3 in v2 uses a different mechanical base.",
+      "summary_zh": "早期 Nori Bot 原型在基于 XLeRobot 的小车上加入升降轴，以扩展操作空间。此处收录历史 v1 设计；后续 v2 的 Nori A3 使用不同的机械底座。",
+      "links": [
+        {
+          "label_en": "Historical paper (v1)",
+          "label_zh": "历史论文（v1）",
+          "url": "https://arxiv.org/abs/2605.16537v1"
+        },
+        {
+          "label_en": "Historical full text (v1)",
+          "label_zh": "历史全文（v1）",
+          "url": "https://arxiv.org/html/2605.16537v1"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2605.16537v1"
+    },
+    {
+      "id": "anchorvla4d",
+      "title": "AnchorVLA4D: an Anchor-Based Spatial-Temporal Vision-Language-Action Model for Robotic Manipulation",
+      "authors": [
+        "Juan Zhu",
+        "Zhanying Shao",
+        "Xiaoqi Li",
+        "Ethan Morgan",
+        "Jiadong Xu",
+        "Hongwei Fan",
+        "Hao Dong"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "preprint",
+      "kind": "real_robot_experiments",
+      "summary_en": "Uses XLeRobot to evaluate an anchor-image vision-language-action policy on box lifting, drawer opening and pouring, with task-specific demonstrations collected on the robot.",
+      "summary_zh": "使用 XLeRobot 评估引入锚点图像的视觉语言动作策略，在机器人上采集任务演示，并开展抬箱、开抽屉和倒水实验。",
+      "links": [
+        {
+          "label_en": "Paper",
+          "label_zh": "论文",
+          "url": "https://arxiv.org/abs/2603.12730v1"
+        },
+        {
+          "label_en": "Full text",
+          "label_zh": "全文",
+          "url": "https://arxiv.org/html/2603.12730v1"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2603.12730v1"
+    },
+    {
+      "id": "xs-vla",
+      "title": "Teaching Tiny VLA Models Where to Look and How to Move",
+      "authors": [
+        "Iok Tong Lei",
+        "Ying Jie Yap",
+        "Wei Huang",
+        "Qingchen Xie",
+        "Qianzhi Li",
+        "Yujie Zhang",
+        "Xiaolong Liu",
+        "Zhidong Deng"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "preprint",
+      "kind": "real_robot_experiments",
+      "summary_en": "Uses XLeRobot for a bimanual carrot-handover task with demonstrations collected from several teleoperators. Appendix D of v3 presents a qualitative comparison of XS-VLA, ACT and SmolVLA using partial-credit scores.",
+      "summary_zh": "使用 XLeRobot 开展双臂胡萝卜传递任务，并由多位操作员采集遥操作演示。v3 附录 D 以分阶段计分方式定性比较 XS-VLA、ACT 和 SmolVLA。",
+      "links": [
+        {
+          "label_en": "Paper (v3)",
+          "label_zh": "论文（v3）",
+          "url": "https://arxiv.org/abs/2607.04171v3"
+        },
+        {
+          "label_en": "Full text",
+          "label_zh": "全文",
+          "url": "https://arxiv.org/html/2607.04171v3"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2607.04171v3"
+    },
+    {
+      "id": "mars-ra",
+      "title": "MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation",
+      "authors": [
+        "Dawei Wang",
+        "Di Zhao",
+        "Xinyuan Liu",
+        "Marci Chi Ma",
+        "Xiaoyang Liu",
+        "Chengming Zhou",
+        "Gary Ushaw",
+        "Richard Davison"
+      ],
+      "year": 2026,
+      "venue": "ACL 2026",
+      "status": "published",
+      "kind": "real_robot_experiments",
+      "summary_en": "Tests a multi-agent coordination policy on two XLeRobots in a cooperative doorway-traversal task, after training in a reconstructed simulation of the room.",
+      "summary_zh": "先在重建的房间仿真场景中训练多智能体协作策略，再使用两台 XLeRobot 开展协同穿门的真机实验。",
+      "links": [
+        {
+          "label_en": "Published paper",
+          "label_zh": "正式论文",
+          "url": "https://aclanthology.org/2026.acl-long.1349/"
+        },
+        {
+          "label_en": "Full text (PDF)",
+          "label_zh": "全文（PDF）",
+          "url": "https://aclanthology.org/2026.acl-long.1349.pdf"
+        }
+      ],
+      "evidence_url": "https://aclanthology.org/2026.acl-long.1349.pdf"
+    },
+    {
+      "id": "low-cost-teleop",
+      "title": "Low-Cost Teleoperation Extension for Mobile Manipulators",
+      "authors": [
+        "Danil Belov",
+        "Artem Erkhov",
+        "Yaroslav Savotin",
+        "Tatiana Podladchikova",
+        "Pavel Osinenko",
+        "Dzmitry Tsetserukou"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "preprint",
+      "kind": "teleoperation_user_study",
+      "summary_en": "Combines phone-based head tracking, foot-pedal base control and leader arms in an XLeRobot teleoperation interface. A 30-participant study compares the interface with keyboard and headset-based alternatives.",
+      "summary_zh": "在 XLeRobot 遥操作界面中结合手机头部追踪、脚踏板底盘控制和主从机械臂。论文通过 30 人用户研究，将这一界面与键盘和头显方案进行比较。",
+      "links": [
+        {
+          "label_en": "Paper (v2)",
+          "label_zh": "论文（v2）",
+          "url": "https://arxiv.org/abs/2603.07672v2"
+        },
+        {
+          "label_en": "Full text",
+          "label_zh": "全文",
+          "url": "https://arxiv.org/html/2603.07672v2"
+        },
+        {
+          "label_en": "Code",
+          "label_zh": "代码",
+          "url": "https://github.com/HRI2026LBR/xlerobot-teleop"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2603.07672v2",
+      "image_key": "hri"
+    },
+    {
+      "id": "lehome",
+      "title": "LeHome: A Simulation Environment for Deformable Object Manipulation in Household Scenarios",
+      "authors": [
+        "Zeyi Li",
+        "Yushi Yang",
+        "Shawn Xie",
+        "Kyle Xu",
+        "Tianxing Chen",
+        "Yuran Wang",
+        "Zhenhao Shen",
+        "Yan Shen",
+        "Yue Chen",
+        "Wenjun Li",
+        "Yukun Zheng",
+        "Chaorui Zhang",
+        "Siyi Lin",
+        "Fei Teng",
+        "Hongjun Yang",
+        "Ming Chen",
+        "Steve Xie",
+        "Ruihai Wu"
+      ],
+      "year": 2026,
+      "venue": "arXiv",
+      "status": "preprint",
+      "kind": "simulation_embodiment",
+      "summary_en": "Integrates an XLeRobot embodiment into a household simulation environment for deformable-object manipulation, with keyboard and joystick teleoperation for collecting demonstrations.",
+      "summary_zh": "在面向家居可变形物体操作的仿真环境中接入 XLeRobot 本体，并提供键盘和手柄遥操作以采集演示。",
+      "links": [
+        {
+          "label_en": "Paper",
+          "label_zh": "论文",
+          "url": "https://arxiv.org/abs/2604.22363v1"
+        },
+        {
+          "label_en": "Full text",
+          "label_zh": "全文",
+          "url": "https://arxiv.org/html/2604.22363v1"
+        },
+        {
+          "label_en": "Project",
+          "label_zh": "项目主页",
+          "url": "https://lehome-web.github.io/"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2604.22363v1"
+    },
+    {
+      "id": "piphen",
+      "title": "PIPHEN: Physical Interaction Prediction with Hamiltonian Energy Networks",
+      "authors": [
+        "Kewei Chen",
+        "Yayu Long",
+        "Mingsheng Shang"
+      ],
+      "year": 2026,
+      "venue": "AAAI 2026",
+      "status": "published",
+      "kind": "real_robot_experiments",
+      "summary_en": "Deploys a distributed perception-and-control method on two single-arm XLeRobot mobile manipulators for a coordinated table-setting demonstration.",
+      "summary_zh": "将分布式感知与控制方法部署到两台单臂改型 XLeRobot 移动机器人上，开展协同摆放餐具演示。",
+      "links": [
+        {
+          "label_en": "Published paper",
+          "label_zh": "正式论文",
+          "url": "https://ojs.aaai.org/index.php/AAAI/article/view/38879"
+        },
+        {
+          "label_en": "Author manuscript and appendices",
+          "label_zh": "作者稿与附录",
+          "url": "https://arxiv.org/html/2511.16200v1"
+        }
+      ],
+      "evidence_url": "https://arxiv.org/html/2511.16200v1"
+    },
+    {
+      "id": "elasticflow",
+      "title": "ElasticFlow: One-Step Physics-Consistent Policy with Elastic Time Horizons for Language-Guided Manipulation",
+      "authors": [
+        "Kewei Chen",
+        "Yayu Long",
+        "Shuai Li",
+        "Mingsheng Shang"
+      ],
+      "year": 2026,
+      "venue": "Findings of ACL 2026",
+      "status": "published",
+      "kind": "real_robot_experiments",
+      "summary_en": "Presents qualitative XLeRobot demonstrations of intercepting a rolling cylinder, inserting a straw and executing a multi-stage household manipulation sequence.",
+      "summary_zh": "使用 XLeRobot 定性展示拦截滚动圆柱、插入吸管和执行多阶段家居操作序列。",
+      "links": [
+        {
+          "label_en": "Published paper",
+          "label_zh": "正式论文",
+          "url": "https://aclanthology.org/2026.findings-acl.1186/"
+        },
+        {
+          "label_en": "Full text (PDF)",
+          "label_zh": "全文（PDF）",
+          "url": "https://aclanthology.org/2026.findings-acl.1186.pdf"
+        }
+      ],
+      "evidence_url": "https://aclanthology.org/2026.findings-acl.1186.pdf"
+    }
+  ],
+  "projects": [
+    {
+      "source_index": 0,
+      "source_record_id": "G01",
+      "id": "robocrew",
+      "title": "RoboCrew",
+      "category": "applications",
+      "summary_en": "Adds LLM-driven interaction to XLeRobot through camera observations, speech, arm-control tools, and multi-agent examples.",
+      "summary_zh": "为 XLeRobot 接入基于大语言模型的交互，提供相机观察、语音、机械臂控制工具及多智能体示例。",
+      "kind": "software_integration",
+      "evidence_note": "README includes XLeRobot-specific imports and runnable speech, manipulation, and cooperation examples.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Grigorij-Dudnik/RoboCrew",
+      "repo": "Grigorij-Dudnik/RoboCrew",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Grigorij-Dudnik/RoboCrew"
+        }
+      ],
+      "evidence_url": "https://github.com/Grigorij-Dudnik/RoboCrew/blob/HEAD/README.md",
+      "image_key": "robocrew"
+    },
+    {
+      "source_index": 1,
+      "source_record_id": "G02",
+      "id": "makermods-xlerobot",
+      "title": "MakerMods XLeRobot",
+      "category": "hardware",
+      "summary_en": "Redesigns XLeRobot's printed structure, wheel modules, power-bank mounts, and electronics enclosures, with shared CAD and printing files.",
+      "summary_zh": "重新设计 XLeRobot 的打印结构、轮组、充电宝支架和电子部件外壳，并提供 CAD 与打印文件。",
+      "kind": "hardware_derivative",
+      "evidence_note": "README describes concrete modified parts and supplies design files; commercial collaborator of the original author. Fleet and reliability claims omitted.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/makermods-robotics/MakerMods-XLeRobot",
+      "repo": "makermods-robotics/MakerMods-XLeRobot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/makermods-robotics/MakerMods-XLeRobot"
+        }
+      ],
+      "evidence_url": "https://github.com/makermods-robotics/MakerMods-XLeRobot/blob/HEAD/README.md",
+      "image_key": "makermods"
+    },
+    {
+      "source_index": 3,
+      "source_record_id": "G04",
+      "id": "home-service-demo",
+      "title": "XLeRobot Home Service Demo",
+      "category": "applications",
+      "summary_en": "Demonstrates a modified XLeRobot responding to spoken requests and fetching objects, with calibration tools, ACT and geometric grasping backends, and voice/web interfaces.",
+      "summary_zh": "展示改装 XLeRobot 响应语音请求并取送物品，提供标定工具、ACT 与几何抓取方案，以及语音和网页接口。",
+      "kind": "application_project",
+      "evidence_note": "README documents the reference build, implementation, videos, model, and dataset. The cover image is explicitly a URDF visualization, not a photograph.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/xujiayuxian-png/xlerobot_home_service_demo",
+      "repo": "xujiayuxian-png/xlerobot_home_service_demo",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/xujiayuxian-png/xlerobot_home_service_demo"
+        },
+        {
+          "label_en": "ACT model",
+          "label_zh": "ACT 模型",
+          "url": "https://huggingface.co/lissajous/xlerobot-act-local-grasp-v1"
+        },
+        {
+          "label_en": "Demonstration dataset",
+          "label_zh": "示教数据集",
+          "url": "https://huggingface.co/datasets/lissajous/xlerobot-glue-stick-grasp-30"
+        }
+      ],
+      "evidence_url": "https://github.com/xujiayuxian-png/xlerobot_home_service_demo/blob/HEAD/README.md",
+      "image_key": "homeservice"
+    },
+    {
+      "source_index": 4,
+      "source_record_id": "G05",
+      "id": "maque",
+      "title": "Maque",
+      "category": "applications",
+      "summary_en": "Connects a local language-model agent, VLA executor, and XLeRobot controller across three computers, with an Orange Pi robot host.",
+      "summary_zh": "将本地语言模型智能体、VLA 执行端和 XLeRobot 控制端部署在三台计算设备上，由 Orange Pi 承载机器人端。",
+      "kind": "software_integration",
+      "evidence_note": "README describes the implemented three-machine stack and XLeRobot robot endpoint; no task success or latency claims retained.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/yizhidianlu/Maque",
+      "repo": "yizhidianlu/Maque",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/yizhidianlu/Maque"
+        }
+      ],
+      "evidence_url": "https://github.com/yizhidianlu/Maque/blob/HEAD/README.md",
+      "image_key": "maque"
+    },
+    {
+      "source_index": 6,
+      "source_record_id": "G07",
+      "id": "xlerobot-mcp",
+      "title": "XLeRobot Servo MCP Server",
+      "category": "applications",
+      "summary_en": "Exposes XLeRobot's servo and wheel controls to MCP clients through RoboCrew's controller, with hardware and mock backends.",
+      "summary_zh": "通过 RoboCrew 控制器向 MCP 客户端开放 XLeRobot 的舵机与车轮控制，并提供硬件和模拟后端。",
+      "kind": "software_integration",
+      "evidence_note": "README supplies explicit hardware invocation with serial buses and distinguishes it from mock mode.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/windht/xlerobot-mcp",
+      "repo": "windht/xlerobot-mcp",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/windht/xlerobot-mcp"
+        }
+      ],
+      "evidence_url": "https://github.com/windht/xlerobot-mcp/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 7,
+      "source_record_id": "G08",
+      "id": "qwen-xlerobot",
+      "title": "QWEN-XLeRobot",
+      "category": "applications",
+      "summary_en": "Integrates Qwen voice interaction with XLeRobot, including playback of recorded arm motions and visual scene descriptions.",
+      "summary_zh": "为 XLeRobot 集成通义语音交互、已录制机械臂动作的回放及视觉场景描述。",
+      "kind": "software_integration",
+      "evidence_note": "README explicitly identifies the integration; robot/robot_controller.py contains real dual-arm LeRobot connections. Do not infer navigation or full-body autonomous control.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/hufeiya/QWEN-XLeRobot",
+      "repo": "hufeiya/QWEN-XLeRobot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/hufeiya/QWEN-XLeRobot"
+        }
+      ],
+      "evidence_url": "https://github.com/hufeiya/QWEN-XLeRobot/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 8,
+      "source_record_id": "G09",
+      "id": "xlerobot-dev",
+      "title": "XLeRobot-dev",
+      "category": "applications",
+      "summary_en": "Extends XLeRobot on an RDK S100 with a vision-and-speech agent, mobile-base control, and persistent USB-device mappings.",
+      "summary_zh": "在 RDK S100 上扩展 XLeRobot，加入视觉语音智能体、移动底盘控制和固定 USB 设备路径。",
+      "kind": "software_integration",
+      "evidence_note": "README distinguishes implemented robocrew/voice_agent/llm_move_agent code from future imitation-learning and sim-to-real plans; only implemented scope retained.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/KxLin-sp66/XLeRobot-dev",
+      "repo": "KxLin-sp66/XLeRobot-dev",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/KxLin-sp66/XLeRobot-dev"
+        }
+      ],
+      "evidence_url": "https://github.com/KxLin-sp66/XLeRobot-dev/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 13,
+      "source_record_id": "G14",
+      "id": "xlerobot-pinc",
+      "title": "XLeRobot Pinc",
+      "category": "hardware",
+      "summary_en": "Extends XLeRobot with SO107-style arms and PincOpen grippers, sharing hardware designs, URDF models, and teleoperation interfaces.",
+      "summary_zh": "为 XLeRobot 配置 SO107 风格机械臂与 PincOpen 夹爪，并开放硬件设计、URDF 模型和遥操作接口。",
+      "kind": "hardware_derivative",
+      "evidence_note": "README explicitly establishes XLeRobot lineage, custom hardware, robot classes, and runnable examples.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/ambient-robots/xlerobot_pinc",
+      "repo": "ambient-robots/xlerobot_pinc",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/ambient-robots/xlerobot_pinc"
+        },
+        {
+          "label_en": "3D viewer",
+          "label_zh": "3D 模型查看器",
+          "url": "https://ambient-robots.github.io/xlerobot_pinc/"
+        }
+      ],
+      "evidence_url": "https://github.com/ambient-robots/xlerobot_pinc/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 14,
+      "source_record_id": "G15",
+      "id": "xlerobot-x1",
+      "title": "XLerobot-X1",
+      "category": "hardware",
+      "summary_en": "Adapts XLeRobot to a Qualcomm QCS8550 computing platform, with assembly, wiring, printed-part, and software resources.",
+      "summary_zh": "将 XLeRobot 适配到高通 QCS8550 计算平台，提供装配、接线、打印零件和软件资源。",
+      "kind": "hardware_derivative",
+      "evidence_note": "README identifies the Qualcomm version of XLeRobot and its code/design resources. Unsupported payload, safety, cost, and reliability language omitted.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/APLUX-Official/XLerobot-X1",
+      "repo": "APLUX-Official/XLerobot-X1",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/APLUX-Official/XLerobot-X1"
+        }
+      ],
+      "evidence_url": "https://github.com/APLUX-Official/XLerobot-X1/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 17,
+      "source_record_id": "G18",
+      "id": "xlerobot-pro-data",
+      "title": "XLeRobot-Pro Measurement Tools",
+      "category": "hardware",
+      "summary_en": "Shares measurement scripts, experiment protocols, and telemetry for an XLeRobot-Pro build, covering power, actuator temperature, payload motion, and demonstration recording.",
+      "summary_zh": "提供 XLeRobot-Pro 的测量脚本、实验流程与遥测数据，涵盖供电、执行器温度、负载运动及示教录制。",
+      "kind": "measurement_tooling",
+      "evidence_note": "README lists concrete scripts and links the operating-code repository. Published measurements were not independently reproduced and are not quoted here.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Minko82/xlerobot-pro-data",
+      "repo": "Minko82/xlerobot-pro-data",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Minko82/xlerobot-pro-data"
+        },
+        {
+          "label_en": "Robot software",
+          "label_zh": "机器人软件",
+          "url": "https://github.com/Minko82/xlerobot-pro"
+        }
+      ],
+      "evidence_url": "https://github.com/Minko82/xlerobot-pro-data/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 19,
+      "source_record_id": "G20",
+      "id": "mecanum-control",
+      "title": "XLeRobot Mecanum Control",
+      "category": "teleoperation",
+      "summary_en": "Adds keyboard driving and a spatial-tracking controller for a four-wheel mecanum XLeRobot base through LeRobot's XLeRobot interface.",
+      "summary_zh": "通过 LeRobot 的 XLeRobot 接口，为四轮麦克纳姆底盘增加键盘驾驶与空间位置跟随控制器。",
+      "kind": "software_integration",
+      "evidence_note": "README names keyboard_drive.py and mecanum_base.py, servo IDs, and the XLeRobot interface; no tracking-accuracy or safety guarantee retained.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/LucasTovar-Gaytan/xlerobot-mecanum-control",
+      "repo": "LucasTovar-Gaytan/xlerobot-mecanum-control",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/LucasTovar-Gaytan/xlerobot-mecanum-control"
+        }
+      ],
+      "evidence_url": "https://github.com/LucasTovar-Gaytan/xlerobot-mecanum-control/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 20,
+      "source_record_id": "G21",
+      "id": "grievous",
+      "title": "Grievous",
+      "category": "applications",
+      "summary_en": "Extends an XLeRobot build with onboard SO-101 leader arms and reports SmolVLA experiments on pick-and-place and dusting tasks.",
+      "summary_zh": "在 XLeRobot 上增加随车 SO-101 主臂，并展示 SmolVLA 在抓放和除尘任务中的实验进展。",
+      "kind": "application_project",
+      "evidence_note": "Author's project page explicitly identifies the XLeRobot base and completed modification; demonstration progress is not a task benchmark.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://www.alexkoven.com/project/grievous/",
+      "repo": null,
+      "links": [
+        {
+          "label_en": "Project",
+          "label_zh": "项目介绍",
+          "url": "https://www.alexkoven.com/project/grievous/"
+        }
+      ],
+      "evidence_url": "https://www.alexkoven.com/project/grievous/"
+    },
+    {
+      "source_index": 21,
+      "source_record_id": "G22",
+      "id": "xlerobot-isaaclab",
+      "title": "XLeRobot IsaacLab",
+      "category": "simulation",
+      "summary_en": "Provides an IsaacLab extension for XLeRobot with keyboard/gamepad teleoperation and ground-plane, cube-lifting, and loft environments.",
+      "summary_zh": "提供 XLeRobot 的 IsaacLab 扩展，包含键盘与手柄遥操作，以及地面、抬升方块和室内场景环境。",
+      "kind": "simulation_project",
+      "evidence_note": "README lists registered XLeRobot environments, robot assets, device drivers, and launch scripts. This is simulation integration.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/kabilankb/xlerobot_isaaclab-",
+      "repo": "kabilankb/xlerobot_isaaclab-",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/kabilankb/xlerobot_isaaclab-"
+        }
+      ],
+      "evidence_url": "https://github.com/kabilankb/xlerobot_isaaclab-/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 23,
+      "source_record_id": "G24",
+      "id": "xlerobot-isaacsim-dgx",
+      "title": "XLeRobot Isaac Sim on DGX Spark",
+      "category": "simulation",
+      "summary_en": "Adapts XLeRobot's IsaacLab simulation to DGX Spark, with environment assets, teleoperation, and LeRobot/GR00T workflow scripts.",
+      "summary_zh": "将 XLeRobot 的 IsaacLab 仿真适配到 DGX Spark，提供环境资产、遥操作和 LeRobot／GR00T 工作流脚本。",
+      "kind": "simulation_project",
+      "evidence_note": "README documents XLeRobot simulation fixes and assets. Its real-hardware deployment section targets SO-101, so no full-XLeRobot sim-to-real result is claimed.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Lakesenberg/xlerobot_sim2real_isaacsim",
+      "repo": "Lakesenberg/xlerobot_sim2real_isaacsim",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Lakesenberg/xlerobot_sim2real_isaacsim"
+        }
+      ],
+      "evidence_url": "https://github.com/Lakesenberg/xlerobot_sim2real_isaacsim/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 24,
+      "source_record_id": "G25",
+      "id": "xlerobot-gazebo",
+      "title": "XLeRobot Gazebo",
+      "category": "simulation",
+      "summary_en": "Integrates XLeRobot with Gazebo and ros2_control, including launch scripts for omnidirectional and planar base backends.",
+      "summary_zh": "将 XLeRobot 接入 Gazebo 与 ros2_control，提供全向和二维平面底盘后端的启动脚本。",
+      "kind": "simulation_project",
+      "evidence_note": "README identifies the XLeRobot-specific Gazebo package, robot assets, and concrete GUI/headless commands.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Qifei-C/xlerobot_gazebo",
+      "repo": "Qifei-C/xlerobot_gazebo",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Qifei-C/xlerobot_gazebo"
+        }
+      ],
+      "evidence_url": "https://github.com/Qifei-C/xlerobot_gazebo/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 25,
+      "source_record_id": "G26",
+      "id": "xlerobot-ros2-jazzy",
+      "title": "XLeRobot ROS 2 Jazzy",
+      "category": "teleoperation",
+      "summary_en": "Provides ROS 2 drivers and teleoperation for XLeRobot's arms, head, and base, including gamepad and leader–follower control.",
+      "summary_zh": "为 XLeRobot 的双臂、头部和底盘提供 ROS 2 驱动，并支持手柄及主从臂遥操作。",
+      "kind": "software_integration",
+      "evidence_note": "README specifies hardware bus ownership, driver topics, bundled XLeRobot adapters, and implemented teleoperation packages; mock mode is separate.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Raibek885/XLeRobot-ROS2",
+      "repo": "Raibek885/XLeRobot-ROS2",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Raibek885/XLeRobot-ROS2"
+        }
+      ],
+      "evidence_url": "https://github.com/Raibek885/XLeRobot-ROS2/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 26,
+      "source_record_id": "G27",
+      "id": "xlerobot-ros2-humble",
+      "title": "XLeRobot ROS 2 Humble",
+      "category": "teleoperation",
+      "summary_en": "Connects XLeRobot to ROS 2 and MoveIt through a hardware bridge, with robot models, calibration tools, and joint/base control.",
+      "summary_zh": "通过硬件桥接将 XLeRobot 接入 ROS 2 和 MoveIt，提供机器人模型、标定工具及关节和底盘控制。",
+      "kind": "software_integration",
+      "evidence_note": "Lowercase readme.md documents real-hardware launch, two serial buses, MoveIt configuration, and hardware bridge. Separate AlohaX platform is excluded.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/AlohaRobot/xlerobot_ros",
+      "repo": "AlohaRobot/xlerobot_ros",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/AlohaRobot/xlerobot_ros"
+        }
+      ],
+      "evidence_url": "https://github.com/AlohaRobot/xlerobot_ros/blob/HEAD/readme.md"
+    },
+    {
+      "source_index": 29,
+      "source_record_id": "G30",
+      "id": "livekit-portal",
+      "title": "LiveKit Portal for XLeRobot",
+      "category": "teleoperation",
+      "summary_en": "Implements remote bimanual leader-arm teleoperation for XLeRobot over LiveKit Portal, with camera streaming, Rerun visualization, and LeRobot dataset recording.",
+      "summary_zh": "通过 LiveKit Portal 实现 XLeRobot 双主臂远程遥操作，并集成相机流、Rerun 可视化和 LeRobot 数据录制。",
+      "kind": "software_integration",
+      "evidence_note": "README documents robot/operator machines, XLeRobot driver installation, serial/camera configuration, and recording.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/livekit-examples/portal-xlerobot",
+      "repo": "livekit-examples/portal-xlerobot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/livekit-examples/portal-xlerobot"
+        }
+      ],
+      "evidence_url": "https://github.com/livekit-examples/portal-xlerobot/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 30,
+      "source_record_id": "G31",
+      "id": "xlvr",
+      "title": "XLVR",
+      "category": "teleoperation",
+      "summary_en": "Extends XLeRobot's XLeVR stack with a Quest 3 delta-control IK bridge for single- or dual-arm SO-101 teleoperation.",
+      "summary_zh": "扩展 XLeRobot 的 XLeVR 系统，加入面向 Quest 3 的增量控制逆运动学桥接，支持单臂或双臂 SO-101 遥操作。",
+      "kind": "software_extension",
+      "evidence_note": "README explicitly imports upstream XLeVR/VRMonitor and supplies arm control workflow. Scope is arm teleoperation, not validated mobile-base control.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/xiaozh26/XLVR",
+      "repo": "xiaozh26/XLVR",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/xiaozh26/XLVR"
+        }
+      ],
+      "evidence_url": "https://github.com/xiaozh26/XLVR/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 31,
+      "source_record_id": "G32",
+      "id": "xoq-xlerobot",
+      "title": "XLeRobot over XoQ",
+      "category": "teleoperation",
+      "summary_en": "Teleoperates a dual-SO-100 XLeRobot configuration and differential-drive base through XoQ's remote serial bridge.",
+      "summary_zh": "通过 XoQ 远程串口桥接，对双 SO-100 机械臂和差速底盘的 XLeRobot 配置进行遥操作。",
+      "kind": "software_integration",
+      "evidence_note": "README documents serial services, arm/base wiring, persisted peer identities, and client scripts.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/haixuanTao/xlerobot",
+      "repo": "haixuanTao/xlerobot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/haixuanTao/xlerobot"
+        }
+      ],
+      "evidence_url": "https://github.com/haixuanTao/xlerobot/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 32,
+      "source_record_id": "G33",
+      "id": "pounce",
+      "title": "Pounce",
+      "category": "teleoperation",
+      "summary_en": "Adds Rift S/SteamVR teleoperation for XLeRobot's arms, four-wheel base, and camera gimbal, alongside STS servo configuration tools.",
+      "summary_zh": "使用 Rift S／SteamVR 遥操作 XLeRobot 的双臂、四轮底盘和相机云台，并提供 STS 舵机配置工具。",
+      "kind": "software_integration",
+      "evidence_note": "README identifies XLeRobot hardware, clutch-driven control, actual bus mappings, application packaging, and hardware-specific configuration.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/RyanXXYC/Pounce",
+      "repo": "RyanXXYC/Pounce",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/RyanXXYC/Pounce"
+        }
+      ],
+      "evidence_url": "https://github.com/RyanXXYC/Pounce/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 33,
+      "source_record_id": "G34",
+      "id": "joycon-guagua",
+      "title": "XLeRobot Joy-Con Data Collection",
+      "category": "teleoperation",
+      "summary_en": "Provides Joy-Con teleoperation and demonstration-recording scripts for XLeRobot, alongside a pi0.5 training workflow.",
+      "summary_zh": "提供 XLeRobot 的 Joy-Con 遥操作与示教数据录制脚本，并包含 pi0.5 训练工作流。",
+      "kind": "software_integration",
+      "evidence_note": "README is short; repository tree additionally confirms joycon controllers, XLeRobot host/client modules, and xlerobot-joycon-dataset.sh. No trained-policy performance claimed.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/guagua-cpu/Xlerobot_Joycon",
+      "repo": "guagua-cpu/Xlerobot_Joycon",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/guagua-cpu/Xlerobot_Joycon"
+        }
+      ],
+      "evidence_url": "https://github.com/guagua-cpu/Xlerobot_Joycon/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 34,
+      "source_record_id": "G35",
+      "id": "joycon-caizonglin",
+      "title": "XLeRobot Remote Joy-Con Control",
+      "category": "teleoperation",
+      "summary_en": "Implements remote Joy-Con control of XLeRobot's two arms, head, and mobile base, including base acceleration and deceleration handling.",
+      "summary_zh": "实现 Joy-Con 对 XLeRobot 双臂、头部和移动底盘的远程控制，并加入底盘加减速处理。",
+      "kind": "software_integration",
+      "evidence_note": "Generic root README alone is insufficient; checked examples/9_teleoperate_joycon_remote.py imports XLerobotClient, maps both arms/head, and sends combined base actions.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/caizonglin/xlerobot_joycon",
+      "repo": "caizonglin/xlerobot_joycon",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/caizonglin/xlerobot_joycon"
+        }
+      ],
+      "evidence_url": "https://github.com/caizonglin/xlerobot_joycon/blob/HEAD/examples/9_teleoperate_joycon_remote.py"
+    },
+    {
+      "source_index": 35,
+      "source_record_id": "G36",
+      "id": "kinesthetic-recorder",
+      "title": "XLeRobot Kinesthetic Recorder",
+      "category": "learning",
+      "summary_en": "Records demonstrations by manually guiding XLeRobot's follower arms, with synchronized camera recording and replay tools.",
+      "summary_zh": "通过手动引导 XLeRobot 从臂录制示教，提供同步相机录制与回放工具。",
+      "kind": "data_collection_tooling",
+      "evidence_note": "README documents follower-only dual-arm setup, recorder script, and cameras; excludes unverified claims about cost or learning improvement.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder",
+      "repo": "tianrui-li-0/xlerobot-kinesthetic-recorder",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder"
+        }
+      ],
+      "evidence_url": "https://github.com/tianrui-li-0/xlerobot-kinesthetic-recorder/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 36,
+      "source_record_id": "G37",
+      "id": "xlerobot-webxr",
+      "title": "XLeRobot WebXR",
+      "category": "teleoperation",
+      "summary_en": "Implements the WebXR client and Mac proxy for an XLeRobot dual-arm teleoperation project, with simulator command interfaces and diagnostic tools.",
+      "summary_zh": "实现 XLeRobot 双臂遥操作项目的 WebXR 客户端和 Mac 代理，包含仿真指令接口及诊断工具。",
+      "kind": "software_integration",
+      "evidence_note": "Capstone repository README documents implemented client/proxy files and simulator targets. Do not present it as a completed physical-robot user study.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/capstone-indory/xlerobot-webxr",
+      "repo": "capstone-indory/xlerobot-webxr",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/capstone-indory/xlerobot-webxr"
+        }
+      ],
+      "evidence_url": "https://github.com/capstone-indory/xlerobot-webxr/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 38,
+      "source_record_id": "G39",
+      "id": "dexbotic-xlerobot",
+      "title": "Dexbotic XLeRobot Integration",
+      "category": "learning",
+      "summary_en": "Provides an XLeRobot-specific path from LeRobot data conversion to policy training and deployment, using a robot client, inference bridge, and policy server.",
+      "summary_zh": "提供面向 XLeRobot 的 LeRobot 数据转换、策略训练和部署流程，通过机器人客户端、推理桥接与策略服务器连接各环节。",
+      "kind": "software_integration",
+      "evidence_note": "Checked hardware/docs/xlerobot_inference_example.md: explicit v0.4 two-wheel embodiment, 16D action schema, converter, bridge.py, and deployment commands.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/dexmal/dexbotic",
+      "repo": "dexmal/dexbotic",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/dexmal/dexbotic"
+        },
+        {
+          "label_en": "XLeRobot guide",
+          "label_zh": "XLeRobot 集成指南",
+          "url": "https://github.com/dexmal/dexbotic/blob/HEAD/hardware/docs/xlerobot_inference_example.md"
+        }
+      ],
+      "evidence_url": "https://github.com/dexmal/dexbotic/blob/HEAD/hardware/docs/xlerobot_inference_example.md"
+    },
+    {
+      "source_index": 39,
+      "source_record_id": "G40",
+      "id": "brainbot",
+      "title": "BrainBot",
+      "category": "applications",
+      "summary_en": "Builds an XLeRobot control stack that combines bimanual teleoperation, policy inference, multi-camera streaming, and web/AR visualization.",
+      "summary_zh": "构建面向 XLeRobot 的控制系统，整合双臂遥操作、策略推理、多相机流及网页／AR 可视化。",
+      "kind": "application_project",
+      "evidence_note": "README supplies actual XLeRobot robot/leader configurations and links the team's Hackster project. No benchmark or promised future dataset claimed.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/Astera-org/brainbot",
+      "repo": "Astera-org/brainbot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/Astera-org/brainbot"
+        },
+        {
+          "label_en": "Project demonstration",
+          "label_zh": "项目演示",
+          "url": "https://www.hackster.io/brainbot/brainbot-big-brain-with-xlerobot-ad1b4c"
+        }
+      ],
+      "evidence_url": "https://github.com/Astera-org/brainbot/blob/HEAD/README.md",
+      "image_key": "vbrain"
+    },
+    {
+      "source_index": 40,
+      "source_record_id": "G41",
+      "id": "laundry-bot",
+      "title": "Laundry Bot",
+      "category": "learning",
+      "summary_en": "Implements a towel-folding policy pipeline for XLeRobot using GR00T and LeRobot, with modality configuration and a phase-based robot evaluation script.",
+      "summary_zh": "基于 GR00T 与 LeRobot 实现 XLeRobot 叠毛巾策略流程，提供模态配置和按阶段执行的机器人评估脚本。",
+      "kind": "software_integration",
+      "evidence_note": "README explicitly lists xle_data_config.py and eval_xle.py for the real XLeRobot. This establishes code, not a verified folding success rate.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/kbgkbg/laundry-bot",
+      "repo": "kbgkbg/laundry-bot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/kbgkbg/laundry-bot"
+        }
+      ],
+      "evidence_url": "https://github.com/kbgkbg/laundry-bot/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 41,
+      "source_record_id": "G42",
+      "id": "vesalius-teleop",
+      "title": "Vesalius-Ai XLeRobot Teleoperation",
+      "category": "teleoperation",
+      "summary_en": "Provides desktop-to-Jetson XLeRobot teleoperation with leader arms, camera streaming, IMU yaw tracking, and demonstration recording.",
+      "summary_zh": "提供从桌面电脑到 Jetson 的 XLeRobot 主臂遥操作，集成相机流、IMU 航向跟踪与示教录制。",
+      "kind": "software_integration",
+      "evidence_note": "README now available and documents actual XLeRobot host/client files and deployment. The owner's surgical-assistant repository description is not reused; no medical capability claimed.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/bigse0u1/Vesalius-Ai",
+      "repo": "bigse0u1/Vesalius-Ai",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/bigse0u1/Vesalius-Ai"
+        }
+      ],
+      "evidence_url": "https://github.com/bigse0u1/Vesalius-Ai/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 44,
+      "source_record_id": "G45",
+      "id": "onerobotai-xlerobot",
+      "title": "OneRobotAI XLeRobot",
+      "category": "learning",
+      "summary_en": "Shares an XLeRobot adaptation with a SmolVLA towel-folding demonstration.",
+      "summary_zh": "分享 XLeRobot 的适配代码及 SmolVLA 叠毛巾演示。",
+      "kind": "application_project",
+      "evidence_note": "Root README links its own fold_tower.mp4 demonstration. Retained as a modified application fork, not merely an upstream mirror; no trial-level performance inferred.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/OneRobotAI/xlerobot",
+      "repo": "OneRobotAI/xlerobot",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/OneRobotAI/xlerobot"
+        },
+        {
+          "label_en": "Folding demonstration",
+          "label_zh": "叠毛巾演示",
+          "url": "https://github.com/OneRobotAI/xlerobot/blob/main/docs/en/source/fold_tower.mp4"
+        }
+      ],
+      "evidence_url": "https://github.com/OneRobotAI/xlerobot/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 46,
+      "source_record_id": "G47",
+      "id": "perception-engine",
+      "title": "XLeRobot Perception Engine",
+      "category": "applications",
+      "summary_en": "Adds object tracking and camera-head sweeping to XLeRobot, with a pan/tilt controller, calibration utility, and browser preview.",
+      "summary_zh": "为 XLeRobot 增加目标跟踪与相机云台扫视，提供俯仰／偏航控制器、标定工具和浏览器预览。",
+      "kind": "software_integration",
+      "evidence_note": "README separates implemented XLERobotHead, tracking controller, real Feetech/camera backend, and mock mode.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/mave5/XLeRobot-Perception-Engine",
+      "repo": "mave5/XLeRobot-Perception-Engine",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/mave5/XLeRobot-Perception-Engine"
+        }
+      ],
+      "evidence_url": "https://github.com/mave5/XLeRobot-Perception-Engine/blob/HEAD/README.md"
+    },
+    {
+      "source_index": 47,
+      "source_record_id": "G48",
+      "id": "xle-hack",
+      "title": "XLeRobot Hackathon Tools",
+      "category": "learning",
+      "summary_en": "Shares XLeRobot-focused policy-training and perception tools from a hackathon project, plus a companion installer that configures the LeRobot/XLeRobot integration.",
+      "summary_zh": "分享黑客松项目中面向 XLeRobot 的策略训练与感知工具，并通过配套安装器配置 LeRobot 和 XLeRobot 的集成。",
+      "kind": "software_integration",
+      "evidence_note": "xle-hack README documents trainer/data/perception code; xlerobot-onboard README supplies an implemented pinned-version installer. Grouped as one developer/event case, not two adoptions.",
+      "checked_this_round": true,
+      "checked_on": "2026-09-24",
+      "url": "https://github.com/ScavieFae/xle-hack",
+      "repo": "ScavieFae/xle-hack",
+      "links": [
+        {
+          "label_en": "Code",
+          "label_zh": "源码",
+          "url": "https://github.com/ScavieFae/xle-hack"
+        },
+        {
+          "label_en": "Companion installer",
+          "label_zh": "配套安装器",
+          "url": "https://github.com/ScavieFae/xlerobot-onboard"
+        }
+      ],
+      "evidence_url": "https://github.com/ScavieFae/xle-hack/blob/HEAD/README.md"
+    },
+    {
+      "id": "clemson-human-interaction",
+      "title": "Clemson Student Interaction Robot",
+      "category": "applications",
+      "summary_en": "A Clemson student project built an XLeRobot with Jetson AGX Orin, a microphone, and a speaker for language-based human–robot interaction.",
+      "summary_zh": "Clemson 学生项目搭建 XLeRobot，并加入 Jetson AGX Orin、麦克风和扬声器，用于语言式人机交互。",
+      "url": "https://ci.clemson.edu/assets/docs/foci/2026.pdf#page=105",
+      "links": [
+        {
+          "label_en": "University abstract",
+          "label_zh": "高校项目摘要",
+          "url": "https://ci.clemson.edu/assets/docs/foci/2026.pdf#page=105"
+        }
+      ],
+      "evidence_url": "https://ci.clemson.edu/assets/docs/foci/2026.pdf#page=105",
+      "evidence_note": "Previously verified primary university programme, PDF page 105, poster 303, Christian Passios and Jonathan Tran. Completed build described in an abstract; no learning outcomes or controlled evaluation asserted.",
+      "kind": "student_project",
+      "supplemental": true,
+      "source_record_id": "C06",
+      "checked_this_round": false
+    },
+    {
+      "id": "matcha-bot",
+      "title": "Matcha Bot",
+      "category": "applications",
+      "summary_en": "UIUC SIGRobotics adapted XLeRobot for matcha preparation, combining bimanual control with a GR00T N1.5 policy and sharing its project code.",
+      "summary_zh": "UIUC SIGRobotics 将 XLeRobot 用于抹茶制作，结合双臂控制与 GR00T N1.5 策略，并开放项目代码。",
+      "url": "https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520",
+      "links": [
+        {
+          "label_en": "Project",
+          "label_zh": "项目介绍",
+          "url": "https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520"
+        },
+        {
+          "label_en": "Robot driver",
+          "label_zh": "机器人驱动",
+          "url": "https://github.com/SIGRobotics-UIUC/lerobot_robot_bi_so101_follower"
+        },
+        {
+          "label_en": "Interface code",
+          "label_zh": "交互代码",
+          "url": "https://github.com/SIGRobotics-UIUC/seeed-hack-interface"
+        }
+      ],
+      "evidence_url": "https://www.hackster.io/sigrobotics/matcha-bot-sigrobotics-embodied-ai-hackathon-1st-place-f0e520",
+      "evidence_note": "Previously verified primary team project report and code links. Describes a modified XLeRobot demonstration, not a repeated-trial benchmark or measured educational benefit.",
+      "kind": "student_application_project",
+      "supplemental": true,
+      "source_record_id": "C10",
+      "checked_this_round": false
+    }
+  ],
+  "images": {
+    "hri": {
+      "filename": "hri.jpg",
+      "source_url": "https://raw.githubusercontent.com/HRI2026LBR/xlerobot-teleop/HEAD/demo.gif",
+      "alt_en": "Frame of the paper demo GIF: phone-VR + pedals (left) vs keyboard (right)",
+      "alt_zh": "论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制",
+      "credit_en": "Original project image",
+      "credit_zh": "原项目图片"
+    },
+    "robocrew": {
+      "filename": "robocrew.jpg",
+      "source_url": "https://raw.githubusercontent.com/Grigorij-Dudnik/RoboCrew-assets/master/Images/main2.jpg",
+      "alt_en": "RoboCrew capability diagram over an XLeRobot line drawing",
+      "alt_zh": "RoboCrew 功能示意：相机增强、语音识别、长期记忆、VLA、运动控制标注在 XLeRobot 线稿上",
+      "credit_en": "Original project image",
+      "credit_zh": "原项目图片"
+    },
+    "makermods": {
+      "filename": "makermods.jpg",
+      "source_url": "https://raw.githubusercontent.com/makermods-robotics/MakerMods-XLeRobot/HEAD/assets/images/hero_shot_17_04_02_18.png",
+      "alt_en": "MakerMods upgraded XLeRobot product shot",
+      "alt_zh": "MakerMods 升级版 XLeRobot 产品照",
+      "credit_en": "Original project image",
+      "credit_zh": "原项目图片"
+    },
+    "homeservice": {
+      "filename": "homeservice.jpg",
+      "source_url": "https://raw.githubusercontent.com/xujiayuxian-png/xlerobot_home_service_demo/HEAD/docs/images/robot-hero.png",
+      "alt_en": "URDF rendering from the XLeRobot Home Service Demo project",
+      "alt_zh": "XLeRobot Home Service Demo 项目的 URDF 渲染图",
+      "credit_en": "Original project URDF rendering",
+      "credit_zh": "原项目 URDF 渲染图"
+    },
+    "maque": {
+      "filename": "maque.jpg",
+      "source_url": "https://raw.githubusercontent.com/yizhidianlu/Maque/HEAD/assets/maque-overview.png",
+      "alt_en": "Maque three-machine architecture diagram",
+      "alt_zh": "Maque 三机架构图",
+      "credit_en": "Original project image",
+      "credit_zh": "原项目图片"
+    },
+    "vbrain": {
+      "filename": "vbrain.jpg",
+      "source_url": "https://github.com/Vector-Wangel/XLeRobot-assets/blob/main/videos/Community/Brain_bot_by_astera.mp4",
+      "alt_en": "BrainBot data-collection collage",
+      "alt_zh": "BrainBot 数据采集四宫格",
+      "credit_en": "Original project image",
+      "credit_zh": "原项目图片"
+    }
+  }
+}

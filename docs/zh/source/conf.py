@@ -137,9 +137,10 @@ html_context = {
 }
 html_css_files = [
     'css/custom.css',
+    'css/community-usecases.css',
 ]
-html_static_path = ['_static']
-html_js_files = ['js/lang-switch.js']
+html_static_path = ['_static', '../../community_usecases/static']
+html_js_files = ['js/lang-switch.js', 'js/community-usecases.js']
 
 ### Autodoc configurations ###
 autodoc_typehints = "signature"

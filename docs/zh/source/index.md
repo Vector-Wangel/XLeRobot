@@ -190,5 +190,5 @@ hardware/index
 simulation/index
 software/index
 demos/index
-relatedworks/index
+社区应用案例 <relatedworks/index>
 ```
