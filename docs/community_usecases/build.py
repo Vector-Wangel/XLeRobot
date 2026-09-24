@@ -122,7 +122,7 @@ def card(item, entry_type, lang, images):
 
 def highlights(data, lang):
     items = {item['id']: item for item in data['papers'] + data['projects']}
-    result = [f'<div class="community-highlights" aria-label="{TEXT[lang]["highlights"]}">']
+    result = [f'<nav class="community-highlights" aria-label="{TEXT[lang]["highlights"]}">']
     for chosen in data.get('highlights', []):
         item = items[chosen['id']]
         image = data['images'].get(item.get('image_key'))
@@ -130,9 +130,12 @@ def highlights(data, lang):
             continue
         result.append(f'<a class="community-highlight" href="#case-{esc(item["id"])}">'
                       f'<img src="../_static/community/{esc(image["filename"])}" '
-                      f'alt="{esc(image["alt_" + lang])}" decoding="async">'
-                      f'<span>{esc(chosen["label_" + lang])}</span></a>')
-    result.append('</div>')
+                      f'alt="{esc(image["alt_" + lang])}" width="72" height="52" decoding="async">'
+                      '<span class="community-highlight-copy">'
+                      f'<span class="community-highlight-title">{esc(chosen["label_" + lang])}</span>'
+                      f'<span class="community-highlight-category">{esc(chosen["category_" + lang])}</span>'
+                      '</span></a>')
+    result.append('</nav>')
     return '\n'.join(result)
 
 
@@ -202,6 +205,8 @@ def validate(data):
             raise ValueError('Highlight must reference an illustrated case: ' + chosen['id'])
         if not chosen.get('label_en') or not chosen.get('label_zh'):
             raise ValueError('Highlight needs both language labels: ' + chosen['id'])
+        if not chosen.get('category_en') or not chosen.get('category_zh'):
+            raise ValueError('Highlight needs both language categories: ' + chosen['id'])
 
 
 def main():

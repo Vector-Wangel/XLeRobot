@@ -8,11 +8,11 @@ See how researchers and builders use XLeRobot for manipulation, teleoperation, s
 
 
 
-<div class="community-highlights" aria-label="Featured community examples">
-<a class="community-highlight" href="#case-makermods-xlerobot"><img src="../_static/community/makermods.jpg" alt="MakerMods upgraded XLeRobot product shot" decoding="async"><span>MakerMods · Hardware adaptation</span></a>
-<a class="community-highlight" href="#case-matcha-bot"><img src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot gripper holding a whisk over a bowl of matcha." decoding="async"><span>Matcha Bot · Household application</span></a>
-<a class="community-highlight" href="#case-low-cost-teleop"><img src="../_static/community/hri.jpg" alt="Frame of the paper demo GIF: phone-VR + pedals (left) vs keyboard (right)" decoding="async"><span>Teleoperation · User study</span></a>
-</div>
+<nav class="community-highlights" aria-label="Featured community examples">
+<a class="community-highlight" href="#case-makermods-xlerobot"><img src="../_static/community/makermods.jpg" alt="MakerMods upgraded XLeRobot product shot" width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">MakerMods</span><span class="community-highlight-category">Hardware</span></span></a>
+<a class="community-highlight" href="#case-matcha-bot"><img src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot gripper holding a whisk over a bowl of matcha." width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">Matcha Bot</span><span class="community-highlight-category">Applications</span></span></a>
+<a class="community-highlight" href="#case-low-cost-teleop"><img src="../_static/community/hri.jpg" alt="Frame of the paper demo GIF: phone-VR + pedals (left) vs keyboard (right)" width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">Teleoperation</span><span class="community-highlight-category">Research</span></span></a>
+</nav>
 
 
 

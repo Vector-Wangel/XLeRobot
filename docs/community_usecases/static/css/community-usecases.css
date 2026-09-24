@@ -208,41 +208,66 @@
 .community-highlights {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin: 1.1rem 0 0.8rem;
+  margin: 1rem 0 0.85rem;
+  padding: 0.8rem 0;
+  border-block: 1px solid var(--pst-color-border);
 }
 
 .community-highlight {
-  display: block;
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 0.7rem;
   min-width: 0;
-  border: 1px solid var(--pst-color-border);
-  border-radius: 0.55rem;
-  background: var(--pst-color-surface);
-  overflow: hidden;
+  padding: 0 0.8rem;
   color: var(--pst-color-text-base);
   text-decoration: none;
 }
 
+.community-highlight:first-child { padding-left: 0; }
+.community-highlight:last-child { padding-right: 0; }
+.community-highlight + .community-highlight {
+  border-left: 1px solid var(--pst-color-border);
+}
+
 .community-highlight img {
   display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
+  width: 4.5rem;
+  height: 3.25rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
   background: var(--pst-color-surface);
 }
 
-.community-highlight span {
+.community-highlight-copy {
   display: block;
-  padding: 0.6rem 0.65rem;
+  min-width: 0;
+}
+
+.community-highlight-title {
+  display: block;
   font-size: 0.86rem;
   font-weight: 600;
   line-height: 1.4;
 }
 
-.community-highlight:hover,
-.community-highlight:focus-visible {
-  border-color: var(--pst-color-primary);
+.community-highlight-category {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.73rem;
+  line-height: 1.4;
+  color: var(--pst-color-text-muted);
+}
+
+.community-highlight:hover .community-highlight-title {
   color: var(--pst-color-primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.community-highlight:focus-visible {
+  outline: 2px solid var(--pst-color-primary);
+  outline-offset: 4px;
 }
 
 .community-jump {
@@ -269,17 +294,24 @@
   .community-controls { grid-template-columns: minmax(0, 1fr); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .community-highlights {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    padding-bottom: 0.35rem;
+    padding: 0.65rem 0;
   }
   .community-highlight {
-    flex: 0 0 72%;
-    scroll-snap-align: start;
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
+    align-content: start;
+    gap: 0.4rem;
+    padding: 0 0.65rem;
   }
+  .community-highlight img {
+    width: 100%;
+    max-width: 6rem;
+    height: 2.75rem;
+  }
+  .community-highlight-title { font-size: 0.78rem; }
+  .community-highlight-category { font-size: 0.7rem; }
 }
 
 .community-credit {

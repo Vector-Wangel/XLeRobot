@@ -39,7 +39,8 @@ Use photographs, demonstration frames, or figures from the specific case's
 primary sources. Identify simulation views explicitly, keep figure panels
 unaltered, and record extraction details alongside the source URL. Images open
 at full resolution from the cards. The `highlights` list selects three illustrated
-cases for the opening gallery; provide a short label in each language.
+cases for the compact opening strip; provide a short name and category in each
+language. Keep all three previews visible on mobile without horizontal scrolling.
 
 Language switching is provided by the official Read the Docs flyout through the
 existing `xlerobot` / `xlerobot-zh` translation relationship (`en` / `zh-cn`). Do

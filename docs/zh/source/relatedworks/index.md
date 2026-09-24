@@ -8,11 +8,11 @@
 
 
 
-<div class="community-highlights" aria-label="社区案例精选">
-<a class="community-highlight" href="#case-makermods-xlerobot"><img src="../_static/community/makermods.jpg" alt="MakerMods 升级版 XLeRobot 产品照" decoding="async"><span>MakerMods · 硬件改造</span></a>
-<a class="community-highlight" href="#case-matcha-bot"><img src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot 夹持茶筅搅拌碗中的抹茶。" decoding="async"><span>Matcha Bot · 家庭应用</span></a>
-<a class="community-highlight" href="#case-low-cost-teleop"><img src="../_static/community/hri.jpg" alt="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制" decoding="async"><span>遥操作 · 用户研究</span></a>
-</div>
+<nav class="community-highlights" aria-label="社区案例精选">
+<a class="community-highlight" href="#case-makermods-xlerobot"><img src="../_static/community/makermods.jpg" alt="MakerMods 升级版 XLeRobot 产品照" width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">MakerMods</span><span class="community-highlight-category">硬件改造</span></span></a>
+<a class="community-highlight" href="#case-matcha-bot"><img src="../_static/community/project_matcha_bot.jpg" alt="Matcha Bot 夹持茶筅搅拌碗中的抹茶。" width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">Matcha Bot</span><span class="community-highlight-category">家庭应用</span></span></a>
+<a class="community-highlight" href="#case-low-cost-teleop"><img src="../_static/community/hri.jpg" alt="论文配套 demo 截图：左为手机 VR 加踏板方案，右为键盘控制" width="72" height="52" decoding="async"><span class="community-highlight-copy"><span class="community-highlight-title">遥操作</span><span class="community-highlight-category">用户研究</span></span></a>
+</nav>
 
 
 

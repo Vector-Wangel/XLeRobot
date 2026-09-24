@@ -1618,18 +1618,24 @@
   "highlights": [
     {
       "id": "makermods-xlerobot",
-      "label_en": "MakerMods · Hardware adaptation",
-      "label_zh": "MakerMods · 硬件改造"
+      "label_en": "MakerMods",
+      "label_zh": "MakerMods",
+      "category_en": "Hardware",
+      "category_zh": "硬件改造"
     },
     {
       "id": "matcha-bot",
-      "label_en": "Matcha Bot · Household application",
-      "label_zh": "Matcha Bot · 家庭应用"
+      "label_en": "Matcha Bot",
+      "label_zh": "Matcha Bot",
+      "category_en": "Applications",
+      "category_zh": "家庭应用"
     },
     {
       "id": "low-cost-teleop",
-      "label_en": "Teleoperation · User study",
-      "label_zh": "遥操作 · 用户研究"
+      "label_en": "Teleoperation",
+      "label_zh": "遥操作",
+      "category_en": "Research",
+      "category_zh": "用户研究"
     }
   ]
 }
