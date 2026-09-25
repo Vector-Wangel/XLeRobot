@@ -18,7 +18,7 @@ from lerobot.cameras.configs import CameraConfig, Cv2Rotation, ColorMode
 from lerobot.cameras.opencv.configuration_opencv import OpenCVCameraConfig
 from lerobot.cameras.realsense import RealSenseCamera, RealSenseCameraConfig
 
-from ..config import RobotConfig
+from lerobot.robots.config import RobotConfig
 
 
 def xlerobot_cameras_config() -> dict[str, CameraConfig]:

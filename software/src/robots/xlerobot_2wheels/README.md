@@ -34,17 +34,17 @@ This is a modified version of XLeRobot that uses a 2-wheel differential drive ba
 
 ### Running the Host (on robot hardware)
 ```bash
-PYTHONPATH=src python -m lerobot.robots.xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
+python -m lerobot_robot_xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
 ```
 
 ### Running the Teleop Client
 ```bash
-PYTHONPATH=src python -m examples.xlerobot_2wheels.teleoperate_Keyboard
+python examples/4_xlerobot_2wheels_teleop_keyboard.py
 ```
 
 ### Direct Connection (no ZMQ)
 ```python
-from lerobot.robots.xlerobot_2wheels import XLerobot2Wheels, XLerobot2WheelsConfig
+from lerobot_robot_xlerobot_2wheels import XLerobot2Wheels, XLerobot2WheelsConfig
 
 config = XLerobot2WheelsConfig()
 robot = XLerobot2Wheels(config)

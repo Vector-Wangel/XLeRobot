@@ -1,11 +1,11 @@
 # To Run on the host
 '''
-PYTHONPATH=src python -m lerobot.robots.xlerobot.xlerobot_host --robot.id=my_xlerobot
+python -m lerobot_robot_xlerobot.xlerobot_host --robot.id=my_xlerobot
 '''
 
 # To Run the teleop:
 '''
-PYTHONPATH=src python -m examples.xlerobot.teleoperate_XBOX
+python examples/5_xlerobot_teleop_xbox.py
 # Optional: --robot.id=my_xlerobot --robot.port1=/dev/ttyACM0 --robot.port2=/dev/ttyACM1 --fps=30
 '''
 
@@ -15,11 +15,11 @@ import numpy as np
 import math
 import pygame
 
-from lerobot.robots.xlerobot import XLerobotConfig, XLerobot
+from lerobot_robot_xlerobot import XLerobotConfig, XLerobot
 # from lerobot.utils.robot_utils import busy_wait
 from lerobot.utils.robot_utils import precise_sleep
 from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 
 # Keymaps (semantic action: controller mapping) - Intuitive human control
 LEFT_KEYMAP = {

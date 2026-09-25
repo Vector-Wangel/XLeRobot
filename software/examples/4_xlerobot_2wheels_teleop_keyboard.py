@@ -1,11 +1,11 @@
 # To Run on the host
 '''python
-PYTHONPATH=src python -m lerobot.robots.xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
+python -m lerobot_robot_xlerobot_2wheels.xlerobot_2wheels_host --robot.id=my_xlerobot_2wheels
 '''
 
 # To Run the teleop:
 '''python
-PYTHONPATH=src python -m examples.xlerobot_2wheels.teleoperate_Keyboard
+python examples/4_xlerobot_2wheels_teleop_keyboard.py
 # Optional: --robot.id=my_xlerobot_2wheels_lab --robot.port1=/dev/ttyACM0 --robot.port2=/dev/ttyACM1 --ip=localhost --fps=50
 '''
 
@@ -14,11 +14,11 @@ import time
 import numpy as np
 import math
 
-from lerobot.robots.xlerobot_2wheels import XLerobot2WheelsClient, XLerobot2WheelsClientConfig, XLerobot2WheelsConfig, XLerobot2Wheels
+from lerobot_robot_xlerobot_2wheels import XLerobot2WheelsClient, XLerobot2WheelsClientConfig, XLerobot2WheelsConfig, XLerobot2Wheels
 # from lerobot.utils.robot_utils import busy_wait
 from lerobot.utils.robot_utils import precise_sleep
 from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 from lerobot.teleoperators.keyboard.teleop_keyboard import KeyboardTeleop, KeyboardTeleopConfig
 
 # Base speed control parameters - adjustable slopes

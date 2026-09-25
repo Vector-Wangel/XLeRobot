@@ -1,11 +1,11 @@
 # To Run on the host
 '''python
-PYTHONPATH=src python -m lerobot.robots.xlerobot.xlerobot_host --robot.id=my_xlerobot
+python -m lerobot_robot_xlerobot.xlerobot_host --robot.id=my_xlerobot
 '''
 
 # To Run the teleop:
 '''python
-PYTHONPATH=src python -m examples.xlerobot.teleoperate_Keyboard
+python examples/4_xlerobot_teleop_keyboard.py
 # Optional: --robot.id=my_xlerobot_pc --robot.port1=/dev/ttyACM0 --robot.port2=/dev/ttyACM1 --fps=50
 '''
 
@@ -14,12 +14,12 @@ import time
 import numpy as np
 import math
 
-from lerobot.robots.xlerobot import XLerobotConfig, XLerobot
-# from lerobot.robots.xlerobot import XLerobotClient, XLerobotClientConfig
+from lerobot_robot_xlerobot import XLerobotConfig, XLerobot
+# from lerobot_robot_xlerobot import XLerobotClient, XLerobotClientConfig
 # from lerobot.utils.robot_utils import busy_wait
 from lerobot.utils.robot_utils import precise_sleep
 from lerobot.utils.visualization_utils import init_rerun, log_rerun_data
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 # from lerobot.teleoperators.keyboard.teleop_keyboard import KeyboardTeleop, KeyboardTeleopConfig
 
         
@@ -399,7 +399,7 @@ def main():
     FPS = args.fps
 
     # Note: the zmq/XLerobotClient connection path is not currently wired up in this
-    # package (XLerobotClient is commented out of lerobot.robots.xlerobot.__init__),
+    # package (XLerobotClient is commented out of lerobot_robot_xlerobot's __init__),
     # so only the local/wired connection is exposed here.
     robot_config = XLerobotConfig(
         id=getattr(args, "robot.id"),

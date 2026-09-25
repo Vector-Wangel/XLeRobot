@@ -19,7 +19,7 @@ from lerobot.cameras.configs import CameraConfig, Cv2Rotation, ColorMode
 from lerobot.cameras.opencv.configuration_opencv import OpenCVCameraConfig
 from lerobot.cameras.realsense import RealSenseCamera, RealSenseCameraConfig
 
-from ..config import RobotConfig
+from lerobot.robots.config import RobotConfig
 
 
 def xlerobot_cameras_config() -> dict[str, CameraConfig]:
@@ -48,7 +48,7 @@ def xlerobot_cameras_config() -> dict[str, CameraConfig]:
     }
 
 
-@RobotConfig.register_subclass("xlerobot")
+@RobotConfig.register_subclass("xlerobot_mecanum")
 @dataclass
 class XLerobotConfig(RobotConfig):
     
@@ -109,7 +109,7 @@ class XLerobotHostConfig:
     # If robot jitters decrease the frequency and monitor cpu load with `top` in cmd
     max_loop_freq_hz: int = 30
 
-@RobotConfig.register_subclass("xlerobot_client")
+@RobotConfig.register_subclass("xlerobot_mecanum_client")
 @dataclass
 class XLerobotClientConfig(RobotConfig):
     # Network Configuration

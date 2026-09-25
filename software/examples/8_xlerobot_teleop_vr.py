@@ -20,10 +20,10 @@ import pygame
 
 # Local imports
 from vr_monitor import VRMonitor
-from lerobot.robots.xlerobot import XLerobotConfig, XLerobot
+from lerobot_robot_xlerobot import XLerobotConfig, XLerobot
 # from lerobot.utils.robot_utils import busy_wait
 from lerobot.utils.robot_utils import precise_sleep
-from lerobot.model.SO101Robot import SO101Kinematics
+from xlerobot_model.SO101Robot import SO101Kinematics
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

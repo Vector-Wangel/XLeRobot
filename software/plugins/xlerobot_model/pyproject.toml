@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "xlerobot_model"
+version = "0.1.0"
+description = "Shared kinematics/robot-construction helpers used by the XLeRobot robot plugins"
+requires-python = ">=3.10"
+dependencies = [
+    "lerobot",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["xlerobot_model"]
