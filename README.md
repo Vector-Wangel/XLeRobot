@@ -46,7 +46,7 @@
   <img width="1368" height="789" alt="image" src="https://github.com/user-attachments/assets/db226bfb-dc20-407b-9854-6a394ccd8fe7" />
 
 - 2025-11-11: **[Temporary VLA tutorial](https://xlerobot.readthedocs.io/en/latest/software/getting_started/RL_VLA.html#vision-language-action-vla-training-for-xlerobot)** out. Official version out soon.
-- 2025-09-22: **Hardware Assembly Video Tutorial** availabe at [Youtube](https://www.youtube.com/watch?v=upB1CEFeOlk) and [Bilibili](https://www.bilibili.com/video/BV1AGWFzUEJf/). Thanks WOWROBO for making this video!
+- 2025-09-22: **Hardware Assembly Video Tutorial** available at [Youtube](https://www.youtube.com/watch?v=upB1CEFeOlk) and [Bilibili](https://www.bilibili.com/video/BV1AGWFzUEJf/). Thanks WOWROBO for making this video!
 - 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). _(In collaboration with **Wowrobo**)_
   - Non-profit, I personally don't earn any from this. I also asked Wowrobo to set the price as low as possible.
   - This is only the assembly kit for developers, please check documentation website and this repo for available codes and tutorials before you purchase.

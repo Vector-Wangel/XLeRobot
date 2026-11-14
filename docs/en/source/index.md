@@ -44,23 +44,23 @@
 </video>
 
 ## 📰 News 
-- 2025-09-22: **Hardware Assembly Video Tutorial** availabe at [Youtube](https://www.youtube.com/watch?v=upB1CEFeOlk) and [Bilibili](https://www.bilibili.com/video/BV1AGWFzUEJf/). Thanks WOWROBO for making this video!
+- 2025-09-22: **Hardware Assembly Video Tutorial** available at [Youtube](https://www.youtube.com/watch?v=upB1CEFeOlk) and [Bilibili](https://www.bilibili.com/video/BV1AGWFzUEJf/). Thanks WOWROBO for making this video!
 - 2025-09-09: **Developer Assembly kit (excluding battery and IKEA cart) ready for purchase** in [China (Taobao) for **3699￥**](https://e.tb.cn/h.SZFbBgZABZ8zRPe?tk=ba514rTBRjQ) and [world-wide for **579\$**](https://shop.wowrobo.com/products/xlerobot-dual-arm-mobile-household-robot-kit?variant=47297659961561). _(In collaboration with **Wowrobo**, one of the official collaborators with Huggingface SO101 arm, they have sold 5k+ SO101 arm worldwide with great customer feedbacks.)_
   ![image](https://github.com/user-attachments/assets/788836c1-966a-4d11-a911-5c37befc0b85)
   - Non-profit, I personally don't earn any from this. I also asked Wowrobo to set the price as low as possible.
   - This is only the assembly kit for developers, please check documentation website and this repo for available codes and tutorials before you purchase.
 - 2025-09-09: Joined [Embodied AI Home Robot Hackathon](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (Oct 25–26, Bay Area) held by **SEEED x Nvidia x Huggingface** as mentor! [Register HERE](https://docs.google.com/forms/d/e/1FAIpQLSdYYDegdgIypxuGJNLcoc8kbdmU4jKgl49zg4X-107LAmBN4g/viewform).
-- ![image](https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b)
+  ![image](https://github.com/user-attachments/assets/4132c23b-5c86-4bb9-94b4-a6b12059685b)
 
 - 2025-08-30: XLeRobot 0.3.0 Release with final outfit touch up and household chores showcase demos. 
 
 - 2025-07-30: [Control XLeRobot in real life](https://xlerobot.readthedocs.io/en/latest/software/index.html)  with **keyboard/Xbox/Switch joycon** in the wild (bluetooth, no wifi, 0 latency).
-- ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
+  ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
 
 
 - 2025-07-08: [**Maniskill Simulation**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) with URDFs, control scripts (support Quest3 VR, keyboard, Xbox, Switch Joycon). 
 Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA environments. Get started in 15 min.
--  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
 - 2025-07-01: [**Documentation** website](https://xlerobot.readthedocs.io/en/latest/index.html) out for more organized tutorials, demos and resources.
 
@@ -76,7 +76,7 @@ Supports for multiple sensors (depth, segmentation, tactile, etc), RL/IL/VLA env
 | + RaspberryPi | +$79 | +€79 | +¥399 | +₹7999 |
 | ↑ RealSense RGBD head cam | +$220 | +€230 | +¥1499 | +₹35726 |
 
-Assembly kit ready for purchase soon, stay tuned!
+The developer assembly kit went on sale on 2025-09-09. See the [News](#-news) section above for purchase links.
 
 
 ## 🌟 Why XLeRobot? 🌟
@@ -146,9 +146,9 @@ However, with all considered — cost, community support, ease of assembly, and 
 ## Contribute
 
 **👋 Want to contribute?**
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidance on how to get involved!
+Please refer to [CONTRIBUTING.md](https://github.com/Vector-Wangel/XLeRobot/blob/main/CONTRIBUTING.md) for guidance on how to get involved!
 
-** Main Contributors **
+**Main Contributors**
 
 - [Gaotian/Vector Wang](https://vector-wangel.github.io/)(myself)
 - Zhuoyi Lu: RL sim2real deploy, teleop on real robot (Xbox, VR, Joycon)
