@@ -77,7 +77,7 @@ XLeRobot有三个摄像头：两个手腕摄像头和一个头部摄像头。确
 以下脚本将开始记录：
 
 ```bash
-python /your_dir/lerobot/src/lerobot/record.py \
+lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/right_arm \
   --robot.id=robot_right_arm \
@@ -94,6 +94,10 @@ python /your_dir/lerobot/src/lerobot/record.py \
 ## 2.2. 使用VR记录XLeRobot数据集
 
 对于更复杂的策略，让我们使用VR来激活机器人的双臂和轮子。
+
+```{warning}
+VR录制脚本`software/src/record.py`是在XLeRobot改为插件之前，按旧版LeRobot的目录结构编写的，无法在LeRobot 0.6及以后的版本上运行，目前正在移植。以下步骤为之前的流程。
+```
 
 在正式合并到LeRobot之前，从XLeRobot复制所需代码到LeRobot：
 ```bash
@@ -153,22 +157,22 @@ python /your_dir/lerobot/src/lerobot/record.py \
 ## 4. 部署模型
 
 测试您训练模型的最简单方法：
-```python
-python /your_dir/lerobot/src/lerobot/record.py \
+```bash
+lerobot-rollout \
+  --strategy.type=base \
+  --policy.path=your_huggingface_id/your_policy \
   --robot.type=xlerobot \
   --robot.cameras="{ head: {type: intelrealsense, serial_number_or_name: 935422072196, width: 640, height: 480, fps: 30, use_depth: True}, right: {type: opencv, index_or_path: '/dev/video6', width: 640, height: 480, fps: 20}, left: {type: opencv, index_or_path: '/dev/video8', width: 640, height: 480, fps: 20} }" \
-  --dataset.repo_id=your_huggingface_id/clear_table \
-  --dataset.single_task="Clear the table." \
-  --dataset.root=your_dir/clear_table \
-  --display_data=true \
-  --teleop.type=xlerobot_vr
+  --task="Clear the table." \
+  --duration=60 \
+  --display_data=true
 ```
 
 上面的脚本在您的机器人树莓派上本地运行策略。对于轻量级ACT策略来说这已经足够了，但对于其他更消耗资源的策略，树莓派将无法提供足够的计算能力。
 
-要运行强大的策略（如SmolVLA或PI0,5），我们需要一台带GPU的外部计算机。按照Lerobot [异步推理指南](https://huggingface.co/docs/lerobot/async)在您的PC上设置策略服务器，在XLeRobot上设置客户端。为服务器使用环回接口（0.0.0.0）而不是localhost，并将服务器的本地IP提供给客户端。
+要运行强大的策略（如SmolVLA或PI0,5），我们需要一台带GPU的外部计算机。按照LeRobot [远程推理指南](https://huggingface.co/docs/lerobot/remote_inference)，在您的PC上运行`lerobot-policy-server`，并在XLeRobot上用`lerobot-rollout --inference.type=remote`连接它。这需要LeRobot 0.7；LeRobot 0.6请参考[异步推理指南](https://huggingface.co/docs/lerobot/async)。
 
-在大多数情况下，您希望将VLA策略用作[LLM agent](https://xlerobot.readthedocs.io/en/latest/software/getting_started/LLM_agent.html)的工具，而不是单独使用。RoboCrew库已经在工具中为您提供了异步客户端。在使用之前，请记住在服务器机器上运行策略服务器：
+在大多数情况下，您希望将VLA策略用作[LLM agent](https://xlerobot.readthedocs.io/en/latest/software/getting_started/LLM_agent.html)的工具，而不是单独使用。RoboCrew库已经在工具中为您提供了异步客户端。在使用之前，请记住在服务器机器上运行策略服务器。RoboCrew会安装LeRobot 0.6.0，因此请在RoboCrew的环境中运行以下命令：
 
 ```
 python -m lerobot.async_inference.policy_server \

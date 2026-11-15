@@ -1,6 +1,6 @@
 ### 安装LeRobot
 
-要安装LeRobot，请按照[官方安装指南](https://huggingface.co/docs/lerobot/installation)
+要安装LeRobot，请按照[官方安装指南](https://huggingface.co/docs/lerobot/installation)。XLeRobot插件支持LeRobot 0.6和0.7，需要Python 3.12或更高版本。
 
 ```{note}
 建议使用`pip install -e .`以便更方便的文件传输。
