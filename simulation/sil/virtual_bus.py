@@ -53,12 +53,15 @@ def load_env():
 class _Sim:
     """One world shared by both buses and the cameras, advanced to match the wall clock."""
 
-    def __init__(self, height: int, width: int, seed: int):
+    def __init__(self, height: int, width: int, seed: int, randomize: bool):
         self.env = load_env()
         self.world = self.env.XLeRobotWorld(30, height, width)
-        self.world.reset(np.random.default_rng(seed), 0.0, 0.0)
+        # The environment's default reset noise, or none for repeatable checks.
+        noise = (2.0, 0.03) if randomize else (0.0, 0.0)
+        self.world.reset(np.random.default_rng(seed), *noise)
         self.last = time.perf_counter()
         self.carry = 0.0
+        self.max_lift = 0.0
 
     def sync(self) -> None:
         now = time.perf_counter()
@@ -69,14 +72,15 @@ class _Sim:
         self.carry = elapsed - steps * step
         if steps:
             self.world.advance(steps * step)
+            self.max_lift = max(self.max_lift, self.world.cube_lift())
 
 
-def sim(height: int = 480, width: int = 640, seed: int = 0) -> _Sim:
-    """The shared simulation, created on first use."""
+def sim(height: int = 480, width: int = 640, seed: int = 0, randomize: bool = False) -> _Sim:
+    """The shared simulation, created on first use; `randomize` applies the env's reset noise."""
     global _sim
     with _lock:
         if _sim is None:
-            _sim = _Sim(height, width, seed)
+            _sim = _Sim(height, width, seed, randomize)
         return _sim
 
 

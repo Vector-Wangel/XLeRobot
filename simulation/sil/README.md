@@ -21,6 +21,24 @@ the plugin's own code runs unchanged:
 A servo follows a goal only in the matching operating mode and with its torque on. A plugin that
 configures its motors wrongly therefore does not move the simulated robot.
 
+## Running LeRobot commands on the simulation
+
+`run.py` runs any LeRobot command line tool with the same virtual bus. Cameras of type
+`xlerobot_sim` render the simulation's camera of the same `name`. For example, a policy rolled out
+through the real `xlerobot` plugin:
+
+```bash
+python simulation/sil/run.py --sil.height 240 --sil.width 320 lerobot-rollout \
+  --strategy.type=base --policy.path=<checkpoint> \
+  --robot.type=xlerobot --robot.use_degrees=true --robot.id=sil \
+  --robot.cameras="{head: {type: xlerobot_sim, name: head, width: 320, height: 240, fps: 30}, right_wrist: {type: xlerobot_sim, name: right_wrist, width: 320, height: 240, fps: 30}}" \
+  --task="Pick up the red cube from the table." --duration=10
+```
+
+`run.py` writes a matching calibration unless `--robot.calibration_dir` is given. It answers the
+plugin's calibration prompt, and it prints the highest the cube was lifted when the command exits.
+Each run resets the cube and joints with the environment's noise; `--sil.seed` picks the draw.
+
 ## What the checks cover
 
 `check_plugin.py` reads the virtual servos' registers and the simulated robot, not only what the
