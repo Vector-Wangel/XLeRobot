@@ -25,7 +25,7 @@ from lerobot.utils.robot_utils import precise_sleep
 from xlerobot_model.SO101Robot import SO101Kinematics
 from lerobot.datasets.lerobot_dataset import LeRobotDataset
 from lerobot.utils.constants import ACTION, OBS_STR
-from lerobot.datasets.utils import hw_to_dataset_features, build_dataset_frame
+from lerobot.utils.feature_utils import hw_to_dataset_features, build_dataset_frame
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')

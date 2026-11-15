@@ -15,6 +15,7 @@
 # limitations under the License.
 
 import logging
+import shutil
 import time
 from functools import cached_property
 from itertools import chain
@@ -25,16 +26,28 @@ import numpy as np
 from lerobot.cameras.utils import make_cameras_from_configs
 from lerobot.utils.errors import DeviceAlreadyConnectedError, DeviceNotConnectedError
 from lerobot.motors import Motor, MotorCalibration, MotorNormMode
-from lerobot.motors.feetech import (
-    FeetechMotorsBus,
-    OperatingMode,
-)
+
+try:
+    # LeRobot >= 0.7 drives Feetech servos through one rustypot-backed bus.
+    from lerobot.motors import SerialMotorsBus as MotorsBus
+except ImportError:  # LeRobot 0.6
+    from lerobot.motors.feetech import FeetechMotorsBus as MotorsBus
 
 from lerobot.robots.robot import Robot
 from lerobot.robots.utils import ensure_safe_goal_position
 from .config_xlerobot import XLerobotConfig
 
 logger = logging.getLogger(__name__)
+
+
+def _set_operating_mode(bus: MotorsBus, mode: str, motor: str) -> None:
+    """Put one motor in "position" or "velocity" mode. Write it with the torque off."""
+    if hasattr(bus, "set_operating_mode"):  # LeRobot >= 0.7
+        bus.set_operating_mode(mode, motor)
+    else:
+        from lerobot.motors.feetech import OperatingMode
+
+        bus.write("Operating_Mode", motor, OperatingMode[mode.upper()].value)
 
 
 class XLerobot(Robot):
@@ -44,10 +57,23 @@ class XLerobot(Robot):
     """
 
     config_class = XLerobotConfig
-    name = "xlerobot"
+    name = "xlerobot_mecanum"
+
+    def _adopt_legacy_calibration(self, config: XLerobotConfig) -> None:
+        # This robot was named "xlerobot" before, so its calibration was saved in the omniwheel
+        # robot's folder. Copy an existing file over so users do not have to calibrate again.
+        if config.calibration_dir or self.calibration_fpath.is_file():
+            return
+        legacy = self.calibration_fpath.parent.parent / "xlerobot" / self.calibration_fpath.name
+        if legacy.is_file():
+            self.calibration_fpath.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(legacy, self.calibration_fpath)
+            logger.info("Copied calibration %s to %s", legacy, self.calibration_fpath)
+            self._load_calibration()
 
     def __init__(self, config: XLerobotConfig):
         super().__init__(config)
+        self._adopt_legacy_calibration(config)
         self.config = config
         self.teleop_keys = config.teleop_keys
         # Define three speed levels and a current index
@@ -72,7 +98,7 @@ class XLerobot(Robot):
         else:
             calibration1 = self.calibration
         
-        self.bus1 = FeetechMotorsBus(
+        self.bus1 = MotorsBus(
             port=self.config.port1,
             motors={
                 # left arm
@@ -104,7 +130,7 @@ class XLerobot(Robot):
         else:
             calibration2 = self.calibration
         # Base motor IDs are placeholders — set to match your wiring (order: FL, FR, RL, RR).
-        self.bus2= FeetechMotorsBus(
+        self.bus2= MotorsBus(
             port=self.config.port2,
             motors={
                 # right arm
@@ -239,7 +265,7 @@ class XLerobot(Robot):
         left_motors = self.left_arm_motors + self.head_motors
         self.bus1.disable_torque()
         for name in left_motors:
-            self.bus1.write("Operating_Mode", name, OperatingMode.POSITION.value)
+            _set_operating_mode(self.bus1, "position", name)
         input(
             "Move left arm and head motors to the middle of their range of motion and press ENTER...."
         )
@@ -268,7 +294,7 @@ class XLerobot(Robot):
         right_motors = self.right_arm_motors + self.base_motors
         self.bus2.disable_torque(self.right_arm_motors)
         for name in self.right_arm_motors:
-            self.bus2.write("Operating_Mode", name, OperatingMode.POSITION.value)
+            _set_operating_mode(self.bus2, "position", name)
         
         input(
             "Move right arm motors to the middle of their range of motion and press ENTER...."
@@ -323,7 +349,7 @@ class XLerobot(Robot):
         
         
         for name in self.left_arm_motors:
-            self.bus1.write("Operating_Mode", name, OperatingMode.POSITION.value)
+            _set_operating_mode(self.bus1, "position", name)
             # Set P_Coefficient to lower value to avoid shakiness (Default is 32)
             self.bus1.write("P_Coefficient", name, 16)
             # Set I_Coefficient and D_Coefficient to default value 0 and 32
@@ -331,7 +357,7 @@ class XLerobot(Robot):
             self.bus1.write("D_Coefficient", name, 43)
         
         for name in self.head_motors:
-            self.bus1.write("Operating_Mode", name, OperatingMode.POSITION.value)
+            _set_operating_mode(self.bus1, "position", name)
             # Set P_Coefficient to lower value to avoid shakiness (Default is 32)
             self.bus1.write("P_Coefficient", name, 16)
             # Set I_Coefficient and D_Coefficient to default value 0 and 32
@@ -339,7 +365,7 @@ class XLerobot(Robot):
             self.bus1.write("D_Coefficient", name, 43)
         
         for name in self.right_arm_motors:
-            self.bus2.write("Operating_Mode", name, OperatingMode.POSITION.value)
+            _set_operating_mode(self.bus2, "position", name)
             # Set P_Coefficient to lower value to avoid shakiness (Default is 32)
             self.bus2.write("P_Coefficient", name, 16)
             # Set I_Coefficient and D_Coefficient to default value 0 and 32
@@ -347,7 +373,7 @@ class XLerobot(Robot):
             self.bus2.write("D_Coefficient", name, 43)
         
         for name in self.base_motors:
-            self.bus2.write("Operating_Mode", name, OperatingMode.VELOCITY.value)
+            _set_operating_mode(self.bus2, "velocity", name)
         
         
         self.bus1.enable_torque()

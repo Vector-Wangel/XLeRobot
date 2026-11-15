@@ -6,9 +6,9 @@ build-backend = "hatchling.build"
 name = "xlerobot_model"
 version = "0.1.0"
 description = "Shared kinematics/robot-construction helpers used by the XLeRobot robot plugins"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "lerobot",
+    "lerobot>=0.6,<0.8",
 ]
 
 [tool.hatch.build.targets.wheel]

@@ -6,9 +6,9 @@ build-backend = "hatchling.build"
 name = "lerobot_robot_xlerobot"
 version = "0.1.0"
 description = "XLeRobot 3-omniwheel base robot plugin for lerobot (RobotConfig.register_subclass 'xlerobot')"
-requires-python = ">=3.10"
+requires-python = ">=3.12"
 dependencies = [
-    "lerobot[feetech]",
+    "lerobot[feetech]>=0.6,<0.8",
     "pyzmq>=25.0.0",
 ]
 

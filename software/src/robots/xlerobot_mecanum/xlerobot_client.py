@@ -32,7 +32,7 @@ from .config_xlerobot import XLerobotClientConfig
 
 class XLerobotClient(Robot):
     config_class = XLerobotClientConfig
-    name = "xlerobot_client"
+    name = "xlerobot_mecanum_client"
 
     def __init__(self, config: XLerobotClientConfig):
         super().__init__(config)
