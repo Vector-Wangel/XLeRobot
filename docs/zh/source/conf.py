@@ -81,9 +81,11 @@ json_url = "_static/version_switcher.json"
 version_match = os.environ.get("READTHEDOCS_VERSION")
 # if version_match is None:
 #     version_match = "v" + __version__
-# html_sidebars = {
-#   "**": []
-# }
+# Pages without child pages would otherwise show an empty "Section Navigation" sidebar.
+html_sidebars = {
+    "demos/index": [],
+    "relatedworks/index": [],
+}
 html_theme_options = {
     # "use_edit_page_button": True,
     "icon_links": [
@@ -93,25 +95,11 @@ html_theme_options = {
             "icon": "fa-brands fa-github",
         },
         {
-            "name": "Website", 
+            "name": "X (Twitter)",
             "url": "https://twitter.com/VectorWang2",
-            "icon": "fa-solid fa-globe",
+            "icon": "fa-brands fa-x-twitter",
         },
-        {
-            "name": "Language",
-            "icon": "fa-solid fa-language",
-            "type": "dropdown",  # Changed from "custom" to "dropdown"
-            "items": [
-                {
-                    "name": "English",
-                    "url": "index.html",  # Changed from "#"
-                },
-                {
-                    "name": "中文",
-                    "url": "README_CN.html",  # Changed from "#"
-                }
-            ]
-        }
+        # Language switching is handled by the Read the Docs flyout menu.
     ],
     # "external_links": [
     #     {"name": "Latest Updates", "url": "https://twitter.com/VectorWang2"},
@@ -128,12 +116,10 @@ html_theme_options = {
     # },
 }
 html_context = {
-    "display_github": True,
-    "github_user": "haosulab",
-    "github_repo": "ManiSkill",
+    "github_user": "Vector-Wangel",
+    "github_repo": "XLeRobot",
     "github_version": "main",
-    "conf_py_path": "/source/",
-    "doc_path": "docs/source"
+    "doc_path": "docs/zh/source",
 }
 html_css_files = [
     'css/custom.css',
