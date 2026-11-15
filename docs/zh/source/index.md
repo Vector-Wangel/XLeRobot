@@ -49,16 +49,16 @@
   - 售卖套件仅为项目推广，我本人不从中获利，并要求wowrobo以尽可能低价售卖.
   - 组装套件仅面向开发者，非消费级产品，请详细阅读文档和repo，确认目前可用的代码和教程后再购买.
 - 2025-09-09: 作为导师团队之一参与由英伟达，Huggingface，SEEED联合举办的[具身智能家庭机器人黑客松](https://www.seeedstudio.com/embodied-ai-worldwide-hackathon-home-robot.html) (10.18-19深圳，10.25–26, 湾区)!.
-- ![image](https://github.com/user-attachments/assets/89039122-e758-406b-b64b-72016e00285b)
+  ![image](https://github.com/user-attachments/assets/89039122-e758-406b-b64b-72016e00285b)
 
 - 2025-08-30: XLeRobot 0.3.0 发布，最终外观完善和家庭杂务展示演示。
 
 - 2025-07-30: [控制XLeRobot在真实环境中](https://xlerobot.readthedocs.io/en/latest/software/index.html) 使用**键盘/Xbox/Switch joycon**（蓝牙，无需wifi，0延迟）。
-- ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
+  ![rea](https://github.com/user-attachments/assets/de8f50ad-a370-406c-97fb-fc01638d5624)
 
 
 - 2025-07-08: [**Maniskill仿真**](https://xlerobot.readthedocs.io/en/latest/simulation/index.html) 支持URDF、控制脚本（支持Quest3 VR、键盘、Xbox、Switch Joycon）。支持多种传感器（深度、分割、触觉等），RL/IL/VLA环境。15分钟快速上手。
--  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
+  ![vr](https://github.com/user-attachments/assets/68b77bea-fdcf-4f42-9cf0-efcf1b188358)
 
 - 2025-07-01: [**文档**网站](https://xlerobot.readthedocs.io/en/latest/index.html) 上线，提供更有序的教程、演示和资源。
 
@@ -74,7 +74,7 @@
 | + 树莓派 | +$79 | +€79 | +¥399 | +₹7999 |
 | ↑ RealSense RGBD头部摄像头 | +$220 | +€230 | +¥1499 | +₹35726 |
 
-组装套件即将开售，敬请期待！
+面向开发者的组装套件已于 2025-09-09 上架，购买链接见上方[新闻](#-新闻)。
 
 
 ## 🌟 为什么选择XLeRobot？ 🌟
@@ -144,7 +144,7 @@
 ## 贡献
 
 **👋 想要贡献？**
-请参考[CONTRIBUTING.md](CONTRIBUTING.md)了解如何参与！
+请参考[CONTRIBUTING.md](https://github.com/Vector-Wangel/XLeRobot/blob/main/CONTRIBUTING.md)了解如何参与！
 
 **主要贡献者**
 
