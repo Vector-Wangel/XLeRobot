@@ -1,10 +1,21 @@
-## 🛠️ Hardware Intro 🛠️
+## Hardware Intro
 
 **XLeRobot** = Lekiwi + 1x SO-100/SO-101 arm + **IKEA RÅSKOG Cart** + **Anker Battery**
 
 = 2x SO-100/SO-101 Arms + 3x omni wheels + RaspberryPi + **IKEA RÅSKOG Cart** + **Anker Battery**
 
-#### 📜Basic Specs
+#### Basic Specs
+
+```{xl-stats}
+:class: xl-stats--inline
+
+- {value: "~12 kg", label: Weight}
+- {value: "0.5–1.25 m", label: Height range}
+- {value: "~0.36 m", label: Reach from the cart edge}
+- {value: "288 Wh", label: Battery capacity}
+- {value: "10 hrs+", label: Normal operation}
+- {value: "1 hr", label: Full charge}
+```
 
 - **Weight**📏: ~12kg. Easily lifted by an adult.
 - **Workspace**🦾:

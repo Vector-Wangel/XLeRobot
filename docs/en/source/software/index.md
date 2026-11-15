@@ -4,7 +4,29 @@
 
 Here we will show how to run XLeRobot under the lerobot framework.
 
-### [Install LeRobot 🤗 and Move XLeRobot files](getting_started/install.md)
+```{xl-flow}
+lanes:
+  - label: Imitation learning
+    note: VLA tutorials from the community
+    items:
+      - {icon: gamepad, title: Record demos, text: Teleoperate to collect a dataset., chips: [Leader arm, VR], link: "doc:software/getting_started/VLA_ACT"}
+      - {icon: brain, title: Train a policy, text: Fine-tune on your dataset., chips: [ACT, SmolVLA, π0.5], link: "doc:software/getting_started/VLA_smol"}
+      - {icon: robot, title: Deploy, text: Run the policy on XLeRobot., link: "doc:software/getting_started/VLA_ACT"}
+  - label: Reinforcement learning
+    note: Full XLeRobot RL code is coming soon
+    items:
+      - {icon: cube, title: Simulate, text: ManiSkill environments., link: "doc:simulation/index"}
+      - {icon: arrows-rotate, title: Train with RL, text: Try on a single SO101 arm first., chips: [lerobot-sim2real, HIL-SERL], link: "doc:software/getting_started/RL"}
+      - {icon: robot, title: Sim2real, text: Deploy to the real robot., link: "doc:software/getting_started/RL"}
+  - label: LLM agent
+    note: Built on RoboCrew
+    items:
+      - {icon: microphone, title: Ask, text: Voice or text commands., link: "doc:software/getting_started/LLM_agent"}
+      - {icon: eye, title: See and decide, text: The agent uses camera vision., link: "doc:software/getting_started/LLM_agent"}
+      - {icon: robot, title: Act, text: Move the base and manipulate objects., link: "doc:software/getting_started/LLM_agent"}
+```
+
+### [Install LeRobot and Move XLeRobot files](getting_started/install.md)
 
 ### Quick Guide
 

@@ -1,4 +1,4 @@
-# Community Use Cases page
+# Community page
 
 `data.json` is the shared source for the English and Chinese pages. Entries focus
 on research and projects that use or extend XLeRobot. Platform introductions,
@@ -23,7 +23,7 @@ Install the relevant documentation requirements before building Sphinx. The page
 generator itself uses only the Python standard library and supports Python 3.9+.
 Both `relatedworks/index.md` files are generated; edit the shared data instead.
 The URL is retained for existing bookmarks, while page titles and navigation use
-Community Use Cases / 社区应用案例.
+Community / 社区.
 
 Shared CSS, JavaScript, and attributed project images live in `static/`, included
 by both Sphinx configurations. All entries remain readable without JavaScript.
