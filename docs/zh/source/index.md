@@ -323,7 +323,6 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
   text: 最终外观完善和家庭杂务展示演示。
 - version: "0.4.0"
   date: "2025-12 / 2026-01"
-  badge: 草稿·待确认
   state: current
   text: 双轮底盘、模块化手臂底座、360° 紧凑头部。最后一个完全基于飞特舵机的版本。
 - version: 下一步
@@ -338,13 +337,11 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
 :variant: news
 
 - eyebrow: "2026-10-06"
-  badge: 草稿·待确认
   title: XLeRobot 以 LeRobot 插件形式安装
   text: "机器人（`xlerobot`、`xlerobot_2wheels`、`xlerobot_mecanum`）和 VR 遥操作器可通过 pip 安装，并直接用于任何 LeRobot 命令行，例如 `--robot.type=xlerobot`。"
   links:
     - {label: 安装教程, url: "doc:software/getting_started/install"}
 - eyebrow: "2026-09-24"
-  badge: 草稿·待确认
   title: 新增社区页面
   text: 收录 9 篇研究论文和 34 个社区项目，均使用或扩展了 XLeRobot，支持中英文搜索。
   image: "_static/community/makermods.jpg"
@@ -352,20 +349,17 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
   links:
     - {label: 浏览案例, url: "doc:relatedworks/index"}
 - eyebrow: "2026-04-21"
-  badge: 草稿·待确认
   title: 麦克纳姆轮底盘
   text: "全向移动（平移和原地转向），四个驱动电机，与双轮版共用同一套硬件。由社区贡献（#135）。"
   links:
     - {label: 麦克纳姆轮组装（英文）, url: "https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble_mecanum.html"}
 - eyebrow: "2026-02-01"
-  badge: 草稿·待确认
   title: 网页版 MuJoCo 仿真
   text: 基于 MuJoCo 引擎和 3DGS，在浏览器里即刻体验 XLeRobot。
   links:
     - {label: 立即体验, url: "doc:simulation/index"}
     - {label: MuJoCo-GS-Web, url: "https://github.com/Vector-Wangel/MuJoCo-GS-Web"}
 - eyebrow: "2026-01-04"
-  badge: 草稿·待确认
   title: XLeRobot 0.4.0 双轮版
   text: "相比三全向轮更稳、更快、扭矩更大，提供舵机和无刷电机两个版本，配模块化手臂底座和 360° 紧凑头部。附 Wowrobo 官方组装视频。"
   image: "https://github.com/user-attachments/assets/7e71afda-1ec5-4b96-a199-42a0cd726226"
@@ -373,7 +367,6 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
   links:
     - {label: 双轮组装（英文）, url: "https://xlerobot.readthedocs.io/en/latest/hardware/getting_started/assemble_2wheel.html"}
 - eyebrow: "2025-12-24"
-  badge: 草稿·待确认
   title: 社区贡献的 VLA 教程
   text: "在 XLeRobot 上训练和部署 ACT、SmolVLA 和 π0.5，附数据集和三相机双臂演示。"
   image: "https://vector-wangel.github.io/XLeRobot-assets/videos/Community/makermod/demoshow.gif"
@@ -383,7 +376,6 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
     - {label: SmolVLA, url: "doc:software/getting_started/VLA_smol"}
     - {label: π0.5, url: "doc:software/getting_started/VLA_pi05"}
 - eyebrow: "2025-10-17"
-  badge: 草稿·待确认
   title: 自主 LLM 智能体
   text: 用 LLM 智能体控制 XLeRobot，借助相机视觉和语音指令移动机器人、操作物体。
   image: "https://github.com/user-attachments/assets/296f6f60-52a4-4fa0-9a77-a113b4868f83"

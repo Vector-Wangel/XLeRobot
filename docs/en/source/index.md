@@ -323,7 +323,6 @@ From the first demo to today.
   text: Final outfit touch up and household chores showcase demos.
 - version: "0.4.0"
   date: "2025-12 / 2026-01"
-  badge: Draft
   state: current
   text: Dual-wheel base, modular arm base, 360° compact head. The last version fully based on Feetech servos.
 - version: Next
@@ -338,13 +337,11 @@ From the first demo to today.
 :variant: news
 
 - eyebrow: "2026-10-06"
-  badge: Draft
   title: XLeRobot installs as a LeRobot plugin
   text: "The robots (`xlerobot`, `xlerobot_2wheels`, `xlerobot_mecanum`) and the VR teleoperator install with pip and work with any LeRobot CLI command, e.g. `--robot.type=xlerobot`."
   links:
     - {label: Install guide, url: "doc:software/getting_started/install"}
 - eyebrow: "2026-09-24"
-  badge: Draft
   title: New Community page
   text: 9 research papers and 34 community projects that use or extend XLeRobot, searchable in English and Chinese.
   image: "_static/community/makermods.jpg"
@@ -352,7 +349,6 @@ From the first demo to today.
   links:
     - {label: Browse the community, url: "doc:relatedworks/index"}
 - eyebrow: "2026-04-21"
-  badge: Draft
   title: Mecanum wheel base
   text: "Holonomic drive (strafe and turn in place) with four drive motors, on the same hardware stack as the dual-wheel version. Contributed by the community (#135)."
   image: "_static/xlerobot_mecanum.gif"
@@ -360,14 +356,12 @@ From the first demo to today.
   links:
     - {label: Mecanum assembly, url: "doc:hardware/getting_started/assemble_mecanum"}
 - eyebrow: "2026-02-01"
-  badge: Draft
   title: Web MuJoCo simulation
   text: Play with XLeRobot instantly in the browser, using the MuJoCo engine and 3DGS.
   links:
     - {label: Try it, url: "doc:simulation/index"}
     - {label: MuJoCo-GS-Web, url: "https://github.com/Vector-Wangel/MuJoCo-GS-Web"}
 - eyebrow: "2026-01-04"
-  badge: Draft
   title: XLeRobot 0.4.0, dual-wheel version
   text: "More stable, faster and stronger than three omni wheels, in servo and brushless versions, with a modular arm base and a 360° compact head. Official assembly videos from Wowrobo."
   image: "https://github.com/user-attachments/assets/7e71afda-1ec5-4b96-a199-42a0cd726226"
@@ -375,7 +369,6 @@ From the first demo to today.
   links:
     - {label: Dual-wheel assembly, url: "doc:hardware/getting_started/assemble_2wheel"}
 - eyebrow: "2025-12-24"
-  badge: Draft
   title: VLA tutorials from the community
   text: "Train and deploy ACT, SmolVLA and π0.5 on XLeRobot, with datasets and three-camera bimanual demos."
   image: "https://vector-wangel.github.io/XLeRobot-assets/videos/Community/makermod/demoshow.gif"
@@ -385,7 +378,6 @@ From the first demo to today.
     - {label: SmolVLA, url: "doc:software/getting_started/VLA_smol"}
     - {label: π0.5, url: "doc:software/getting_started/VLA_pi05"}
 - eyebrow: "2025-10-17"
-  badge: Draft
   title: Autonomous LLM agent
   text: Control XLeRobot with an LLM agent that uses camera vision and voice commands to move the robot and manipulate objects.
   image: "https://github.com/user-attachments/assets/296f6f60-52a4-4fa0-9a77-a113b4868f83"
