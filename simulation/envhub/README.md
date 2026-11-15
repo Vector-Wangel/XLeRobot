@@ -6,7 +6,9 @@ and cameras use the names and units of the `xlerobot` LeRobot plugin, so one pol
 with `--robot.type=sim` on this environment and `--robot.type=xlerobot --robot.use_degrees=true` on
 the real robot.
 
-Status: prototype. It runs locally with LeRobot 0.7 and is not published to the Hub yet. See
+Status: prototype. It runs with LeRobot 0.7, from this directory or from the Hub as
+[`VectorW/xlerobot-pick-cube-mujoco`](https://huggingface.co/VectorW/xlerobot-pick-cube-mujoco)
+(private for now). The Hub copy carries the robot model in `xlerobot/`. See
 [What to verify on a real robot](#what-to-verify-on-a-real-robot) before relying on sim-to-real
 transfer.
 
@@ -58,10 +60,23 @@ envs = make_env(HubEnvConfig(hub_path="simulation/envhub", trust_remote_code=Tru
 `--env.make_env_kwargs` (or `make_env_kwargs` above) overrides the defaults of `XLeRobotEnv`: image
 size, cameras, episode length, joint and cube noise. Headless Linux machines need `MUJOCO_GL=egl`.
 
+### Scripted demonstrations
+
+`scripted_demos.py` records a LeRobot dataset of right-arm pick-ups. It needs the `xlerobot_model`
+plugin package, whose IK it uses. The demonstrator knows the cube's pose: it aims the shoulder at the
+cube and keeps only the episodes that lift it. By default it records the `head` and `right_wrist`
+cameras at 320×240.
+
+```bash
+python simulation/envhub/scripted_demos.py --root data/xlerobot_pick_cube --episodes 50
+lerobot-train --policy.type=act --dataset.repo_id=local/xlerobot_pick_cube_scripted \
+  --dataset.root=data/xlerobot_pick_cube --policy.push_to_hub=false
+```
+
 ## Model and conventions
 
-- **Robot model:** `../mujoco/xlerobot.xml`. A published copy would carry it in an `xlerobot/`
-  folder next to `env.py`.
+- **Robot model:** `../mujoco/xlerobot.xml`. The Hub copy carries it, with the meshes it uses, in an
+  `xlerobot/` folder next to `env.py`; `env.py` looks there first.
 - **Additions at build time:**
   - `env.py` adds position actuators for the head and a box for the head, since the model's head
     has no geometry.

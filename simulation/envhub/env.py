@@ -29,6 +29,9 @@ import mujoco
 import numpy as np
 from gymnasium import spaces
 
+# Where this environment is published on the Hub.
+REPO_ID = "VectorW/xlerobot-pick-cube-mujoco"
+# Not resolved: in the Hugging Face cache, repository files are symlinks into blobs/ named by hash.
 HERE = Path(__file__).absolute().parent
 SCENE_FILE = "scene.xml"
 ROBOT_FILE = "xlerobot.xml"
@@ -96,12 +99,27 @@ CUBE_BODY = "red_cube"
 LIFT_SUCCESS = 0.05  # metres above the cube's resting height
 
 
-def robot_dir() -> Path:
-    """Directory holding ``xlerobot.xml`` and its meshes: a published copy, else the repository's."""
-    for candidate in (HERE / "xlerobot", HERE.parent / "mujoco"):
+def repo_root() -> Path:
+    """Directory holding the scene: this file's, or a snapshot of the Hub repository.
+
+    LeRobot's in-process loader downloads ``env.py`` alone, into ``snapshots/<commit>/`` of the Hub
+    cache; fetch the rest of that same commit. A checkout of XLeRobot or of the Hub repository needs
+    nothing.
+    """
+    if (HERE / SCENE_FILE).is_file():
+        return HERE
+    from huggingface_hub import snapshot_download
+
+    revision = HERE.name if HERE.parent.name == "snapshots" else None
+    return Path(snapshot_download(REPO_ID, revision=revision))
+
+
+def robot_dir(root: Path) -> Path:
+    """Directory holding ``xlerobot.xml`` and its meshes: the Hub repository's copy, else XLeRobot's."""
+    for candidate in (root / "xlerobot", root.parent / "mujoco"):
         if (candidate / ROBOT_FILE).is_file():
             return candidate
-    raise FileNotFoundError(f"No {ROBOT_FILE} next to {HERE} or in ../mujoco")
+    raise FileNotFoundError(f"No {ROBOT_FILE} in {root / 'xlerobot'} or {root.parent / 'mujoco'}")
 
 
 def _look_quat(direction: Sequence[float], up: Sequence[float]) -> np.ndarray:
@@ -193,7 +211,8 @@ class XLeRobotWorld:
     """Compiled model and physics of one XLeRobot scene, read and driven in the plugin's units."""
 
     def __init__(self, fps: int, height: int, width: int, scene: Path | None = None):
-        self.model = build_model(scene or HERE / SCENE_FILE, robot_dir())
+        root = repo_root()
+        self.model = build_model(scene or root / SCENE_FILE, robot_dir(root))
         self.substeps = max(1, round(1 / (fps * self.model.opt.timestep)))
         self.model.opt.timestep = 1 / (fps * self.substeps)
         self.data = mujoco.MjData(self.model)
