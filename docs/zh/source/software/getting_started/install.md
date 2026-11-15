@@ -1,4 +1,4 @@
-### 安装LeRobot 🤗
+### 安装LeRobot
 
 要安装LeRobot，请按照[官方安装指南](https://huggingface.co/docs/lerobot/installation)
 

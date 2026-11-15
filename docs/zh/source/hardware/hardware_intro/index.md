@@ -1,10 +1,21 @@
-## 🛠️ 硬件介绍 🛠️
+## 硬件介绍
 
 **XLeRobot** = Lekiwi + 1x SO-100/SO-101 手臂 + **宜家RÅSKOG推车** + **Anker电池**
 
 = 2x SO-100/SO-101 手臂 + 3x 全向轮 + 树莓派 + **宜家RÅSKOG推车** + **Anker电池**
 
-#### 📜基本规格
+#### 基本规格
+
+```{xl-stats}
+:class: xl-stats--inline
+
+- {value: "~12 kg", label: 重量}
+- {value: "0.5–1.25 m", label: 高度范围}
+- {value: "~0.36 m", label: 推车边缘外的宽度范围}
+- {value: "288 Wh", label: 电池容量}
+- {value: "10 小时+", label: 正常运行}
+- {value: "1 小时", label: 充满电}
+```
 
 - **重量**📏: ~12kg。成人可轻松抬起。
 - **工作空间**🦾:

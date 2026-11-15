@@ -1,6 +1,6 @@
-# 🛒 **Bill of Material**
+# **Bill of Material**
 
-## 💵 Total Cost 
+## Total Cost
 
 ```{note}
 Doesn't include cost of 3D printing, tools, shipping and taxes.
@@ -27,7 +27,7 @@ You can purchase printed parts or pre-assembled kits from [Wowrobo](https://shop
 If you already have SO101 arms or Lekiwi, refer to this BOM selectively. We recommend checking the other two repos (SO100, Lekiwi) as well for potentially better-priced options.
 ```
 
-## 🔨 Assembly Tools 
+## Assembly Tools
 
 Skip this section if you already have these tools:
 
@@ -40,7 +40,7 @@ Skip this section if you already have these tools:
 - This tool list is just a reference—you can use any tools that will accomplish the task, primarily for driving hex and cross-head screws.
 - 9x M4x10 screws are also needed for wheels assembly. 
 
-## ⏫ Feature Parts
+## Feature Parts
 
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) | Unit Cost (IN) | Buy (IN) |
@@ -64,7 +64,7 @@ Skip this section if you already have these tools:
   - [Anker Prime Power Bank](https://www.amazon.in/Anker-Portable-Compatible-Charging-Included/dp/B0BYP2F3SG/)
   - [UGREEN 300W 48,000mAh Portable Charger](https://www.amazon.in/UGREEN-Portable-Charger-Digital-Lighting/dp/B0CJY37RT3/)
 
-## 💻 Electronics
+## Electronics
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) | Unit Cost (IN) | Buy (IN) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -86,7 +86,7 @@ Skip this section if you already have these tools:
 - USB-C cable to connect Raspberry Pi to the battery
 - Two Type-C to DC cables (12V) connect the motor control board to the power supply.
 
-## 📷 Sensors 
+## Sensors
 
 | Part | Amount | Unit Cost (US) | Buy (US) | Unit Cost (EU) | Buy (EU) | Unit Cost (CN) | Buy (CN) | Unit Cost (IN) | Buy (IN) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -96,13 +96,13 @@ Skip this section if you already have these tools:
 
 ![image](https://github.com/user-attachments/assets/0f5a10ce-d0e9-4e53-b457-27a9ba057cbf)
 
-## 🧑‍🤝‍🧑 Alternative choices 
+## Alternative choices
 
 - **IKEA Cart**: You can use a similar cart not from IKEA; however, this may require minor adjustments to the base connector in [3D printed parts](https://github.com/Vector-Wangel/XLeRobot/tree/main/hardware).
 - **Batteries**: You can use **other batteries**, but ensure the maximum output capacity can adequately power 2 arms and 3 wheels(~120W=60W*2 ports) (and a RaspberryPi (40W) if you have one).
 - **Electronics**: You can use any brand of cables (USB-C cable must be fast-charging type), microSD card, and Raspberry Pi 5 as long as they are compatible.
 
-## 🧩 Optional Add-ons 
+## Optional Add-ons
 
 - 🫱Soft Gripper Design: The .3mf file contains soft finray fingers that need to be printed with TPU95A. If you want original SO101 finger, just download the original [SO101.stl](https://github.com/Vector-Wangel/XLeRobot/blob/main/hardware/Ender_Follower_SO101.stl) file.
 - ![d2e57534a9e55a3d4dc0d644242cd044](https://github.com/user-attachments/assets/8d095541-d98f-4af8-a43c-028baae0d375)

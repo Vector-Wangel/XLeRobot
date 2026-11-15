@@ -1,4 +1,4 @@
-# ⚒️ 组装
+# 组装
 
 ![image](https://github.com/user-attachments/assets/949a670b-a5a2-459d-ab7f-45c51b93afa2)
 
@@ -8,7 +8,7 @@
 如果你宁愿跳过拧螺丝的乐趣，你也可以购买SO101手臂的[预组装套件](https://github.com/TheRobotStudio/SO-ARM100#kits)。
 ```
 
-## 🦾 SO101手臂
+## SO101手臂
 
 ![IMG_0264](https://github.com/user-attachments/assets/072d1e5b-f0c3-4bc6-a7cc-5ff38d42565c)
 
@@ -20,7 +20,7 @@
 - 按照这个[安装指南](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/SO101_Wrist_Cam_Hex-Nut_Mount_32x32_UVC_Module)添加手腕相机。
 - 如果你有[3M抓握胶带](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1)，现在是时候将其包裹在手指上了。
 
-## 🤔 配置电机
+## 配置电机
 
 ![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
@@ -39,13 +39,13 @@
     - 另一套用于**轮式底座**(电机id：7, 8, 9)。
 - 提示：用记号笔在电机上写数字，并区分不同板子的电机(如L1-L8和R1-R9)。
 
-## 🛒 宜家推车
+## 宜家推车
 
 - 万一你意外扔掉了手册，[这里有一份](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf)。
 
 <img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
 
-## 🧑‍🦼‍➡ 轮式底座
+## 轮式底座
 
 > 如果你已经有一个Lekiwi底座，请拆下电池、舵机支架等。底板只需安装3个带轮子的电机(保留接线)。
 >
@@ -92,7 +92,7 @@
 - 使用尖嘴钳在顶部底座的相应孔位切割金属网格，只移除中央的"x"以保持结构完整性。这为线缆布线创建开口。
 - 然后，将之前延长的线缆从下方穿过推车向上布线。
 
-## 🦾 手臂底座
+## 手臂底座
 
 ### 顶部底座组装
 ![image](https://github.com/user-attachments/assets/1ea61764-6e4c-4edf-8d0f-0979430a7921)
@@ -105,7 +105,7 @@
 
 - 这应该与[SO101手臂组装](https://huggingface.co/docs/lerobot/so101#joint-1)的前两个步骤相同。
 
-## 🧵 接线
+## 接线
 
 ```{important}
 在将顶部底座夹到宜家推车之前，完成顶部底座的所有接线和线缆管理，并将树莓派放入其外壳中。
@@ -122,7 +122,7 @@
 - 将2根**USB-C转USB-A****数据线缆**从2个**电机控制板**连接到**树莓派**(剩下2个USB-A插槽用于相机)。
 - 连接所有3根**电源线缆**：2根**USB-C转DC(12V)**从2个**电机控制板**和1根**USB-C转USB-C**从**树莓派**，连接到电源的快充部分。每个插槽在同时充电时提供高达100W功率，经测试足以支持12V版本运行。
 
-### 🔋 放置电池 🛒
+### 放置电池
 
 - 放在推车中层或下层的任何位置以保持低重心。电池有防滑底部，在正常操作中不易滑动。
 - 为了安全保持直立放置。
@@ -132,7 +132,7 @@
 为了保护电机控制板，确保最后连接电源线缆。在插拔其他线缆时始终断开电源线缆。
 ```
 
-## 📸 最终组装
+## 最终组装
 
 ### 底座装入推车
 

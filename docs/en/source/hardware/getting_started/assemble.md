@@ -1,4 +1,4 @@
-# ⚒️ Assembly
+# Assembly
 
 ![image](https://github.com/user-attachments/assets/949a670b-a5a2-459d-ab7f-45c51b93afa2)
 
@@ -24,7 +24,7 @@ Tips from Greg's Tech
     allowfullscreen>
 </iframe>
 
-## 🦾 SO101 Arms
+## SO101 Arms
 
 ![IMG_0264](https://github.com/user-attachments/assets/072d1e5b-f0c3-4bc6-a7cc-5ff38d42565c)
 
@@ -38,7 +38,7 @@ Tips from Greg's Tech
 - If you have [3M gripper tape](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1), now it's time to wrap it on the fingers.
 
 
-## 🤔 Configure Motors
+## Configure Motors
 
 ![image](https://github.com/user-attachments/assets/fc674d38-d703-40bd-87a2-a502af1b52c7)
 
@@ -57,13 +57,13 @@ Tips from Greg's Tech
     - and the other for **the wheel base** (motors ids: 7, 8, 9).
 - Tips: write the numbers on motors with marker and distinguish motors for different boards (such as L1-L8 and R1-R9).
 
-## 🛒 IKEA Cart
+## IKEA Cart
 
 - Just in case you accidentally throw your manual away, [here it is](https://github.com/Vector-Wangel/XLeRobot/blob/main/others/Manuals_raskog_utility_cart.pdf).
 
 <img width="925" alt="1745897734515" src="https://github.com/user-attachments/assets/f9f95840-5080-4084-bebb-ea456a097d55" />
 
-## 🧑‍🦼‍➡ Wheel Base
+## Wheel Base
 
 > If you already have a Lekiwi base, detach the battery, servo mounts, etc. Base plate will only have 3 mounted motors with wheels (keep the wirings).
 >
@@ -113,7 +113,7 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 - Then, run the previously extended wire up through the cart from below.
 
 
-## 🦾 Arm Base
+## Arm Base
 
 ### Top Base Assembly
 ![image](https://github.com/user-attachments/assets/1ea61764-6e4c-4edf-8d0f-0979430a7921)
@@ -128,7 +128,7 @@ This new hardware version is compatible with the IKEA cart metal mesh, and all t
 
 - It should be the same as the first two steps of [SO101 arm assembly](https://huggingface.co/docs/lerobot/so101#joint-1).
 
-## 🧵 Wiring
+## Wiring
 
 ```{important}
 Complete all wiring and cable management for the top base and put the Raspberry Pi in its case before clamping the top base into the IKEA cart.
@@ -147,7 +147,7 @@ When extending the 5264 wire yourself, be careful with the polarity—reversed c
 - Connect the 2 **USB-C to USB-A** **data cables** from 2 **motor control board** to **Rasberry Pi** (2 USB-A slots left for the cameras).
 - Connect all 3 **power cables**: 2 **USB-C to DC(12V)** from 2 **motor control board** and 1 **USB-C to USB-C** from **Rasberry Pi**, to the fast charging section of the power supply. Each slot provides up to 100W power when charging simultaneously, which is tested sufficient for 12V version operation.
 
-### 🔋 Place the Battery 🛒
+### Place the Battery
 
 - Anywhere you like on the middle or lower level of the cart to maintain a low center of mass. The battery has an anti-slip bottom so it won't easily slide during normal operations.
 - Maintain placed upright for safety.
@@ -156,7 +156,7 @@ When extending the 5264 wire yourself, be careful with the polarity—reversed c
 ```{important}
 In order to protect the motor control board, make sure to connect the power cables last. And always disconnect the power cables when plugging/unplugging other cables.
 ```
-## 📸 Final Assembly
+## Final Assembly
 
 ### Base into the Cart
 

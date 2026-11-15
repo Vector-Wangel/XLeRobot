@@ -1,0 +1,4 @@
+{#- Same page in the other language; falls back to its home page. See xl_components.py. #}
+<a class="xl-lang-switch" href="{{ xl_alt_lang_url }}" hreflang="{{ 'en' if xl_is_zh else 'zh-CN' }}" lang="{{ 'en' if xl_is_zh else 'zh-CN' }}" title="{{ 'Read this page in English' if xl_is_zh else '切换到中文' }}">
+  <i class="fa-solid fa-language" aria-hidden="true"></i><span>{{ xl_alt_lang_label }}</span>
+</a>

@@ -53,7 +53,8 @@ extensions = [
     "sphinx_subfigure",
     "sphinxcontrib.video",
     "sphinx_togglebutton",
-    "sphinx_design"
+    "sphinx_design",
+    "xl_components",  # docs/_shared/_ext: diagrams, cards, price calculator
 ]
 
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
@@ -61,7 +62,9 @@ myst_enable_extensions = ["colon_fence", "dollarmath"]
 # https://github.com/executablebooks/MyST-Parser/issues/519#issuecomment-1037239655
 myst_heading_anchors = 4
 
-templates_path = ["_templates"]
+# Shared by the English and Chinese sites.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "_shared", "_ext"))
+templates_path = ["../../_shared/templates"]
 # exclude_patterns = ["Hardware/reference/_autosummary/*"]
 
 
@@ -78,13 +81,14 @@ json_url = "_static/version_switcher.json"
 version_match = os.environ.get("READTHEDOCS_VERSION")
 # if version_match is None:
 #     version_match = "v" + __version__
-# Pages without child pages would otherwise show an empty "Section Navigation" sidebar.
+# The home page uses a full-width layout; pages without child pages would
+# otherwise show an empty "Section Navigation" sidebar.
 html_sidebars = {
+    "index": [],
     "demos/index": [],
     "relatedworks/index": [],
 }
 html_theme_options = {
-    # "use_edit_page_button": True,
     "icon_links": [
         {
             "name": "GitHub",
@@ -96,34 +100,38 @@ html_theme_options = {
             "url": "https://twitter.com/VectorWang2",
             "icon": "fa-brands fa-x-twitter",
         },
-        # Language switching is handled by the Read the Docs flyout menu.
     ],
-    # "external_links": [
-    #     {"name": "Latest Updates", "url": "https://twitter.com/VectorWang2"},
-    # ],
     "logo": {
         "image_dark": "_static/logo_white.png",
     },
-    # "navbar_center": ["version-switcher", "navbar-nav"],
-    "show_version_switcher": False,
+    # Language: the navbar link goes to the same page in the other language;
+    # the Read the Docs flyout menu also switches languages and versions.
+    "navbar_end": ["xl-lang-switch", "theme-switcher", "navbar-icon-links"],
+    "header_links_before_dropdown": 6,
+    "secondary_sidebar_items": {
+        "**": ["page-toc", "sourcelink"],
+        "index": [],
+    },
+    "footer_start": ["xl-footer"],
+    "footer_center": [],
+    "footer_end": [],
+    "pygments_light_style": "xcode",
+    "pygments_dark_style": "github-dark",
     "show_version_warning_banner": False,
-    # "switcher": {
-    #     "json_url": json_url,
-    #     "version_match": version_match,
-    # },
 }
 html_context = {
     "github_user": "Vector-Wangel",
     "github_repo": "XLeRobot",
     "github_version": "main",
     "doc_path": "docs/en/source",
+    "default_mode": "light",
 }
 html_css_files = [
-    'css/custom.css',
-    'css/community-usecases.css',
+    "css/xl-theme.css",
+    "css/community-usecases.css",
 ]
-html_static_path = ['_static', '../../community_usecases/static']
-html_js_files = ['js/lang-switch.js', 'js/community-usecases.js']
+html_static_path = ["_static", "../../_shared/static", "../../community_usecases/static"]
+html_js_files = [("js/xl.js", {"defer": "defer"}), "js/community-usecases.js"]
 
 ### Autodoc configurations ###
 autodoc_typehints = "signature"
