@@ -1,0 +1,47 @@
+<!-- A room with a table in front of XLeRobot and a red cube to pick up. The robot is attached by
+     env.py at the robot_mount frame (the world origin), facing +y. -->
+<mujoco model="xlerobot_pick_cube">
+  <option timestep="0.002" gravity="0 0 -9.80665" integrator="implicitfast"/>
+
+  <statistic center="0 0.3 0.6" extent="1.2"/>
+
+  <visual>
+    <headlight diffuse="0.5 0.5 0.5" ambient="0.35 0.35 0.35" specular="0 0 0"/>
+    <global azimuth="210" elevation="-25" offwidth="1280" offheight="960"/>
+    <quality shadowsize="4096"/>
+  </visual>
+
+  <asset>
+    <texture type="skybox" builtin="gradient" rgb1="0.92 0.93 0.95" rgb2="0.75 0.77 0.8" width="512" height="3072"/>
+    <texture type="2d" name="floor" builtin="checker" mark="edge" rgb1="0.78 0.76 0.72" rgb2="0.72 0.7 0.66"
+      markrgb="0.6 0.58 0.55" width="300" height="300"/>
+    <material name="floor" texture="floor" texuniform="true" texrepeat="4 4" reflectance="0.05"/>
+    <material name="table" rgba="0.62 0.47 0.33 1"/>
+    <material name="table_leg" rgba="0.35 0.27 0.2 1"/>
+    <material name="red_cube" rgba="0.85 0.12 0.1 1"/>
+  </asset>
+
+  <worldbody>
+    <light pos="0.5 -0.5 2.5" dir="-0.2 0.2 -1" directional="true" castshadow="true" diffuse="0.6 0.6 0.6"/>
+    <light pos="-1 1.5 2" dir="0.3 -0.4 -1" directional="true" castshadow="false" diffuse="0.25 0.25 0.25"/>
+    <!-- Contact groups: the floor (contype 1) does not touch the robot (contype 2); the table and
+         the cube (conaffinity 3) touch both. -->
+    <geom name="floor" size="0 0 0.05" type="plane" material="floor" contype="1" conaffinity="1"/>
+
+    <body name="table" pos="0 0.5 0">
+      <!-- Table geoms collide with the robot and the cube. -->
+      <geom name="table_top" type="box" size="0.4 0.19 0.015" pos="0 0 0.645" material="table" friction="1 0.005 0.0001" contype="1" conaffinity="3"/>
+      <geom type="box" size="0.02 0.02 0.315" pos="0.36 0.15 0.315" material="table_leg" contype="1" conaffinity="3"/>
+      <geom type="box" size="0.02 0.02 0.315" pos="-0.36 0.15 0.315" material="table_leg" contype="1" conaffinity="3"/>
+      <geom type="box" size="0.02 0.02 0.315" pos="0.36 -0.15 0.315" material="table_leg" contype="1" conaffinity="3"/>
+      <geom type="box" size="0.02 0.02 0.315" pos="-0.36 -0.15 0.315" material="table_leg" contype="1" conaffinity="3"/>
+    </body>
+
+    <!-- In front of the robot's right arm (world +x is the robot's right). -->
+    <body name="red_cube" pos="0.15 0.37 0.676">
+      <freejoint name="red_cube"/>
+      <geom type="box" size="0.015 0.015 0.015" material="red_cube" mass="0.03" friction="1.2 0.005 0.0001" contype="1" conaffinity="3"
+        solref="0.01 1" condim="4"/>
+    </body>
+  </worldbody>
+</mujoco>

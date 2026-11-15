@@ -109,3 +109,6 @@ web_control/server/.pytest_cache/
 
 # Sphinx build output
 docs/*/source/_build/
+
+# MuJoCo warning log, written to the working directory
+MUJOCO_LOG.TXT
