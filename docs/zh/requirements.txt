@@ -1,6 +1,6 @@
 sphinx==6.2.1
 sphinx-autobuild
-pydata_sphinx_theme
+pydata-sphinx-theme==0.16.1  # docs/_shared overrides depend on its markup
 # For spelling
 sphinxcontrib.spelling
 # Type hints support
@@ -8,8 +8,8 @@ sphinx-autodoc-typehints
 # Copy button for code snippets
 sphinx_copybutton
 # Markdown parser
-myst-parser
+myst-parser==3.0.1
 sphinx-subfigure
 sphinxcontrib-video
 sphinx-togglebutton
-sphinx_design
+sphinx-design==0.6.1

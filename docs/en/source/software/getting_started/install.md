@@ -1,4 +1,4 @@
-### Install LeRobot 🤗
+### Install LeRobot
 
 To install LeRobot, follow the [official Installation Guide](https://huggingface.co/docs/lerobot/installation)
 

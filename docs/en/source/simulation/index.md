@@ -12,7 +12,7 @@ Play with XLeRobot instantly on web, using mujoco engine and 3DGS. See detailed 
     allowfullscreen>
 </iframe>
 
-##### [👋 Get Started](getting_started/index)
+##### [Get Started](getting_started/index)
 
 - [A short technical blog](https://vectorwang.notion.site/Analytical-IK-for-SO101-20abb280f59380d288bcdd398ffbfab1) for analytical IK introduction.
 
@@ -20,14 +20,14 @@ Play with XLeRobot instantly on web, using mujoco engine and 3DGS. See detailed 
 
 - URDF files, maniskill robot agent scripts, joint/EE control scripts.
 
-##### [👀 VR Control](getting_started/vr_sim)
+##### [VR Control](getting_started/vr_sim)
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Sim_demos/XLeRobot_0_2_3.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-##### [🔩 More Scenes](getting_started/simdemos)
+##### [More Scenes](getting_started/simdemos)
 
 <video width="100%" style="max-width: 100%;" controls>
   <source src="https://vector-wangel.github.io/XLeRobot-assets/videos/Sim_demos/XLeRobot_0_1_5.mp4" type="video/mp4">

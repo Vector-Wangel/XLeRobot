@@ -1,6 +1,6 @@
-# 🛒 **材料清单**
+# **材料清单**
 
-## 💵 总成本 
+## 总成本
 
 ```{note}
 不包括3D打印、工具、运输和税费的成本。
@@ -23,7 +23,7 @@
 如果你已经有SO101手臂或Lekiwi，请有选择地参考此BOM。我们建议同时查看其他两个仓库(SO100、Lekiwi)，可能有更优惠的价格选项。
 ```
 
-## 🔨 组装工具 
+## 组装工具
 
 如果你已经有这些工具，可以跳过这一部分：
 
@@ -35,7 +35,7 @@
 - 使用齐头钳切割金属网格进行线缆布线。
 - 这个工具清单只是参考——你可以使用任何能完成任务的工具，主要用于驱动内六角和十字头螺丝。
 
-## ⏫ 主要零件
+## 主要零件
 
 
 | 零件 | 数量 | 单价 (美国) | 购买 (美国) | 单价 (欧盟) | 购买 (欧盟) | 单价 (中国) | 购买 (中国) | 单价 (印度) | 购买 (印度) |
@@ -56,7 +56,7 @@
   - [Anker 笔记本电脑充电宝 (25K, 165W)](https://www.anker.com/products/a1695-anker-power-bank-25000mah-165w?variant=44320657997974&utm_source=google&utm_medium=pmax&utm_campaign=us_anker_charger_conversion_pmax_seasonal_purchase_ost&utm_content=seasonal&utm_term=%7B20274825774%7D_%7B%7D_%7B%7D&gad_source=1&gad_campaignid=20284126303&gbraid=0AAAAADbnO27MKKh2JRMESwKW-MVxtoKEL&gclid=CjwKCAjwq9rFBhAIEiwAGVAZPyQRpShyzLVCZCrWArnCPk8fVGbShtkYDsQmfMCKwbmLKyY12u9N_xoCKC0QAvD_BwE)
   - [AOHI 240W 笔记本电脑充电宝 27600mAh](https://a.co/d/aW8lNc2)
 
-## 💻 电子元件
+## 电子元件
 
 | 零件 | 数量 | 单价 (美国) | 购买 (美国) | 单价 (欧盟) | 购买 (欧盟) | 单价 (中国) | 购买 (中国) | 单价 (印度) | 购买 (印度) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -76,7 +76,7 @@
 - USB-C线将树莓派连接到电池
 - 两根Type-C转DC线(12V)将电机控制板连接到电源。
 
-## 📷 传感器 
+## 传感器
 
 | 零件 | 数量 | 单价 (美国) | 购买 (美国) | 单价 (欧盟) | 购买 (欧盟) | 单价 (中国) | 购买 (中国) | 单价 (印度) | 购买 (印度) |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -86,13 +86,13 @@
 
 ![image](https://github.com/user-attachments/assets/0f5a10ce-d0e9-4e53-b457-27a9ba057cbf)
 
-## 🧑‍🤝‍🧑 备选方案 
+## 备选方案
 
 - **宜家推车**: 你可以使用非宜家的类似推车；但是，这可能需要对[3D打印零件](https://www.notion.so/vectorwang/3D_Models/3D_models_for_printing/XLeRobot_special/base_connector.stl)进行小幅调整。
 - **电池**: 你可以使用**其他电池**，但要确保最大输出容量能够充分为2个手臂、3个轮子和一个树莓派(~160W)供电。
 - **电子元件**: 你可以使用任何品牌的线缆(USB-C线必须是快充类型)、microSD卡和树莓派5，只要它们兼容。
 
-## 🧩 可选附加组件 
+## 可选附加组件
 
 - 🙌双臂主从关节控制: 额外的两个[SO100手臂套装](https://github.com/TheRobotStudio/SO-ARM100/tree/main)用于双臂主从关节控制
 - ✊更好的抓握稳定性: [3M抓握胶带](https://www.amazon.com/gp/product/B0093CQPW8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) (来自[UMI抓握器规格](https://docs.google.com/document/d/1TPYwV9sNVPAi0ZlAupDMkXZ4CA1hsZx7YDMSmcEy6EU/edit?tab=t.0#heading=h.5k5vwx2iqjqg))

@@ -1,0 +1,26 @@
+{%- set zh = xl_is_zh %}
+<div class="xl-footer">
+  <nav class="xl-footer__cols" aria-label="{{ '页脚' if zh else 'Footer' }}">
+    <div>
+      <p>{{ '文档' if zh else 'Docs' }}</p>
+      <a href="{{ pathto('hardware/index') }}">{{ '硬件' if zh else 'Hardware' }}</a>
+      <a href="{{ pathto('simulation/index') }}">{{ '仿真' if zh else 'Simulation' }}</a>
+      <a href="{{ pathto('software/index') }}">{{ '软件' if zh else 'Software' }}</a>
+      <a href="{{ pathto('demos/index') }}">{{ '演示' if zh else 'Demos' }}</a>
+    </div>
+    <div>
+      <p>{{ '交流' if zh else 'Connect' }}</p>
+      <a href="{{ pathto('relatedworks/index') }}">{{ '社区' if zh else 'Community' }}</a>
+      <a href="https://github.com/Vector-Wangel/XLeRobot">GitHub</a>
+      <a href="https://discord.gg/bjZveEUh6F">Discord</a>
+      <a href="https://twitter.com/VectorWang2">X (Twitter)</a>
+    </div>
+    <div>
+      <p>{{ '项目' if zh else 'Project' }}</p>
+      <a href="https://github.com/Vector-Wangel/XLeRobot/blob/main/CONTRIBUTING.md">{{ '参与贡献' if zh else 'Contributing' }}</a>
+      <a href="{{ pathto(root_doc) if pagename != root_doc else '' }}#citation">{{ '引用' if zh else 'Citation' }}</a>
+      <a href="https://github.com/Vector-Wangel/XLeRobot/blob/main/LICENSE">Apache-2.0</a>
+    </div>
+  </nav>
+  <p class="xl-footer__fine">© {{ copyright }}. {{ '基于' if zh else 'Built with' }} <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ '和' if zh else '&' }} <a href="https://pydata-sphinx-theme.readthedocs.io/">PyData Sphinx Theme</a>.</p>
+</div>

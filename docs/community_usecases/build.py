@@ -8,7 +8,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 TEXT = {
     'en': {
-        'title': 'Community Use Cases',
+        'title': 'Community',
         'intro': 'See how researchers and builders use XLeRobot for manipulation, teleoperation, simulation, and household applications.',
         'scope': 'Each entry describes the specific use reported by its authors. Simulation examples and hardware derivatives are identified separately.',
         'papers': 'Research papers', 'projects': 'Community projects', 'all': 'All entries',
@@ -21,7 +21,7 @@ TEXT = {
         'suggest': 'Suggest a community use case', 'source': 'Source', 'highlights': 'Featured community examples',
     },
     'zh': {
-        'title': '社区应用案例',
+        'title': '社区',
         'intro': '看看研究者和开发者如何将 XLeRobot 用于机器人操作、遥操作、仿真与家庭应用。',
         'scope': '每个条目说明作者如何使用 XLeRobot；仿真案例和硬件改型会单独标明。',
         'papers': '研究论文', 'projects': '社区项目', 'all': '全部条目',
