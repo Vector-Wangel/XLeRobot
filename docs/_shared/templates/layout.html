@@ -1,7 +1,8 @@
 {%- extends "!layout.html" %}
-{#- Same as the theme's body tag, plus page classes so the home page can use a
-    full-width layout. Keep in sync with pydata-sphinx-theme when upgrading. #}
+{#- Same as the theme's body tag, plus page classes so the home page and the
+    simulation page can use their own layouts. Keep in sync with pydata-sphinx-theme
+    when upgrading. #}
 {% block body_tag %}
-  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="{{ default_mode }}" class="xl-page{% if pagename == root_doc %} xl-home{% endif %}">
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="{{ default_mode }}" class="xl-page{% if pagename == root_doc %} xl-home{% endif %}{% if pagename == 'simulation/index' %} xl-sim{% endif %}">
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">{{ _("Skip to main content") }}</a></div>
 {%- endblock %}

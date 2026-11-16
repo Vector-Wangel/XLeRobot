@@ -85,11 +85,13 @@ version_match = os.environ.get("READTHEDOCS_VERSION")
 # if version_match is None:
 #     version_match = "v" + __version__
 # The home page uses a full-width layout; pages without child pages would
-# otherwise show an empty "Section Navigation" sidebar.
+# otherwise show an empty "Section Navigation" sidebar. The simulation page
+# gives the whole window to the simulator.
 html_sidebars = {
     "index": [],
     "demos/index": [],
     "relatedworks/index": [],
+    "simulation/index": [],
 }
 html_theme_options = {
     "icon_links": [
@@ -114,6 +116,7 @@ html_theme_options = {
     "secondary_sidebar_items": {
         "**": ["page-toc", "sourcelink"],
         "index": [],
+        "simulation/index": [],
     },
     "footer_start": ["xl-footer"],
     "footer_center": [],
