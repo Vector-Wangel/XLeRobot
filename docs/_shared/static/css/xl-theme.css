@@ -787,6 +787,11 @@ html[lang^="zh"] .bd-article {
 .xl-sim .bd-header-article {
   display: none;
 }
+/* The Read the Docs flyout floats in the bottom right corner: on the simulator's panel, and on a phone
+   on the links under it. The navigation bar has the language switch. */
+.xl-sim readthedocs-flyout {
+  display: none;
+}
 .xl-sim .bd-container__inner.bd-page-width,
 .xl-sim .bd-main .bd-content .bd-article-container {
   max-width: none;
