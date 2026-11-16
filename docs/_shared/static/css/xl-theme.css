@@ -707,6 +707,21 @@ html[lang^="zh"] .bd-article {
 .xl-cta a:first-child:hover {
   background: var(--xl-accent-hover);
 }
+/* The second link is a quieter button; the links after it stay plain. */
+.xl-cta a:nth-child(2) {
+  padding: 9px 21px;
+  border: 1px solid currentColor;
+  border-radius: 980px;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.xl-cta a:nth-child(2)::after {
+  content: "";
+}
+.xl-cta a:nth-child(2):hover {
+  background: var(--xl-accent);
+  border-color: var(--xl-accent);
+  color: #fff !important;
+}
 .xl-badges p {
   display: flex;
   justify-content: center;
