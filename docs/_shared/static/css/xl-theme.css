@@ -1,6 +1,6 @@
 /* XLeRobot docs theme: a quiet, white, Apple-like layer over pydata-sphinx-theme.
  *
- * 1. Tokens and fonts       5. Home page layout
+ * 1. Tokens and fonts       5. Home and simulation page layouts
  * 2. Theme variable mapping 6. Components (xl_components.py)
  * 3. Global chrome          7. sphinx-design cards
  * 4. Article content        8. Responsive and motion
@@ -584,7 +584,7 @@ html[lang^="zh"] .bd-article {
   color: #ff9f0a;
 }
 
-/* 5. Home page layout ------------------------------------------------------ */
+/* 5. Home and simulation page layouts --------------------------------------- */
 
 .xl-home .bd-header-article,
 .xl-home .prev-next-footer,
@@ -777,6 +777,125 @@ html[lang^="zh"] .bd-article {
 .xl-home .bd-article > section > section.xl-fineprint > h2 {
   text-align: center;
   font-size: 1.25rem;
+}
+
+/* Simulation page: the simulator fills the window; the other guides start below the fold. */
+.xl-sim {
+  --xl-sim-bar: 3.5rem;
+  --xl-sim-gap: 0.75rem;
+}
+.xl-sim .bd-header-article {
+  display: none;
+}
+.xl-sim .bd-container__inner.bd-page-width,
+.xl-sim .bd-main .bd-content .bd-article-container {
+  max-width: none;
+}
+.xl-sim .bd-main .bd-content .bd-article-container {
+  padding: 0;
+  overflow: visible;
+}
+.xl-sim .bd-main,
+.xl-sim .bd-content {
+  overflow: visible;
+}
+.xl-sim .bd-main .bd-content .bd-article-container .bd-article {
+  padding: 0;
+}
+/* The title stays for screen readers and search; the simulator starts under the navigation bar. */
+.xl-sim .bd-article > section > h1 {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.xl-sim-stage {
+  /* What the window leaves under the navigation bar (and its border), less the line below. */
+  --xl-sim-rest: calc(var(--pst-header-height) + 1px + var(--xl-sim-bar) + var(--xl-sim-gap));
+  height: calc(100vh - var(--xl-sim-rest));
+  height: calc(100dvh - var(--xl-sim-rest));
+  min-height: 26rem;
+  margin: var(--xl-sim-gap) var(--xl-sim-gap) 0;
+  border-radius: var(--xl-radius-lg);
+  overflow: hidden;
+  background: var(--xl-bg-alt);
+}
+.xl-sim-stage iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.xl-sim-stage:fullscreen {
+  height: 100%;
+  margin: 0;
+  border-radius: 0;
+}
+/* One line under the simulator, in view without scrolling: what it is, and what is further down. */
+.xl-sim-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem 2rem;
+  min-height: var(--xl-sim-bar);
+  padding: 0 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.35;
+  color: var(--xl-text-2);
+}
+.xl-sim-bar p {
+  margin: 0;
+  color: inherit;
+}
+.xl-sim-bar strong {
+  color: var(--xl-text);
+  font-weight: 600;
+}
+.xl-sim-bar__text {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.xl-sim-bar__links {
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 1.5rem;
+}
+.xl-sim-bar a,
+.xl-sim-bar button {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  color: var(--xl-link) !important;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.xl-sim-bar a:hover,
+.xl-sim-bar button:hover {
+  text-decoration: underline !important;
+}
+.xl-sim-bar [hidden] {
+  display: none;
+}
+.xl-sim-bar a[target="_blank"]::after {
+  content: " \2197";
+}
+.xl-sim-bar__more::after {
+  content: " \2193";
+}
+.xl-sim .bd-article > section > section,
+.xl-sim .prev-next-footer {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 0 1.375rem;
+}
+.xl-sim .bd-article > section > section {
+  padding-top: 4.5rem;
+  padding-bottom: 1.5rem;
 }
 
 /* 6. Components ------------------------------------------------------------ */
@@ -1525,7 +1644,23 @@ a.xl-flow__card:hover {
   }
 }
 
+@media (max-width: 1100px) {
+  .xl-sim-bar__text {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
+  .xl-sim {
+    --xl-sim-bar: 4.5rem;
+    --xl-sim-gap: 0.5rem;
+  }
+  .xl-sim-stage {
+    border-radius: var(--xl-radius);
+  }
+  .xl-sim-bar {
+    padding: 0 1rem;
+  }
   .xl-home .bd-article > section > h1 {
     margin-top: 48px;
   }

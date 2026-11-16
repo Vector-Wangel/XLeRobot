@@ -1,4 +1,5 @@
-/* XLeRobot docs: price calculator and scroll-in fade. Pages work without it. */
+/* XLeRobot docs: price calculator, scroll-in fade, full-screen buttons and the simulator's theme.
+   Pages work without it. */
 (function () {
   "use strict";
 
@@ -75,9 +76,42 @@
     });
   }
 
+  /* <button data-xl-fullscreen="id" hidden>: shown where the browser can put that element full screen. */
+  function initFullscreen() {
+    if (!document.fullscreenEnabled) return;
+    document.querySelectorAll("[data-xl-fullscreen]").forEach(function (button) {
+      var target = document.getElementById(button.getAttribute("data-xl-fullscreen"));
+      if (!target) return;
+      button.hidden = false;
+      button.addEventListener("click", function () {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else target.requestFullscreen();
+      });
+    });
+  }
+
+  /* The framed simulator takes the site's light or dark theme: it asks for it when it starts
+     ("xlerobot-sim:hello"), and is told again when the reader switches. */
+  function initSimTheme() {
+    var frame = document.querySelector(".xl-sim-stage iframe");
+    if (!frame) return;
+    var origin = new URL(frame.src, location.href).origin;
+    function send() {
+      var theme = document.documentElement.getAttribute("data-theme");
+      if (frame.contentWindow) frame.contentWindow.postMessage({ type: "xlerobot-sim:theme", theme: theme }, origin);
+    }
+    window.addEventListener("message", function (event) {
+      if (event.source === frame.contentWindow && event.data && event.data.type === "xlerobot-sim:hello") send();
+    });
+    new MutationObserver(send).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
+    frame.addEventListener("load", send);
+  }
+
   function init() {
     document.querySelectorAll("[data-xl-pricing]").forEach(initPricing);
     initReveal();
+    initFullscreen();
+    initSimTheme();
   }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);
