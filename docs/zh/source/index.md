@@ -10,7 +10,7 @@
 :::
 
 :::{container} xl-cta
-[开始组装](hardware/index.md) <a href="#film">观看视频</a> [在 GitHub 上查看](https://github.com/Vector-Wangel/XLeRobot)
+[开始组装](hardware/index.md) [在线仿真](simulation/index.md) <a href="#film">观看视频</a> [在 GitHub 上查看](https://github.com/Vector-Wangel/XLeRobot)
 :::
 
 :::{container} xl-badges
@@ -358,7 +358,7 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
   text: 基于 MuJoCo 引擎和 3DGS，在浏览器里即刻体验 XLeRobot。
   links:
     - {label: 立即体验, url: "doc:simulation/index"}
-    - {label: MuJoCo-GS-Web, url: "https://github.com/Vector-Wangel/MuJoCo-GS-Web"}
+    - {label: Hugging Face, url: "https://huggingface.co/spaces/VectorW/xlerobot-sim"}
 - eyebrow: "2026-01-04"
   title: XLeRobot 0.4.0 双轮版
   text: "相比三全向轮更稳、更快、扭矩更大，提供舵机和无刷电机两个版本，配模块化手臂底座和 360° 紧凑头部。附 Wowrobo 官方组装视频。"
@@ -500,14 +500,13 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
 
 如果您愿意，可以使用以下方式引用本工作：
 
-```
+```bibtex
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian and Lu, Zhuoyi},
+    author = {Wang, Gaotian and Lu, Zhuoyi and Yiyang, Huang and Yihao, Liu},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
-    howpublished = "\\url{<https://github.com/Vector-Wangel/XLeRobot>}",
+    howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
     year = {2025}
 }
-
 ```
 
 ## 免责声明
