@@ -10,7 +10,7 @@ Bring Embodied AI to Every Developer Around the World!
 :::
 
 :::{container} xl-cta
-[Get started](hardware/index.md) <a href="#film">Watch the film</a> [View on GitHub](https://github.com/Vector-Wangel/XLeRobot)
+[Get started](hardware/index.md) [Try the simulator](simulation/index.md) <a href="#film">Watch the film</a> [View on GitHub](https://github.com/Vector-Wangel/XLeRobot)
 :::
 
 :::{container} xl-badges
@@ -360,7 +360,7 @@ From the first demo to today.
   text: Play with XLeRobot instantly in the browser, using the MuJoCo engine and 3DGS.
   links:
     - {label: Try it, url: "doc:simulation/index"}
-    - {label: MuJoCo-GS-Web, url: "https://github.com/Vector-Wangel/MuJoCo-GS-Web"}
+    - {label: Hugging Face, url: "https://huggingface.co/spaces/VectorW/xlerobot-sim"}
 - eyebrow: "2026-01-04"
   title: XLeRobot 0.4.0, dual-wheel version
   text: "More stable, faster and stronger than three omni wheels, in servo and brushless versions, with a modular arm base and a 360° compact head. Official assembly videos from Wowrobo."
@@ -502,14 +502,13 @@ Looking forward to collaborating with anyone interested in contributing to this 
 
 If you want, you can cite this work with:
 
-```
+```bibtex
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian and Lu, Zhuoyi},
+    author = {Wang, Gaotian and Lu, Zhuoyi and Yiyang, Huang and Yihao, Liu},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
-    howpublished = "\\url{<https://github.com/Vector-Wangel/XLeRobot>}",
+    howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
     year = {2025}
 }
-
 ```
 
 ## Disclaimer
