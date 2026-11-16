@@ -3,7 +3,7 @@
 ### FAQ
 
 - If you are using Ubuntu, be sure to run `sudo chmod 666 /dev/ttyACM0` and `sudo chmod 666 /dev/ttyACM1` after plugging in the motor control board.
-- Then run `python lerobot/find_port.py` to check the control board ID. Then change the names correspondingly in
+- Then run `lerobot-find-port` to check the control board ID. Then change the names correspondingly in
 - ![image](https://github.com/user-attachments/assets/19264425-8a67-465f-86ba-3c54ec13793e)
 - If you are having error of not detecting any motor after `sudo chmod ...`, try replugging the power cable.
 - If you are having error of `need 9 motors, but 8 detected`, you need to switch the port names in the above figure.

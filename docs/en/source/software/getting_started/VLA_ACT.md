@@ -77,7 +77,7 @@ Connect a leader arm to the Raspberry Pi or other computer you use to record a d
 Following script will start recording:
 
 ```bash
-python /your_dir/lerobot/src/lerobot/record.py \
+lerobot-record \
   --robot.type=so101_follower \
   --robot.port=/dev/right_arm \
   --robot.id=robot_right_arm \
@@ -94,6 +94,10 @@ python /your_dir/lerobot/src/lerobot/record.py \
 ## 2.2. Record Dataset for XLeRobot with VR
 
 For more complicated policies, let's use VR to activate both robot's arms and wheels.
+
+```{warning}
+The VR recording script, `software/src/record.py`, was written for the LeRobot layout before XLeRobot became a set of plugins, and it does not run on LeRobot 0.6 or later. It is being ported. The steps below describe the previous workflow.
+```
 
 Before the official merge into LeRobot, copy the required code from XLeRobot to LeRobot:
 ```bash
@@ -153,22 +157,22 @@ After collecting your datasets, refer to the LeRobot [training tutorial](https:/
 ## 4. Deploy a Model
 
 The simplest way to test your trained model:
-```python
-python /your_dir/lerobot/src/lerobot/record.py \
+```bash
+lerobot-rollout \
+  --strategy.type=base \
+  --policy.path=your_huggingface_id/your_policy \
   --robot.type=xlerobot \
   --robot.cameras="{ head: {type: intelrealsense, serial_number_or_name: 935422072196, width: 640, height: 480, fps: 30, use_depth: True}, right: {type: opencv, index_or_path: '/dev/video6', width: 640, height: 480, fps: 20}, left: {type: opencv, index_or_path: '/dev/video8', width: 640, height: 480, fps: 20} }" \
-  --dataset.repo_id=your_huggingface_id/clear_table \
-  --dataset.single_task="Clear the table." \
-  --dataset.root=your_dir/clear_table \
-  --display_data=true \
-  --teleop.type=xlerobot_vr
+  --task="Clear the table." \
+  --duration=60 \
+  --display_data=true
 ```
 
 Script above runs policy locally on your robot's Raspberry. For lightweight ACT policy it's enough, but for other more resource-consuming policies, the Raspberry will not provide enough computation. 
 
-To run powerful policies as SmolVLA or PI0,5 we need an external computer with GPU. Follow the Lerobot [async inference guide](https://huggingface.co/docs/lerobot/async) to set up policy server on your PC, and client on the XLeRobot. Use loopback interface (0.0.0.0) instead of localhost for your server, and provide server's local IP to the client.
+To run powerful policies as SmolVLA or PI0,5 we need an external computer with GPU. Follow the LeRobot [remote inference guide](https://huggingface.co/docs/lerobot/remote_inference) to run `lerobot-policy-server` on your PC and connect `lerobot-rollout --inference.type=remote` on XLeRobot to it. This needs LeRobot 0.7; LeRobot 0.6 uses the [async inference guide](https://huggingface.co/docs/lerobot/async) instead.
 
-In most cases you'll want to use your VLA policy not by itself, but as a tool of the [LLM agent](https://xlerobot.readthedocs.io/en/latest/software/getting_started/LLM_agent.html). RoboCrew lib already provides you with async client in the tool. Before using it, remember to run policy server on the server machine:
+In most cases you'll want to use your VLA policy not by itself, but as a tool of the [LLM agent](https://xlerobot.readthedocs.io/en/latest/software/getting_started/LLM_agent.html). RoboCrew lib already provides you with async client in the tool. Before using it, remember to run policy server on the server machine. RoboCrew installs LeRobot 0.6.0, so run this command in RoboCrew's environment:
 
 ```
 python -m lerobot.async_inference.policy_server \

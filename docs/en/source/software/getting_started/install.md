@@ -1,6 +1,6 @@
 ### Install LeRobot
 
-To install LeRobot, follow the [official Installation Guide](https://huggingface.co/docs/lerobot/installation)
+To install LeRobot, follow the [official Installation Guide](https://huggingface.co/docs/lerobot/installation). XLeRobot's plugins support LeRobot 0.6 and 0.7, which need Python 3.12 or newer.
 
 ```{note}
 It's recommended to use `pip install -e .` for a more convenient file transfer.
