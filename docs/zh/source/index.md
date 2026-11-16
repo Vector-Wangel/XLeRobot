@@ -502,7 +502,7 @@ note: 价格为估算值，不含3D打印、工具、运费和税费。
 
 ```bibtex
 @misc{wang2025xlerobot,
-    author = {Wang, Gaotian and Lu, Zhuoyi and Yiyang, Huang and Yihao, Liu},
+    author = {Wang, Gaotian and Lu, Zhuoyi and Huang, Yiyang and Liu, Yihao},
     title = {XLeRobot: A Practical Low-cost Household Dual-Arm Mobile Robot Design for General Manipulation},
     howpublished = "\url{https://github.com/Vector-Wangel/XLeRobot}",
     year = {2025}
