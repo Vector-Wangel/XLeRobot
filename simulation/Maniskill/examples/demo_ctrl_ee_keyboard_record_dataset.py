@@ -722,7 +722,7 @@ def main(args: Args):
                 # Get sensor images
                 sensor_images = {}
                 try:
-                    sensor_images = env.get_sensor_images()
+                    sensor_images = env.unwrapped.get_sensor_images()
                 except:
                     pass
                 
