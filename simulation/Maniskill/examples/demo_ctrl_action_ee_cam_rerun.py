@@ -565,7 +565,7 @@ def main(args: Args):
         if args.show_cameras and step_counter >= warmup_steps and args.use_rerun and RERUN_AVAILABLE:
             try:
                 # Get sensor images
-                sensor_images = env.get_sensor_images()
+                sensor_images = env.unwrapped.get_sensor_images()
                 if args.debug_cameras:
                     print(f"Available sensor images: {list(sensor_images.keys())}")
                 
@@ -632,7 +632,7 @@ def main(args: Args):
                 
                 # Also get human render camera images
                 try:
-                    render_images = env.render_rgb_array()
+                    render_images = env.unwrapped.render_rgb_array()
                     if args.debug_cameras:
                         print(f"Render images type: {type(render_images)}")
                         if render_images is not None:
